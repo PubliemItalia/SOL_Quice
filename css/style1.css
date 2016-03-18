@@ -1,0 +1,578 @@
+/*---MENU---*/
+	html{
+		font-family: Arial;
+		font-size: 11px;
+	color: #000;
+	}
+	li{
+		list-style: none;
+		/*width: 100px;*/
+        width:auto;
+	}
+	ul{
+		margin:10px 0 0 -25px;
+		text-align:left;
+	}
+	a{
+		text-decoration: none;
+		color: #000;
+	} 
+
+	.voce_top_menu{
+		float: left;
+		padding: 7px 0 7px 7px;
+		font-size: 12px;
+		font-weight: bold;
+		color: #fff;
+		width: 100px;
+		border-right: 1px solid #fff;
+		background: #0079ca;
+	}
+	.voce_top_menu:hover{
+		color: #000;
+		background:#93d1f7;
+	}
+	.voce_top_menu_hover{
+		float: left;
+		padding: 7px 0 7px 7px;
+		font-size: 12px;
+		font-weight: bold;
+		color: #000;
+		width: 100px;
+		border-right: 1px solid #fff;
+		background:#93d1f7;
+	}
+	.select_market {
+		font-weight: bold;
+		padding: 7px;
+		float:right;
+		color: #FFED00;
+	}
+
+	#wrap {
+		width:960px;
+		margin: auto;	
+	}
+	#menu{
+	color: #000;
+	height: 28px;
+	/*margin-bottom: 150px;*/
+		background: #003c80;
+	}
+	.menu_markets li{
+		color: #000;
+	}
+
+	#test{
+		height: 140px;
+	}
+	.lightBlue{
+		background:#0079ca;
+	}
+	.searchMenu{
+		background: #003c80;
+	}
+
+	#percorso{
+	float:left;
+	}
+	#rdaMenu{
+	float: right;
+	margin-right: 0px;
+	}
+	#subMenu{
+	height:60px;
+	}
+	#subMenu ul li {
+		float:left;
+		font-size: 13px;
+		border-left: 1px solid #000;
+		/*margin-right: 15px;*/
+	}
+	#subMenu ul li:hover{
+		background: #e6f5fc;
+	}
+	#subMenu ul li a{
+	display:block;
+	padding: 5px 15px;
+	font-weight: bold;
+	}
+
+	/*type*/
+	h2{
+	font-size: 16px;
+	color: red;
+	}
+	h2 a {
+		color: red;
+	}
+	
+
+	/*JS Style*/
+
+	.col{
+		width: auto;
+		float: left;
+		padding:10px 0 0 15px;
+	}
+	.show{
+	margin-top: -1px;
+		overflow:hidden;
+		position: absolute;
+		z-index: 1;
+		width: 960px;
+		height: 100px;
+		/*background: #93d1f7;*/
+	}
+	.show li{
+		margin-top:5px;
+	}
+	.show li:hover{
+		background: #56BBED;
+	}
+	.show li a{
+		font-size: 12px;
+		color: #000;
+	}
+	.hide{
+		display:none;
+	}
+
+	.menuAssetBg{
+		background:#f0f0f0 url('../immagini/asset.png') no-repeat right bottom;
+	}
+	.menuConsumableBg{
+/*		background: #ffd9d9;*/
+		background:#f0f0f0 url('../immagini/consumabili.png') no-repeat right bottom;
+	}
+	.menuSpBg{
+		background:#f0f0f0 url('../immagini/ricambi.png') no-repeat right bottom;
+	}
+	.viviListColor{
+		background:#d9f2e5;
+	}
+	.medDeviceColor{
+		background:#d9e6ff;
+	}
+	.search{
+		background:#fff7d9;
+	}
+#div_lingua {
+	color: #000;
+	height: 25px;
+	/*margin-bottom: 150px;*/
+	background: #FFFFFF;
+	overflow: inherit;
+	background-color: #727272;
+	border-bottom-color: #FFFFFF;
+	margin-bottom: 10px;
+	width: 960px;
+}
+.btnav { 
+background-color: <?php echo $sfondo_righe_tab; ?>;
+	height: 25px;
+} 
+.btnav2 {
+	background-color: #FFFFFF;
+	height: 25px;
+} 
+
+
+
+.col_destra {
+	width: auto;
+	float: right;
+}
+.hilightcolor {
+/*	background:#84C1DF;
+*/	background:<?php echo $sfondo_highlight; ?>;
+	
+}
+#filtri {
+	height:30px;
+}
+
+
+/*---TABELLA---*/
+
+/*html{
+	color: #000;
+	font-family: Arial,Helvetica,Sans-Serif;
+
+}
+*/
+/*table{
+	width: 960px;
+	font-size: 13px;
+	text-align: left;
+	border-collapse: collapse;
+}
+*/
+table_right{
+	width: 960px;
+	font-size: 13px;
+	text-align: right;
+	border-collapse: collapse;
+}
+
+#wrap{
+	width:960px;
+	margin: auto;
+}
+
+.rowHead{
+	height: 25px;
+	background: #8e8e8e;
+}
+
+.row{
+	height: 25px;
+	color: #445864;
+}
+.row:hover{
+	background: #56BBED;
+}
+.grigio{
+	background: #eaeaea;
+}
+.bianco{
+	background: #fff;
+}
+.codeTitle{
+	padding-left:7px;
+}
+.code{
+	padding-left:7px;
+	text-transform: uppercase;
+}
+
+
+/*ROW COLORS*/
+.carrelloColor {
+/*	background: #d9e6ff;
+*/	background:#F0F0F0;
+}
+.grigio{
+	background: #eaeaea;
+}
+.assetColor{
+/*	background:#d9d9d9;*/
+	background:#F0F0F0;
+}
+.consumableColor{
+/*	background: #ffd9d9;
+*/	background:#F0F0F0;
+}
+.sparePartsColor{
+/*	background:#e3dbe8;
+*/	background:#F0F0F0;
+}
+.viviListColor{
+/*	background:#d9f2e5;
+*/	background:#F0F0F0;
+}
+.medDeviceColor{
+/*	background:#d9e6ff;
+*/	background:#F0F0F0;
+}
+.cartColor{
+/*	background: #9999FF;
+*/	background:#F0F0F0;
+}
+.rdaColor{
+/*	background: #FF3366;
+*/	background:#F0F0F0;
+}
+.searchColor{
+/*	background:#fff7d9;
+*/	background:#F0F0F0;
+}
+#filtri {
+	height:30px;
+}
+
+/*BOTTONI*/
+.btn{	
+	font-size: 11px;
+	font-family:Arial;
+	/*font-weight:bold;*/
+	
+		
+}
+a{
+	text-decoration:none;
+}
+
+.btn{
+	padding-top:10px;
+}
+
+.btnFreccia a {
+	background: url("../immagini/btn_green_freccia_120x19.jpg") no-repeat scroll 0 0 transparent;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 19px;
+	line-height: 19px;
+	text-align: left;
+	width: 117px;
+	padding-left: 3px;
+	float: right;
+	z-index: 2;
+}
+.btnFreccia a:hover {
+    background: url("../immagini/btn_green_freccia_120x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+.btnSvuota a {
+	background: url("../immagini/btn_gray_120x19.jpg") no-repeat scroll 0 0 transparent;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 19px;
+	line-height: 19px;
+	text-align: left;
+	width: 117px;
+	padding-left: 3px;
+	float: right;
+	z-index: 2;
+}
+.btnSvuota a:hover {
+    background: url("../immagini/btn_gray_120x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnProsegui a {
+    background: url("../immagini/btn_green_160x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    text-align: left;
+    width: 157px;
+    padding-left: 3px;
+}
+.btnProsegui a:hover {
+    background: url("../immagini/btn_green_160x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnRicerca a {
+    background: url("../immagini/btn_green_150x31.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight:bold;
+    display: block;
+    height: 29px;
+    line-height: 13px;
+    text-align: left;
+    width: 147px;
+    padding-left: 5px;
+    padding-top:2px;
+}
+.btnRicerca a:hover {
+    background: url("../immagini/btn_green_150x31.jpg") no-repeat scroll 0 -41px transparent;
+}
+
+.btnCarrello a {
+    background: url("../immagini/btn_gray_carrello_150x31.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 29px;
+    line-height: 13px;
+    text-align: left;
+    width: 147px;
+    padding-left: 5px;
+    padding-top:2px;
+}
+.btnCarrello a:hover {
+    background: url("../immagini/btn_gray_carrello_150x31.jpg") no-repeat scroll 0 -41px transparent;
+}
+
+.btnPaginaOrdini a {
+	background: url("../immagini/btn_gray_150x25.jpg") no-repeat scroll 0 0 transparent;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 25px;
+	line-height: 20px;
+	text-align: right;
+	width: 147px;
+	padding-left: 3px;
+	padding-top:2px;
+	font-weight:bold;
+	margin-left: 60px;
+}
+.btnPaginaOrdini a:hover {
+    background: url("../immagini/btn_gray_150x25.jpg") no-repeat scroll 0 -35px transparent;
+}
+
+.btnTornaHome a {
+    background: url("../immagini/btn_green_freccia_150x25.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 20px;
+    text-align: left;
+    width: 147px;
+    padding-left: 3px;
+    padding-top:2px;
+    font-weight:bold;
+}
+.btnTornaHome a:hover {
+    background: url("../immagini/btn_green_freccia_150x25.jpg") no-repeat scroll 0 -35px transparent;
+}
+
+.btnLente a {
+    background: url("../immagini/btn_lente_19x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    display:block;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+}
+.btnLente a:hover {
+    background: url("../immagini/btn_lente_19x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnStella a {
+    background: url("../immagini/btn_stella_19x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    display:block;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+}
+.btnStella a:hover {
+    background: url("../immagini/btn_stella_19x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnCarrello19x19 a {
+    background: url("../immagini/btn_carrello_19x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    display:block;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+}
+.btnCarrello19x19 a:hover {
+    background: url("../immagini/btn_carrello_19x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+/*PAGINATION*/
+.num_pag {
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	color: #CCCCCC;
+}
+.current_num_pag {
+	font-family: Arial;
+	font-size: 16px;
+	text-align: left;
+	font-weight: bold;
+	color: #0099FF;
+}
+.immagine {
+	width: 300px;
+	float: right;
+	padding:0px 0px 0px 0px;
+	margin-right: 20px;
+}
+.testo_scheda {
+	width: 180px;
+	float: left;
+	padding:0px 0px 0px 0px;
+	margin-left: 20px;
+}
+.titolo_scheda {
+	width: 780px;
+	float: left;
+	padding:0px 0px 0px 0px;
+	margin-left: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+.rda {
+	margin-right: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	float: left;
+	margin-top: 10px;
+}
+.links_scheda {
+	width: 250px;
+	float: left;
+	padding:0px 0px 0px 0px;
+	margin-left: 20px;
+}
+.btnFreccia_b {
+	display: block;
+	height: 19px;
+	width: 117px;
+	float: right;
+	z-index: 3;
+}
+.btnPaginaOrdinidx a {
+	background: url("../immagini/btn_gray_150x25.jpg") no-repeat scroll 0 0 transparent;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 25px;
+	line-height: 20px;
+	text-align: left;
+	width: 147px;
+	padding-left: 3px;
+	padding-top:2px;
+	font-weight:bold;
+	float: right;
+}
+.btnFrecciadx a {
+	background: url("../immagini/btn_gray_150x25.jpg") no-repeat scroll 0 0 transparent;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 19px;
+	line-height: 19px;
+	text-align: left;
+	width: 117px;
+	padding-left: 3px;
+	float: right;
+	z-index: 2;
+}
+/*STILI HOME*/
+
+#content{
+	width: 960px;
+	margin:auto;
+	margin-top: 50px;
+}
+
+.rigaIndex{
+	height:140px;
+}
+
+.colIndex{
+	float:left;
+	width:480px;
+	height:140px;
+}
+.subCol{
+	float:left;
+	width: 240px;
+	height: 140px;
+}
+.rightAlign{
+	text-align:right;
+	padding-right:10px;
+}
+.tot_carrello {
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+}
+textarea {
+	background-color: #FFFFCC;
+	color: #9b2220;
+	font-size: 12px;
+}
