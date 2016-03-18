@@ -1,0 +1,146 @@
+.btn{	
+	font-size: 11px;
+	font-family:Arial;
+	/*font-weight:bold;*/
+	
+		
+}
+a{
+	text-decoration:none;
+}
+
+.btn{
+	padding-top:10px;
+}
+
+.btnFreccia a {
+    background: url("btn_green_freccia_120x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    text-align: left;
+    width: 117px;
+    padding-left: 3px;
+}
+.btnFreccia a:hover {
+    background: url("btn_green_freccia_120x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnProsegui a {
+    background: url("btn_green_160x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    text-align: left;
+    width: 157px;
+    padding-left: 3px;
+}
+.btnProsegui a:hover {
+    background: url("btn_green_160x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnRicerca a {
+    background: url("btn_green_150x31.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight:bold;
+    display: block;
+    height: 31px;
+    line-height: 31px;
+    text-align: left;
+    width: 147px;
+    padding-left: 3px;
+}
+.btnRicerca a:hover {
+    background: url("btn_green_150x31.jpg") no-repeat scroll 0 -41px transparent;
+}
+
+.btnCarrello a {
+    background: url("btn_gray_carrello_150x31.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 29px;
+    line-height: 13px;
+    text-align: left;
+    width: 147px;
+    padding-left: 3px;
+    padding-top:2px;
+}
+.btnCarrello a:hover {
+    background: url("btn_gray_carrello_150x31.jpg") no-repeat scroll 0 -41px transparent;
+}
+
+.btnPaginaOrdini a {
+    background: url("btn_gray_150x25.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 20px;
+    text-align: left;
+    width: 147px;
+    padding-left: 3px;
+    padding-top:2px;
+    font-weight:bold;
+}
+.btnPaginaOrdini a:hover {
+    background: url("btn_gray_150x25.jpg") no-repeat scroll 0 -35px transparent;
+}
+
+.btnTornaHome a {
+    background: url("btn_green_freccia_150x25.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 20px;
+    text-align: left;
+    width: 147px;
+    padding-left: 3px;
+    padding-top:2px;
+    font-weight:bold;
+}
+.btnTornaHome a:hover {
+    background: url("btn_green_freccia_150x25.jpg") no-repeat scroll 0 -35px transparent;
+}
+
+.btnLente a {
+    background: url("btn_lente_19x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    display:block;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+}
+.btnLente a:hover {
+    background: url("btn_lente_19x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnStella a {
+    background: url("btn_stella_19x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    display:block;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+}
+.btnStella a:hover {
+    background: url("btn_stella_19x19.jpg") no-repeat scroll 0 -29px transparent;
+}
+
+.btnCarrello19x19 a {
+    background: url("btn_carrello_19x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    display:block;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+}
+.btnCarrello19x19 a:hover {
+    background: url("btn_carrello_19x19.jpg") no-repeat scroll 0 -29px transparent;
+}

@@ -1,0 +1,51 @@
+#dati{
+	display: inline;
+}
+
+.container-startform{
+	margin-top: 10vh !important;
+}
+
+
+.labels {
+    color: #888;
+    text-align: right !important;
+    min-height: 0px !important;
+    padding: 9px 0px !important;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.fields {
+    min-height: 0px !important;
+    height: 40px !important;
+}
+
+.campi {
+    background-color: #fafafa !important;
+    border: 1px solid #ddd !important;
+    padding: 0px 10px !important;
+    color: #009ee0;
+    font-size: 18px;
+}
+
+
+.fields-accedi {
+    min-height: 0px !important;
+    height: 60px !important;
+}
+
+#button-accedi {
+    background-color: #ddd !important;
+    border: 2px solid #ccc !important;
+    color: #444 !important;
+    padding: 6px 14px !important;
+    font-size: 16px !important;
+    margin-top: 18px !important;
+}
+
+#button-accedi:hover {
+    background-color: #aaa !important;
+    border: 2px solid #888 !important;
+    color: #444 !important;
+}

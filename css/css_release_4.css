@@ -1,0 +1,255 @@
+.btn-down {
+	/*background-image: url("btn-down.png");*/
+	background-color: #c4c4c4;
+	width: 40px;
+}
+
+.btn-down:hover {
+	background-color: #969696;
+	transition: 0.2s;
+}
+
+
+
+.btn-up {
+	/*background-image: url("btn-up.png");*/
+	background-color: #c4c4c4;
+	width: 40px;
+}
+
+.btn-up:hover {
+	background-color: #969696;
+	transition: 0.2s;
+}
+
+.id-ordine {
+	font-weight: bold;
+}
+
+.sottomenu {
+	color: #fafafa;
+	border: solid 1px #c4c4c4;
+}
+
+.titoli-sottomenu {
+	color: #939393;
+	text-align: left;
+}
+
+.stato-prodotto {
+	background-color: #fff;
+	border: solid 1px #c4c4c4;
+	width: 920px;
+}
+
+.stato-prodotto-arancio {
+	color: #e27305;
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.stato-prodotto-verde {
+	color: #23ad36;
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.stato-prodotto-verde-sfondo {
+	background-color: #e7f7e7;
+}
+
+.stato-prodotto-aggiornamento {
+	color: #939393;
+	text-align: right;
+	font-size: 8px;
+}
+
+
+.note-titolo {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #939393;
+}
+
+.note-sfondo {
+	background-color: #fff;
+	width: 300px;
+}
+
+.note-testo {
+	font-size: 12px;
+	color: #939393;
+}
+
+#main_container .riga.dettaglio_rda {
+    padding-top: 0px;
+    width: 958px;
+    border-top: none;
+}
+
+div#testata_righe {
+    background: #c5dcf0;
+    padding-top: 5px !important;
+    padding-bottom: 0px !important;
+    text-transform: uppercase;
+    text-align: left;
+    color: #666 !important;
+    font-size: 9px !important;
+    border-top: none !important;
+    height: 16px;
+    margin: 0px 0px;
+    padding: 0px 10px;
+    width: auto !important;
+    border-bottom: none !important;
+}
+
+.dettaglio_rda {
+	width: 958px; 
+	border: 1px solid #c5dcf0; 
+	display: none; 
+	padding-bottom: 0px;
+	border-top: none;
+}
+.dettaglio_carrello_rda {
+	border: 1px solid rgb(184, 227, 246); 
+	border-top: none;
+	width: 958px
+	min-height: 100px;
+	overflow: hidden;
+	height:auto;
+	padding-bottom:20px;
+}
+
+
+.riga {
+	min-height:2px;
+	overflow: hidden;
+	height: auto; 
+	padding:4px 0px;
+   /* border-top: 1px solid rgb(184, 227, 246) !important; */
+    border-bottom: 1px solid #c5dcf0 !important; 
+ }
+
+
+ #costi_spedizione {
+ margin-top:20px; margin-left:42px; font-family:Arial; font-size:12px;
+ color: #999;
+ text-decoration:none;
+ float:right;
+ }
+.contenitore_generale_rda {
+	width: 960px;
+	min-height: 10px;
+	overflow: hidden;
+	height:auto;
+}
+
+div.riga.prodotto-lista {
+    width: auto !important;
+    margin: 0px 12px;
+    border-top: none !important;
+    border-bottom: 1px solid #c5dcf0 !important;
+}
+
+div#col01e {
+    width: auto !important;
+    margin: 0px 12px;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+
+
+div.riga.row.rdaColor {
+    border-bottom: none !important;
+}
+
+
+
+#testata_righe div div {
+    width: 30px !important;
+    color: red !important;
+}
+
+#carrello_fondo_riepilogo {
+    background-color: rgb(116, 193, 236) !important;
+}
+.riga.bianco {
+    /* border-top: 1px solid rgb(184, 227, 246) !important; */
+    border-bottom: none !important; 
+    border-top: 1px solid #ddd !important;
+}
+
+.riga.rdaColor {
+    /* border-top: 1px solid rgb(184, 227, 246) !important; */
+    border-bottom: none !important; 
+    border-top: 1px solid #ddd !important;
+}
+
+.colonna {
+	min-height:25px; 
+	overflow: hidden; 
+	height: auto; 
+	float:left;
+}
+.testata_elenco {
+    background-color: #7c8c99;
+    color: #fff;
+    padding-top: 6px !important;
+    padding-bottom: 0px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-top: none !important;
+    border-bottom: none !important;
+    width: 960px !important;
+}
+
+div.riga.dettaglio_rda {
+    padding-bottom: 0px;
+    margin-bottom: 12px;
+}
+/*
+div#col01c {
+    margin-left: 0px !important;
+}
+
+div#col01d {
+    margin-left: 0px !important;
+} */
+
+div#col03e {
+    margin-left: 0px !important;
+}
+
+#col02e {
+    margin-left: 10px;
+    width: 694px !important;
+}
+
+#col08e{
+	width: 40% !important;
+}
+
+.col02e-pulsante {
+    width: 230px !important;
+	margin-top: 24px;
+}
+
+textarea.campo_note {
+    padding: 6px !important;
+    background-color: #FFFFDB;
+    width: 230px !important;
+}
+
+#col07b img {
+    width: 62px;
+    height: 17px;
+}
+
+#col03d span {
+    font-size: 9px !important;
+    line-height: 20px;
+    font-weight: 700;
+}

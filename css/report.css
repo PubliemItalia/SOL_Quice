@@ -1,0 +1,199 @@
+.sommari_euro {
+	text-decoration:none;
+	color: rgb(0,0,0);
+	font-family:Arial;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:normal;
+	text-align:left;
+	float:left;
+	padding-right:30px;
+}
+.barra_sup {
+	width:960px;
+	margin:0px auto 15px;
+	padding-top:10px;
+	height: 21px;
+	background-color: rgb(255,255,255);
+	border-bottom:1px solid rgb(0,0,0);
+}
+.cella_menu {
+	width:100px;
+	margin-left: 10px;
+	float:left;
+	text-decoration:none;
+	color: rgb(0,0,0);
+	font-family:Arial;
+	font-size:12px;
+	font-weight:normal;
+	text-align:center;
+	cursor:pointer;
+}
+#contenitore_testata{
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	width:955px;
+	padding-left:5px;
+	height: 25px;
+	background: #8e8e8e;
+	color:white;
+}
+.contenitore_rda{
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	width:955px;
+	padding-left:5px;
+	height: 25px;
+	background-color:rgb(221,221,221);
+	color:black;
+	margin-top:15px;
+	float:left;
+	/*border-top:1px solid black;*/
+}
+.contenitore_rda_testfatt{
+	color:white; 
+	font-family:Arial; 
+	font-size:12px; 
+	font-weight:bold; 
+	padding-left:10px;
+	background-color: #B4B4B4;
+	width:955px;
+	padding-left:5px;
+	height: 25px;
+	margin-top:15px;
+	float:left;
+}
+.contenitore_rda_testfatt:hover{
+	background-color:#FF835A;
+}
+.contenitore_rda_testfatt_open{
+	background-color:#FF835A;
+}
+.contenitore_pl_unit{
+	font-family:Arial;
+	font-size:11px;
+	width:948px;
+	padding:5px;
+	min-height:40px;
+	overflow:hidden;
+	height: auto;
+	color:black;
+	float:left;
+	display:none;
+	border: 1px solid #888;
+}
+.contenitore_rda_fattura{
+	font-family:Arial;
+	font-size:11px;
+	width:955px;
+	padding-left:5px;
+	height: auto;
+	color:black;
+	/*margin-top:15px;*/
+	float:left;
+	/*border-top:1px solid black;*/
+}
+.riga_separazione{
+	width:950px;
+	height: 5px;
+	float:left;
+	border-bottom:1px solid rgb(221,221,221);
+	
+}
+.contenitore_riga{
+	font-family:Arial;
+	font-size:11px;
+	width:955px;
+	padding-left:5px;
+	height: 30px;
+	color:black;
+	float:left;
+	border-bottom:1px solid rgb(221,221,221);
+}
+.contenitore_riga_fattura{
+	font-family:Arial;
+	font-size:11px;
+	width:955px;
+	padding-left:5px;
+	height: 20px;
+	color:#666;
+	float:left;
+	padding: 0px 0px 0px 10px !important;
+}
+.contenitore_gruppo_merci{
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	width:955px;
+	padding-left:5px;
+	height: auto;
+	color:black;
+	float:left;
+	padding: 0px 0px 0px 10px !important;
+}
+.box_120{
+	width:120px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+.box_130_dx{
+	width:125px;
+	padding-top:5px;
+	padding-right:5px;
+	height: auto;
+	float:left;
+	text-align:right
+}
+.box_450{
+	width:445px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+.box_570{
+	width:565px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+.box_100_20{
+	width:100px;
+	padding-top:5px;
+	padding-left:20px;
+	height: auto;
+	float:left;
+}
+.box_100{
+	width:100px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+.box_200{
+	width:200px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+.box_150{
+	width:150px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+.box_80{
+	width:80px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+.box_40{
+	width:40px;
+	padding-top:5px;
+	height: auto;
+	float:left;
+}
+

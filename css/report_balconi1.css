@@ -1,0 +1,451 @@
+@charset "utf-8";
+/* CSS Document */
+.btnFreccia {
+    background: url("../immagini/btn_green_freccia_120x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    text-align: left;
+    width: 117px;
+    margin-left: 40px;
+	padding-left: 3px;
+	float:left;
+}
+.btnFrecciaRed {
+    background: url("../immagini/btn_red_freccia_120x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    text-align: left;
+    width: 117px;
+    /*margin-left: 40px;*/
+	padding-left: 3px;
+	float:left;
+}
+.btnFrecciaRedLunga {
+    background: url("../immagini/btn_red_freccia_150x19.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    text-align: left;
+    width: 147px;
+    /*margin-left: 40px;*/
+	padding-left: 3px;
+	float:left;
+}
+/*.btnFrecciaRed:hover {
+    background: url("immagini/btn_red_freccia_120x19.jpg") no-repeat scroll 0 0 transparent;
+}
+.btnFreccia a:hover {
+    background: url("immagini/btn_green_freccia_120x19.jpg") no-repeat scroll 0 -29px transparent;
+}*/
+#columns_totale {
+	width: 960px;
+	background: #FFFFCC;
+	height:25px;
+}
+#columns_totale {
+	width: 960px;
+	background: #FFFFCC;
+	height:25px;
+}
+.libero {
+	width: 960px;
+	height:auto;
+	float: left;
+}
+#columns_testata {
+	font-weight: bold;
+	color: #FFFFFF;
+	width: 960px;
+	height: 25px;
+	background-color: #8e8e8e;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	float:left;
+}
+#spia_cambio {
+	float: left;
+	color: #FFFFFF;
+	width: 10px;
+	height: 25px;
+	background-color: #8e8e8e;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8px;
+}
+#riga_totale {
+	color: black;
+	width: 960px;
+	height: 25px;
+	background-color: #CCC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.riassunto_rda {
+	float: left;
+	font-weight: bold;
+	color: white;
+	width: 950px;
+	height: 21px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #97b4b5;
+	padding-left: 10px;
+	padding-top: 5px;
+	margin-top:10px;
+}
+.titolo_evasione_parziale {
+	float: left;
+	font-weight: bold;
+	color: rgnb(0,0,0);
+	width: 950px;
+	height: 21px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	padding-left: 10px;
+	padding-top: 5px;
+	margin-top:10px;
+}
+
+.riepilogo_rda {
+    cursor: pointer;
+	float: left;
+	font-weight: bold;
+	width: 670px;
+	height: auto;
+}
+.ind_num_rda {
+	float: left;
+	font-weight: bold;
+	color:#FF0;
+	width: 100px;
+	height: auto;
+}
+.stato_rda {
+	float: left;
+	font-weight: bold;
+	color: black;
+	width: 75px;
+	height: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #97b4b5;
+}
+
+.cont_rda {
+	float: left;
+	width: 960px;
+	height: auto;
+	background-color: rgb(255,255,255);
+}
+.columns_righe1 {
+	float: left;
+	color: black;
+	width: 960px;
+	height: 32px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #F0F0F0;
+}
+.riga_divisoria {
+	float: left;
+	width: 960px;
+	height: 2px;
+	background-color: #F0F0F0;
+}
+.columns_righe2 {
+	float: left;
+	color: black;
+	width: 960px;
+	height: 32px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background: #fff;
+}
+.columns_righe1:hover {
+	background: #D6ECED;
+}
+.columns_righe2:hover {
+	background: #D6ECED;
+}
+#columns0 {
+	width: 960px;
+	background: #fff;
+	height:25px;
+}
+#columns1 {
+	width: 960px;
+	background:#F0F0F0;
+	height:25px;
+}
+.cod1 {
+	padding-left: 10px;
+	color: #FFFFFF;
+	width: 70px;
+	height: 20px;
+	float: left;
+	padding-top: 5px;
+}
+.cod1 a {
+	color: #FFFFFF;
+}
+.cod1_riga {
+	padding-left: 10px;
+	color: black;
+	width: 70px;
+	height: 24px;
+	float: left;
+	padding-top: 4px;
+}
+.cod1_riga_quant {
+	padding-left: 10px;
+	color: black;
+	width: 85px;
+	height: 24px;
+	float: left;
+	padding-top: 4px;
+}
+.descr4 {
+	float: left;
+	width: 300px;
+	height:20px;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.descr4 a {
+	color: #FFFFFF;
+}
+.descr4_riga {
+	float: left;
+	width: 300px;
+	height:24px;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+#confez5 {
+	float: left;
+	width: 70px;
+	height:20px;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+#confez5_riga {
+	float: left;
+	width: 55px;
+	height:24px;
+	padding-left: 5px;
+	padding-top: 4px;
+}
+.lente_prodotto {
+	float: left;
+	width: 30px;
+	height:24px;
+	padding-top: 4px;
+}
+#confez5 a {
+	color: #FFFFFF;
+}
+.price6 {
+	color: #FFFFFF;
+	width: 80px;
+	height: 20px;
+	float: left;
+	padding-top: 5px;
+	padding-right: 15px;
+	text-align: right;
+}
+.price6_quant {
+	color: #FFFFFF;
+	width: 85px;
+	height: 20px;
+	float: left;
+	padding-top: 5px;
+	padding-right: 25px;
+	text-align: right;
+}
+.price6_riga {
+	color: black;
+	width: 100px;
+	height: 24px;
+	float: left;
+	padding-top: 4px;
+	padding-right: 15px;
+	text-align: right;
+}
+.price6_riga_quant {
+	color: black;
+	width: 70px;
+	height: 23px;
+	float: left;
+	padding-top: 4px;
+	padding-right: 24px;
+	text-align: right;
+}
+.tx_totale {
+	color: black;
+	width: 735px;
+	height: 20px;
+	float: left;
+	padding-top: 7px;
+	padding-right: 25px;
+	text-align: right;
+}
+.vuoto9 {
+	float: left;
+	width: 62px;
+	height:20px;
+	padding-top: 5px;
+	text-align: center;
+}
+.vuoto9_riga {
+	float: left;
+	width: 42px;
+	height:24px;
+	padding-top: 4px;
+}
+.style_mag {
+	float: left;
+	width: 42px;
+	height:24px;
+	color:#e9a441;
+	padding-top: 4px;
+	font-weight: bold;
+}
+.style_sap {
+	float: left;
+	width: 42px;
+	height:24px;
+	color:#11bfe4;
+	padding-top: 4px;
+	font-weight: bold;
+}
+.style_ord {
+	float: left;
+	width: 42px;
+	height:24px;
+	color:#33b655;
+	padding-top: 4px;
+	font-weight: bold;
+}
+.style_lab {
+	float: left;
+	width: 42px;
+	height:24px;
+	color:#abb3b7;
+	padding-top: 4px;
+	font-weight: bold;
+}
+.sel_all {
+	float: left;
+	font-weight: bold;
+	color: black;
+	text-align:center;
+	width: 45px;
+	height: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #97b4b5;
+}
+.sel_all_riga {
+	float: left;
+	text-align:center;
+	width: 20px;
+	height: 13px;
+	padding-top: 9px;
+}
+.servizio {
+	float: left;
+	color: black;
+	width: 960px;
+	height: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding-top:10px;
+	padding-bottom:10px;
+display:inline;
+	/*background: #393;*/
+}
+.campo_note {
+	width: 350px;
+	height: 40px;
+	color: black;
+	background-color: #FFFFCC;
+	border:0px solid #FFFFFF;
+}
+.note {
+	float: left;
+	width: 350px;
+	height: auto;
+	/*padding-left:10px;
+	padding-top:5px;
+	margin-bottom:10px;
+	background-color: #393;
+	*/
+}
+
+.note_pregresse {
+	float: left;
+	width: 780px;
+	height: auto;
+	/*padding-left:10px;*/
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.messaggio {
+	float: left;
+	width: 350px;
+	height: 60px;
+	padding-left:20px;
+	/*padding-top:5px;*/
+	font-weight: bold;
+	color: black;
+	/*background-color: #99FFFF;*/
+}
+#ordini {
+	color: black;
+	float: left;
+	width: 120px;
+	height: auto;
+	font-weight: bold;
+	text-align:center;
+}
+.puls_servizio {
+	color: black;
+	float: left;
+	width: 117px;
+	height: 20px;
+	padding-left:43px;
+	font-weight: bold;
+	/*background-color: #FFFF00;*/
+}
+.puls_servizio a {
+	color: black;
+}
+#puls_processa {
+	float: left;
+	width: 160px;
+	height: auto;
+}
+.label{
+   font-family:Verdana, sans-serif;
+   font-size:12px;
+   color:#369;
+   font-weight:bold;
+   }
+   
+.filtri_report {
+	float: none;
+	width: auto;
+	height: auto;
+	color:#000;
+}
+

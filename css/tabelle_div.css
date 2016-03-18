@@ -1,0 +1,224 @@
+/*---MENU---*/
+<!--
+
+#columns_totale {
+	width: 960px;
+	background: #FFFFCC;
+	height:25px;
+}
+#columns_testata {
+	width: 960px;
+	background: #8e8e8e;
+	height:25px;
+}
+#columns0 {
+	width: 960px;
+	background: #fff;
+	height:25px;
+}
+#columns1 {
+	width: 960px;
+	background:#F0F0F0;
+	height:25px;
+}
+#1spazio {
+	float: left;
+	width: 10px;
+	height:25px;
+}
+#2codice {
+	float: left;
+	width: 80px;
+	height:25px;
+}
+#3nazione {
+	float: left;
+	width: 70px;
+	height:25px;
+}
+#4descrizione {
+	float: left;
+	width: 300px;
+	height:25px;
+}
+#5confezione {
+	float: left;
+	width: 80px;
+	height:25px;
+}
+#6prezzo {
+	float: left;
+	width: 90px;
+	height:25px;
+}
+#7quant {
+	float: left;
+	width: 150px;
+	height:25px;
+}
+#8totale {
+	float: left;
+	width: 90px;
+	height:25px;
+}
+#9scheda {
+	float: left;
+	width: 45px;
+	height:25px;
+}
+#10elimina {
+	float: left;
+	width: 45px;
+	height:25px;
+}
+
+#801{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#802{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#803{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#804{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#805{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#806{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#807{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#808{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#809{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#810{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#811{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#812{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#813{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#814{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#815{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#816{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#817{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#818{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#819{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#820{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#821{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#822{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#823{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#824{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#825{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#826{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#827{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#828{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#829{
+	float: left;
+	width: 90px;
+	height:25px;
+	}
+#830{
+	float: left;
+	width: 90px;
+	height:25px;
+	}

@@ -1,0 +1,52 @@
+#pop_container {
+	width:340px;
+	height:130px;
+	margin: auto;
+	margin-top: 10px;
+	font-family: Arial;
+	color: green;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+#pop_container_grande {
+	width:400px;
+	height:170px;
+	margin: auto;
+	margin-top: 10px;
+	font-family: Arial;
+	color: green;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+#scelta{
+	width:200px;
+	height:auto;
+	float: left;
+	margin-left:50px;
+}
+#spaziatore{
+	width:400px;
+	height:30px;
+	float: left;
+}
+.centr {
+	text-align: center;
+}
+/*form input{
+float:left;
+border: 1px solid #ccc;
+background: #ccc;
+color: #000;
+display:block;
+width: 80px;
+height: 30px;
+margin-right:10px;
+}
+
+form input:hover{
+ background: #999;
+ color: #fff;
+}
+*/

@@ -1,0 +1,79 @@
+#pop_container {
+	width:380px;
+	height:160px;
+	margin: auto;
+	margin-top: 10px;
+	font-family: Arial;
+	color: green;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+#pop_container_grande {
+	width:400px;
+	height:170px;
+	margin: auto;
+	margin-top: 10px;
+	font-family: Arial;
+	color: green;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+#scelta{
+	width:200px;
+	height:auto;
+	float: left;
+	margin-left:50px;
+}
+#spaziatore{
+	width:400px;
+	height:30px;
+	float: left;
+}
+.centr {
+	text-align: center;
+}
+.bottoni_notifiche {
+	width:70px;
+	height: 40px;
+	margin: auto;
+	margin-top: 5px;
+	padding: 5px;
+	font-family: Arial;
+	font-weight: bold;
+	color: white;
+	background-color:green;
+	font-size: 18px;
+	text-align: center;
+	border:2px solid green;
+}
+.bottoni_notifiche_neg {
+	width:70px;
+	height: 40px;
+	margin: auto;
+	margin-top: 5px;
+	padding: 5px;
+	font-family: Arial;
+	font-weight: bold;
+	color: green;
+	background-color:white;
+	font-size: 18px;
+	text-align: center;
+	border:2px solid green;
+}
+.avvisi_pop {
+	width: 360px;
+	text-align:center !important;
+	margin: 15px auto 15px;
+	font-family:Arial !important;
+	font-size:16px !important;
+	color: green !important;
+	font-weight:bold !important;
+}
+.cont_form_modal_pulsanti {
+	width: 50%;
+	text-align:center !important;
+	padding: 10px 0px;
+	float:left;
+}
