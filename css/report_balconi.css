@@ -202,6 +202,9 @@
 .cont_rda.blocco_rda {
     border: 1px solid #c5dcf0;
     width: 958px !important;
+	<!--[if IE]>
+	width: 100% !important;
+	< ![endif]-->
 }
 
 
@@ -347,7 +350,7 @@ div#confez5_riga{
 }
 
 .cont_rda div#col09c {
-    width: 90px !important;
+    width: 85px !important;
 }
 
 .cont_rda.testatina div#col09c {

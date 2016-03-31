@@ -396,9 +396,12 @@ $_SESSION[percorso_indietro] = $_SESSION[file_ritorno]."?categoria1=".$categoria
 }
 .raggruppo {
 	width:490px;
-	height:220px;
+	min-height:220px;
+	overflow: hidden;
+	height: auto;
 	float:left;
 	padding:10px 0px 0px 10px;
+	margin-bottom:20px;
 }
 -->
 </style>

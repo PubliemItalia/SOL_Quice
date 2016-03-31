@@ -30,12 +30,14 @@ include "traduzioni_interfaccia.php";
 
 
 //recupero info indirizzo spedizione bmc
+if ($addr_spedizione != "") {
 	  $sqlp = "SELECT * FROM qui_tBMC_Clienti WHERE id = '$addr_spedizione'";
 	  $risultp = mysql_query($sqlp) or die("Impossibile eseguire l'interrogazione" . mysql_error());
 	  while ($rigap = mysql_fetch_array($risultp)) {
 		//indirizzo_diverso = addslashes($rigap[DescrInd]);
-		$indirizzo_diverso .= addslashes($rigap[NAME1]).'<br>'.addslashes($rigap[STRAS]).'<br>'.addslashes($rigap[PSTLZ]).' '.addslashes($rigap[ORT01]).' ('.addslashes($rigap[LAND1]).')<br>'.addslashes($rigap[KUNNR]);
+		$indirizzo_sped .= addslashes($rigap[NAME1]).'<br>'.addslashes($rigap[STRAS]).'<br>'.addslashes($rigap[PSTLZ]).' '.addslashes($rigap[ORT01]).' ('.addslashes($rigap[LAND1]).')<br>'.addslashes($rigap[KUNNR]);
 	  }
+}
 
 //§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 //§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
@@ -153,6 +155,9 @@ $risults = mysql_query($s) or die("Impossibile eseguire l'interrogazione" . mysq
 while ($rigas = mysql_fetch_array($risults)) {
 $nome_unita = $rigas[nome_unita];
 }
+if ($addr_spedizione != "") {
+		$indirizzo_diverso = $indirizzo_sped;
+	  }
 //echo "stato_rda: ".$stato_rda."<br>";
 //legenda stati = 1 = da presentare - 2 = approvata resp - 4 = approvata buyer
 mysql_query("INSERT INTO qui_rda (negozio, id_unita, nome_unita, id_utente, id_resp, stato, data_inserimento, data_approvazione, data_ultima_modifica, id_carrello, data_carrello, note_utente, nome_utente, wbs, nazione, id_company, nome_company, indirizzo_spedizione) VALUES ('$negozio_rda', '$unita_scelta', '$nome_unita', '$id_utente', '$_SESSION[IDResp]', '$stato_rda', '$data_rda', '$data_rda', '$data_rda', '$id_carrello', '$data_ultima_modifica', '$note', '$nome_sessione', '$wbs', '$nazione_rda', '$company_scelta', '$nome_company', '$indirizzo_diverso')") or die("Impossibile eseguire l'inserimento 1" . mysql_error());

@@ -1,5 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
+.sommari_euro {
+	text-decoration:none;
+	color: rgb(0,0,0);
+	font-family:Arial;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:normal;
+	text-align:left;
+}
 .btnFreccia {
     background: url("../immagini/btn_processarda.png") no-repeat scroll 0 0 transparent;
     color: #fff;
@@ -105,17 +114,13 @@
 
 
 .riassunto_rda {
-    min-height: 20px;
+    min-height: 25px;
     overflow: hidden;
     height: auto;
     /* padding: 4px 0px; */
     /* border-top: 1px solid rgb(184, 227, 246) !important; */
     border-bottom: 1px solid #c5dcf0 !important;
     background: rgb(128,182,226);
-}
-
-.riassunto_rda:hover {
-    background: rgb(108,162,206);
 }
 
 
@@ -133,9 +138,9 @@
 }
 
 .riepilogo_rda {
-    cursor: pointer;
+    /*cursor: pointer;*/
 	float: left;
-	width: 670px;
+	width: 660px;
 	height: auto;
 	text-align: left;
     font-weight: 100;
@@ -153,13 +158,11 @@
     margin-right: 30px;
 }
 
-.ind_num_rda:hover {
-    color: #ddd;
-}
 
 
 
 .stato_rda {
+	padding-top:1px;
 	float: left;
 	font-weight: bold;
 	color: black;
@@ -198,7 +201,7 @@
 
 .cont_rda.blocco_rda {
     border: 1px solid #c5dcf0;
-    width: 958px;
+    width: 958px !important;
 }
 
 
@@ -271,7 +274,7 @@
 .cod1 a {
 	color: #FFFFFF;
 }
-.cont_rda .testatina .cod1_riga {
+.cont_rda.testatina .cod1_riga {
     padding-left: 10px;
     color: #666 !important;
     width: 70px !important;
@@ -295,7 +298,7 @@ div#confez5_riga{
 
 }
 
-.cont_rda .testatina .confez5_riga{
+.cont_rda.testatina .confez5_riga{
 	padding-left: 0px!important;
 	width: 54px !important;
 	 text-align: left;
@@ -303,19 +306,19 @@ div#confez5_riga{
 }
 
 
-.cont_rda .testatina .descr4 {
+.cont_rda.testatina .descr4 {
 	float: left;
 	width: 300px;
 	height:20px;
 	padding-left: 10px;
 	padding-top: 5px;
 }
-.cont_rda .testatina .descr4 a {
+.cont_rda.testatina .descr4 a {
 	color: #FFFFFF;
 }
-.cont_rda .testatina .descr4_riga {
+.cont_rda.testatina .descr4_riga {
     float: left;
-    width: 300px !important;
+    width: 290px !important;
     height: 24px;
     padding-left: 10px;
     text-align: left !important;
@@ -347,7 +350,7 @@ div#confez5_riga{
     width: 85px !important;
 }
 
-.cont_rda .testatina div#col09c {
+.cont_rda.testatina div#col09c {
     padding-top: 4px !important;
 }
 
@@ -388,12 +391,12 @@ div#confez5_riga{
 	color: #FFFFFF;
 }
 
-.cont_rda .testatina div#col01c {
+.cont_rda.testatina div#col01c {
     padding-top: 4px !important;
       /*  margin-left: 0px !important;  */
 }
-.cont_rda .testatina div#col02c {
-    width: 30px !important;
+.cont_rda.testatina div#col02c {
+    width: 40px !important;
 }
 
 .cont_rda .blocco_rda div#col01d {
@@ -403,12 +406,12 @@ div#confez5_riga{
 }
 
 .cont_rda .blocco_rda div#col02d {
-    width: 30px !important;
+    width: 40px !important;
     text-align: right;
     margin-right: 10px;
 }
 .cont_rda .blocco_rda div#col03d {
-    width: 300px !important;
+    width: 290px !important;
     text-align: left !important;
         padding-top: 0px;
 }
@@ -473,12 +476,12 @@ div#confez5_riga{
         padding-top: 0px;
 }
 
-.cont_rda .testatina .price6_riga {
+.cont_rda.testatina .price6_riga {
 	margin-right: 12px !important;
 	    padding-top: 4px !important;
 }
 
-.cont_rda .testatina .price6_riga_quant{
+.cont_rda.testatina .price6_riga_quant{
 	padding-top: 4px !important;
 }
 
@@ -658,14 +661,11 @@ div#tendina_stato {
 #tendina_stato div {
     width: 200px !important;
     text-align: right !important;
-    right: 0px;
-    position: absolute;
 }
 
 select#status {
     border: 1px solid grey !important;
     height: 27px !important;
-    margin-top: 20px;
 }
 
 #tendina_stato strong {
@@ -673,7 +673,7 @@ select#status {
 }
 
 .cont_rda .dicitura_totale_rda {
-    margin-left: 490px;
+    margin-left: 500px;
     width: 40px !important;
     float: left;
 }
@@ -688,4 +688,30 @@ select#status {
 .cont_rda #col02d span {
     font-size: 10px !important;
     color: #666 !important;
+}
+.stato_rda-arancio {
+	color:white;
+	background-color:#e9a441;
+	padding:5px 0px;
+}
+.stato_rda-cyano {
+	color:white;
+	background-color:#11bfe4;
+	padding:5px 0px;
+}
+
+.stato_rda-grey {
+	color:white;
+	background-color:#abb3b7;
+	padding:5px 0px;
+}
+.stato_rda-green {
+	color:white;
+	background-color:#33b655;
+	padding:5px 0px;
+}
+.stato_rda-bianco {
+	color:#000;
+	background-color:white;
+	padding:5px 0px;
 }

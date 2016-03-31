@@ -1,0 +1,115 @@
+"ID","COUNTRY","GAS","Markets","Thread","Norm","Connection Type","Valve Type","Material","Chrome pleted","Pressure","Residual Pressure","Price"
+"Val001","Italy","Acetylene (C2H2)","All markets","D. 20 x D. 10","UNI 4411/1","C - Yoke Outlet","Standard (25E)","Brass","Not",200,"Not","6,5"
+"Val002","Italy","Acetylene (C2H2)","All markets","G 5/8"" Left","UNI 4411/2","A - Female","Standard (25E)","Brass","Not",200,"Not","6,5"
+"Val003","Italy","Anhydrous Ammonia (NH3)","All markets","W 30 x 1/14"" Left","UNI 4407","B - Male","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val004","Italy","Anhydrous Ammonia (NH3)","All markets","W 30 x 1/14"" Left","UNI 4407","B - Male","Standard (25E)","Steel","-",200,"Not",90
+"Val005","Italy","Carbon Dioxide (CO2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard mignon (17E)","Brass","Not",200,"Not",7
+"Val006","Italy","Carbon Dioxide (CO2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard (25E)","Brass","Not",200,"Not",7
+"Val007","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val008","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Standard (25E)","Steel","-",200,"Not",90
+"Val009","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Standard mignon (17E)","Brass","Not",200,"Not",7
+"Val010","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Standard (25E)","Brass","Not",200,"Not",7
+"Val011","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","7,5"
+"Val012","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Standard (25E)","Brass chrome plated","Yes",200,"Not","7,5"
+"Val013","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val014","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard (25E)","Steel","-",200,"Not",90
+"Val015","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard mignon (17E)","Brass","Not",200,"Not",6
+"Val016","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard (25E)","Brass","Not",200,"Not",6
+"Val017","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val018","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard (25E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val019","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Standard mignon (17E)","Brass","Not",200,"Not",6
+"Val020","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Standard (25E)","Brass","Not",200,"Not",6
+"Val021","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val022","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Standard (25E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val023","Italy","Compressed Air","Medical","W 30 x 1/14""","UNI 4410","B - Male","Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val024","Italy","Compressed Air","Medical","W 30 x 1/14""","UNI 4410","B - Male","Standard (25E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val025","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val026","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Standard (25E)","Steel","-",200,"Not",90
+"Val027","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Standard mignon (17E)","Brass","Not",200,"Not",6
+"Val028","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Standard (25E)","Brass","Not",200,"Not",6
+"Val029","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val030","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Standard (25E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val031","Italy","Chlorine (Cl2)","All markets","W 1"" x 1/8""","UNI 4408","B - Male","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val032","Italy","Chlorine (Cl2)","All markets","W 1"" x 1/8""","UNI 4408","B - Male","Standard (25E)","Steel","-",200,"Not",90
+"Val033","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val034","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard (25E)","Steel","-",200,"Not",90
+"Val035","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard mignon (17E)","Brass","Not",200,"Not",6
+"Val036","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Standard (25E)","Brass","Not",200,"Not",6
+"Val037","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Standard mignon (17E)","Steel","-",300,"Not",90
+"Val038","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Standard (25E)","Steel","-",300,"Not",90
+"Val039","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Standard mignon (17E)","Brass","Not",300,"Not",6
+"Val040","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Standard (25E)","Brass","Not",300,"Not",6
+"Val041","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val042","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Standard (25E)","Steel","-",200,"Not",90
+"Val043","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Standard mignon (17E)","Brass","Not",200,"Not",6
+"Val044","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Standard (25E)","Brass","Not",200,"Not",6
+"Val045","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val046","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard (25E)","Steel","-",200,"Not",90
+"Val047","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard mignon (17E)","Brass","Not",200,"Not",6
+"Val048","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard (25E)","Brass","Not",200,"Not",6
+"Val049","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val050","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard (25E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val051","Italy","Propane (C3H8)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/P","B - Male","Standard mignon (17E)","Brass","Not",200,"Not",7
+"Val052","Italy","Propane (C3H8)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/P","B - Male","Standard (25E)","Brass","Not",200,"Not",7
+"Val053","Italy","Nitrous Oxide (N2O)","All markets","G 3/8"" A","UNI 9097","B - Male","Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","7,5"
+"Val054","Italy","Nitrous Oxide (N2O)","All markets","G 3/8"" A","UNI 9097","B - Male","Standard (25E)","Brass chrome plated","Yes",200,"Not","7,5"
+"Val055","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard mignon (17E)","Steel","-",200,"Not",90
+"Val056","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard (25E)","Steel","-",200,"Not",90
+"Val057","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard mignon (17E)","Brass","Not",200,"Not",7
+"Val058","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Standard (25E)","Brass","Not",200,"Not",7
+"Val059","Italy","Carbon Dioxide (CO2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual mignon (17E)","Brass","Not",200,"Residual","10,5"
+"Val060","Italy","Carbon Dioxide (CO2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual (25E)","Brass","Not",200,"Residual","10,5"
+"Val061","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val062","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Residual (25E)","Steel","-",200,"Residual",100
+"Val063","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Residual mignon (17E)","Brass","Not",200,"Residual","10,5"
+"Val064","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Residual (25E)","Brass","Not",200,"Residual","10,5"
+"Val065","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Residual mignon (17E)","Brass chrome plated","Yes",200,"Residual",11
+"Val066","Italy","Carbon Dioxide (CO2)","Medical","D 27 x 2","ISO 5145 Gr.2","B - Male","Residual (25E)","Brass chrome plated","Yes",200,"Residual",11
+"Val067","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val068","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual (25E)","Steel","-",200,"Residual",100
+"Val069","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual mignon (17E)","Brass","Not",200,"Residual",9
+"Val070","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual (25E)","Brass","Not",200,"Residual",9
+"Val071","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual mignon (17E)","Brass chrome plated","Yes",200,"Residual","9,5"
+"Val072","Italy","Argon (Ar)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual (25E)","Brass chrome plated","Yes",200,"Residual","9,5"
+"Val073","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Residual mignon (17E)","Brass","Not",200,"Residual","9,5"
+"Val074","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Residual (25E)","Brass","Not",200,"Residual","9,5"
+"Val075","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Residual mignon (17E)","Brass chrome plated","Yes",200,"Residual",10
+"Val076","Italy","Compressed Air","All markets","W 30 x 1/14""","UNI 4410","B - Male","Residual (25E)","Brass chrome plated","Yes",200,"Residual",10
+"Val077","Italy","Compressed Air","Medical","W 30 x 1/14""","UNI 4410","B - Male","Residual mignon (17E)","Brass chrome plated","Yes",200,"Residual",10
+"Val078","Italy","Compressed Air","Medical","W 30 x 1/14""","UNI 4410","B - Male","Residual (25E)","Brass chrome plated","Yes",200,"Residual",10
+"Val079","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val080","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Residual (25E)","Steel","-",200,"Residual",100
+"Val081","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Residual mignon (17E)","Brass","Not",200,"Residual",9
+"Val082","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Residual (25E)","Brass","Not",200,"Residual",9
+"Val083","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Residual mignon (17E)","Brass chrome plated","Yes",200,"Residual","9,5"
+"Val084","Italy","Nitrogen (N2)","All markets","W 21,7 x 1/14""","UNI 4409","A - Female","Residual (25E)","Brass chrome plated","Yes",200,"Residual","9,5"
+"Val085","Italy","Chlorine (Cl2)","All markets","W 1"" x 1/8""","UNI 4408","B - Male","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val086","Italy","Chlorine (Cl2)","All markets","W 1"" x 1/8""","UNI 4408","B - Male","Residual (25E)","Steel","-",200,"Residual",100
+"Val087","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val088","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual (25E)","Steel","-",200,"Residual",100
+"Val089","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual mignon (17E)","Brass","Not",200,"Residual",9
+"Val090","Italy","Helium (He)","All markets","W 24,5 x 1/14""","UNI 4412 ","A - Female","Residual (25E)","Brass","Not",200,"Residual",9
+"Val091","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Residual mignon (17E)","Steel","-",300,"Residual",100
+"Val092","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Residual (25E)","Steel","-",300,"Residual",9
+"Val093","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Residual mignon (17E)","Brass","Not",300,"Residual",9
+"Val094","Italy","Helium (He)","All markets","W 30","ISO 5145 Gr5","A - Female","Residual (25E)","Brass","Not",300,"Residual",9
+"Val095","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val096","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Residual (25E)","Steel","-",200,"Residual",100
+"Val097","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Residual mignon (17E)","Brass","Not",200,"Residual",9
+"Val098","Italy","Hidrogen (H2)","All markets","W 20 x 1/14"" Sinistro","UNI 4405/H","B - Male","Residual (25E)","Brass","Not",200,"Residual",9
+"Val099","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val100","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual (25E)","Steel","-",200,"Residual",100
+"Val101","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual mignon (17E)","Brass","Not",200,"Residual","9,5"
+"Val102","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual (25E)","Brass","Not",200,"Residual","9,5"
+"Val103","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual mignon (17E)","Brass chrome plated","Yes",200,"Residual",10
+"Val104","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual (25E)","Brass chrome plated","Yes",200,"Residual",10
+"Val105","Italy","Nitrous Oxide (N2O)","All markets","G 3/8"" A","UNI 9097","B - Male","Residual mignon (17E)","Brass chrome plated","Yes",200,"Residual",11
+"Val106","Italy","Nitrous Oxide (N2O)","All markets","G 3/8"" A","UNI 9097","B - Male","Residual (25E)","Brass chrome plated","Yes",200,"Residual",11
+"Val107","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual mignon (17E)","Steel","-",200,"Residual",100
+"Val108","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual (25E)","Steel","-",200,"Residual",100
+"Val109","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual mignon (17E)","Brass","Not",200,"Residual",10
+"Val110","Italy","Refrigerant","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Residual (25E)","Brass","Not",200,"Residual",10
+"Val111","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Reducer Standard mignon (17E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val112","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Reducer Standard (25E)","Brass chrome plated","Yes",200,"Not","6,5"
+"Val113","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Reducer Standard mignon (17E)","Brass chrome plated","Yes",200,"Residual",10
+"Val114","Italy","Oxygen (O2)","All markets","W 21,7 x 1/14""","UNI 4406","B - Male","Reducer Standard (25E)","Brass chrome plated","Yes",200,"Residual",10

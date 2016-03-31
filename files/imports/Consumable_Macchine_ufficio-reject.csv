@@ -1,0 +1,8 @@
+"Errors","Object","ID","Country","Categoria","Settore","Prodotto eng","Prodotto","Confezione","Prezzo","Esclusivo","Obsoleto","IDDestinatario","COGE","Note","QuantDef"
+"Name field is required.",0,"MU038","Italy","Macchine elettrici e accessori","Macchine elettriche per ufficio e accessori","Calcolatrici e ricambi","Calcolatrici e ricambi",,,FALSO,FALSO,"SMR","N010",,
+"Name field is required.",0,"MU039","Italy","Macchine elettrici e accessori","Macchine elettriche per ufficio e accessori","Plastificatrici e ricambi","Plastificatrici e ricambi",,,FALSO,FALSO,"SMR","N010",,
+"Name field is required.",0,"MU040","Italy","Macchine elettrici e accessori","Macchine elettriche per ufficio e accessori","Cucitrici elettriche","Cucitrici elettriche",,,FALSO,FALSO,"SMR","N010",,
+"Name field is required.",0,"MU041","Italy","Macchine elettrici e accessori","Macchine elettriche per ufficio e accessori","Rotoli carta termica","Rotoli carta termica",,,FALSO,FALSO,"SMR","N010",,
+"Name field is required.",0,"MU104","Italy","Toner e cartucce","HP","Toner per stampanti laser HP","Toner per stampanti laser HP",,,FALSO,FALSO,"SMR","N010",VERO,FALSO
+"Name field is required.",0,"MU105","Italy","Toner e cartucce","HP","Cartucce per stampanti inkjet HP","Cartucce per stampanti inkjet HP",,,FALSO,FALSO,"SMR","N010",VERO,FALSO
+"Name field is required.",0,"MU106","Italy","Toner e cartucce","HP","Accessori per stampanti HP","Accessori per stampanti HP",,,FALSO,FALSO,"SMR","N010",VERO,FALSO

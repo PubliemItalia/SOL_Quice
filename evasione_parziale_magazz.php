@@ -155,7 +155,7 @@ switch ($rigan[azienda_prodotto]) {
 	while ($rigap = mysql_fetch_array($risultp)) {
 		$label_ric_mag = $rigap[ric_mag];
 	  if ($rigap[ric_mag] == "mag") {
-		$sost_quant .= "<span style=\"color:red; font-weight:bold;\"> - ".strtoupper($rigap[ric_mag])."</span>";
+		//$sost_quant .= "<span style=\"color:red; font-weight:bold;\"> - ".strtoupper($rigap[ric_mag])."</span>";
 		 $sost_quant .= "<input name=prezzo type=hidden id=prezzo value=".$rigap[prezzo].">";
 	  }
 	}
@@ -175,7 +175,7 @@ switch ($rigan[azienda_prodotto]) {
 	while ($rigap = mysql_fetch_array($risultp)) {
 		$label_ric_mag = $rigap[ric_mag];
 	  if ($rigap[ric_mag] == "mag") {
-		$sost_quant .= "<span style=\"color:red; font-weight:bold;\"> - ".strtoupper($rigap[ric_mag])."</span>";
+		//$sost_quant .= "<span style=\"color:red; font-weight:bold;\"> - ".strtoupper($rigap[ric_mag])."</span>";
 		 $sost_quant .= "<input name=prezzo type=hidden id=prezzo value=".$rigap[prezzo].">";
 	  }
 	}

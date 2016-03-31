@@ -180,7 +180,7 @@ if (isset($_GET['societa'])) {
 $societaDaModulo = $_GET['societa'];
 } 
 if ($societaDaModulo != "") {
-$g = "azienda_prodotto = '".$societaDaModulo."'";
+$g = "azienda_utente = '".$societaDaModulo."'";
 $clausole++;
 }
 
@@ -189,14 +189,14 @@ switch ($doc) {
 	case "F":
 	  $m = "n_ord_sap = ''";
 	  $clausole++;
-	  $ordinamento = "pack_list DESC";
+	  $ordinamento = "azienda_utente ASC";
 	break;
 	case "R":
 	  $m = "n_ord_sap != ''";
 	  $doc = "F";
 	  $arc = "1";
 	  $clausole++;
-	  $ordinamento = "pack_list DESC";
+	  $ordinamento = "azienda_utente ASC";
 	break;
 }
 
@@ -498,9 +498,10 @@ function closeJS(){
 		// Wait for window load
 		$(window).load(function() {
 			// Animate loader off screen
-			$("#layer2").animate({
+			$("#layer2").fadeOut(2000);
+			/*$("#layer2").animate({
 				left: -4000
-			}, 1500);
+			}, 1500);*/
 		});
 	</script>
 
@@ -563,7 +564,7 @@ Stato
 </div>-->
   <?php
 include "testata_amministrazione.php";
-include "modulo_filtri.php"; 
+include "modulo_filtri_fatt.php"; 
 //include "menu_amministrazione.php";
 //div ricerca righe fatturazione
 //if ($clausole > 0) {
@@ -580,18 +581,18 @@ if ($nrRdaDaModulo != "") {
  $sf = 1;
 //$querya = $testoQuery;
 //inizia il corpo della tabella
-$array_units_ids = array();
+$array_company_ids = array();
 $array_units = array();
 $array_pl = array();
 $array_ord_sap = array();
 $array_fatt_sap = array();
 $result = mysql_query($querya);
 while ($row = mysql_fetch_array($result)) {
-	if (!in_array($row[pack_list],$array_pl)) {
-		$add_pl = array_push($array_pl,$row[pack_list]);
+	if (!in_array($row[pack_list].'-'.$row[azienda_prodotto],$array_pl)) {
+		$add_pl = array_push($array_pl,$row[pack_list].'-'.$row[azienda_prodotto]);
 	}
-	if (!in_array($row[nome_unita],$array_units)) {
-		$add_unit = array_push($array_units,$row[nome_unita]);
+	if (!in_array($row[azienda_utente].'-'.$row[azienda_prodotto],$array_company_ids)) {
+		$add_company = array_push($array_company_ids,$row[azienda_utente].'-'.$row[azienda_prodotto]);
 	}
 	if ($row[n_ord_sap] != "0") {
 	  if (!in_array($row[n_ord_sap],$array_ord_sap)) {
@@ -604,65 +605,64 @@ while ($row = mysql_fetch_array($result)) {
 	  }
 	}
 }
-sort($array_units);
-foreach ($array_units as $cada_unit) {
-	$queryt = "SELECT * FROM qui_unita WHERE nome_unita = '$cada_unit'";
-	$resultt = mysql_query($queryt);
-	while ($rowt = mysql_fetch_array($resultt)) {
-	$add_id_unit = array_push($array_units_ids,$rowt[id_unita]);
-	}
-}
 sort($array_fatt_sap);
 sort($array_ord_sap);
-//echo "<span style=\"color:black;\">array_units_ids: ";
-//print_r($array_units_ids);
-//echo "</span><br>";
-
+/*
+echo "<span style=\"color:black;\">array_pl: ";
+print_r($array_pl);
+echo "</span><br>";
+echo "<span style=\"color:black;\">array_company_ids: ";
+print_r($array_company_ids);
+echo "</span><br>";
+*/
 switch ($doc) {
 //BLOCCO PER PAGINA RICHIESTA FATTURA
 case "F":
 case "G":
-foreach ($array_units_ids as $sing_unit) {
-$array_pl_unit = array();
-foreach ($array_pl as $ogni_pl) {
-	$queryw = "SELECT * FROM qui_packing_list WHERE id = '$ogni_pl'";
+foreach ($array_company_ids as $sing_company) {
+  $array_pl_comp = array();
+	$progressivo = $progressivo + 1;
+	$postrat = stripos($sing_company,"-");
+	$venditore = substr($sing_company,($postrat+1));
+	$idcomp = substr($sing_company,0,$postrat);
+	$queryw = "SELECT DISTINCT pack_list FROM qui_righe_rda WHERE azienda_utente = '$idcomp' ORDER BY pack_list ASC";
 	$resultw = mysql_query($queryw);
 	while ($roww = mysql_fetch_array($resultw)) {
-		if ($roww[id_unita] == $sing_unit) {
-		  $add_pl_unit = array_push($array_pl_unit,$ogni_pl);
-		  $blocco_pl .= $ogni_pl.';';
-		}
+	  if (in_array($roww[pack_list].'-'.$venditore,$array_pl)) {
+		$add_pl_comp = array_push($array_pl_comp,$roww[pack_list]);
+		$blocco_pl .= $roww[pack_list].';';
+	  }
 	}
-}
+	
 $blocco_pl = substr($blocco_pl,0,(strlen($blocco_pl)-1));
-foreach ($array_pl_unit as $pl_singolo) {
-  $sommapl =  "SELECT SUM(totale) as totale_pl FROM qui_righe_rda WHERE pack_list = '".$pl_singolo."'";
+foreach ($array_pl_comp as $pl_singolo) {
+  $sommapl =  "SELECT SUM(totale) as totale_pl FROM qui_righe_rda WHERE pack_list = '".$pl_singolo."' AND azienda_prodotto = '$venditore'";
   $resulth = mysql_query($sommapl);
   list($totale_pl) = mysql_fetch_array($resulth);
   $totale_fattura = $totale_fattura + $totale_pl;
 }
-	$contatore = $contatore +1;
-	  echo '<div id= "glob_'.$contatore.'" style="width: 100%; min-height: 30px; overflow: hidden; height: auto;">';
-	echo "<a name=".$contatore.">";
+	  echo '<div id= "glob_'.$progressivo.'" style="width: 100%; min-height: 30px; overflow: hidden; height: auto;">';
+	echo "<a name=".$progressivo.">";
 	  echo '<div class="contenitore_rda_testfatt" style="padding-top: 10px; background-color: #888; color:white; text-decoration:none;">';
-	$queryz = "SELECT * FROM qui_unita WHERE id_unita = '$sing_unit'";
+	$queryz = "SELECT * FROM qui_company WHERE IDCompany = '$idcomp'";
 	$resultz = mysql_query($queryz);
 	while ($rowz = mysql_fetch_array($resultz)) {
-	  $nome_sing_unita = $rowz[nome_unita];
+	  $nome_sing_company = $rowz[Company];
 	}
-	  echo '<div style="width: 150px; height: 20px; float: left;">Unit&agrave; '.$nome_sing_unita.'</div>
+	  echo '<div style="width: 150px; height: 20px; float: left;">'.$nome_sing_company.'</div>
 	  <div style="text-align: right; width: 130px; height: 20px; float: left; margin: 0px 50px 0px 10px;">Totale euro '.number_format($totale_fattura,2,",",".").'</div>';
 	  if (($doc == "F") || ($doc == "R")) {
 	  echo '<div style="width: 400px; height: 20px; float: left; margin-top: -3px;">';
 		if ($visualizza_pulsanti == "1") {
 		  echo '<div style ="width:154px; height:22px; float:left;">';
+			  echo '<input type="hidden" name="venditore'.$progressivo.'" id="venditore'.$progressivo.'" value="'.$venditore.'">';
 		  if ($n_fatt_sap != "") {
-			echo "<input type=text name=ord".$contatore." id=ord".$contatore." disabled style =\"width:150px; height:22px; background-color:#fff; border: 1px solid #E4E4E4; color: #686868; padding-left:3px; padding-top:3px;\" onFocus=\"azzera_campoord(this.id,".$contatore.")\"";
+			echo '<input type="text" name="ord'.$progressivo.'" id="ord'.$progressivo.'" disabled style ="width:150px; height:22px; background-color:#fff; border: 1px solid #E4E4E4; color: #686868; padding-left:3px; padding-top:3px;" onFocus="azzera_campoord(this.id,'.$progressivo.')" onBlur="ripristina_campoord(this.id,'.$progressivo.')"';
 		  } else {
 			if ($n_ord_sap != "") {
-			  echo "<input type=text name=ord".$contatore." id=ord".$contatore." disabled style =\"width:150px; height:22px; background-color:#fff; border: 1px solid #E4E4E4; color: #686868; padding-left:3px; padding-top:3px;\" onFocus=\"azzera_campoord(this.id,".$contatore.")\"";
+			  echo '<input type="text" name="ord'.$progressivo.'" id="ord'.$progressivo.'" disabled style ="width:150px; height:22px; background-color:#fff; border: 1px solid #E4E4E4; color: #686868; padding-left:3px; padding-top:3px;" onFocus="azzera_campoord(this.id,'.$progressivo.')" onBlur="ripristina_campoord(this.id,'.$progressivo.')"';
 			} else {
-			  echo "<input type=text name=ord".$contatore." id=ord".$contatore." style =\"width:150px; height:22px; background-color:#fff; border: 1px solid #E4E4E4; color: #686868; padding-left:3px; padding-top:3px;\" onFocus=\"azzera_campoord(this.id,".$contatore.")\"";
+			  echo '<input type="text" name="ord'.$progressivo.'" id="ord'.$progressivo.'" style ="width:150px; height:22px; background-color:#fff; border: 1px solid #E4E4E4; color: #686868; padding-left:3px; padding-top:3px;" onFocus="azzera_campoord(this.id,'.$progressivo.')" onBlur="ripristina_campoord(this.id,'.$progressivo.')"';
 			}
 		  }
 		  if ($n_ord_sap != "") {
@@ -679,25 +679,26 @@ foreach ($array_pl_unit as $pl_singolo) {
 		  //se il numero fattura sap è inserito,  niente campo, solo valore
 		echo $n_fatt_sap;
 	  } else {
-		echo "<input type=text name=fatt".$contatore." id=fatt".$contatore." style =\"width:150px; height:22px; background-color:#E4E4E4; color: #686868; border: none; padding-left:3px; padding-top:3px;\" onFocus=\"azzera_campofatt(this.id,".$contatore.")\"";
+		echo "<input type=text name=fatt".$sing_company." id=fatt".$sing_company." style =\"width:150px; height:22px; background-color:#E4E4E4; color: #686868; border: none; padding-left:3px; padding-top:3px;\" onFocus=\"azzera_campofatt(this.id,".$sing_company.")\"";
 		  echo ' value="Fattura SAP">';
 	  }
 	} else {
 		//altrimenti il campo n fatt sap è disabilitato
-	  echo "<input type=text name=fatt".$contatore." id=fatt".$contatore." disabled style =\"width:150px; height:22px; background-color:#E4E4E4; color: #686868; border: none; padding-left:3px; padding-top:3px;\"";
+	  echo "<input type=text name=fatt".$sing_company." id=fatt".$sing_company." disabled style =\"width:150px; height:22px; background-color:#E4E4E4; color: #686868; border: none; padding-left:3px; padding-top:3px;\"";
 	  if ($n_fatt_sap != "") {
-		echo " value=".$contatore.">";
+		echo " value=".$sing_company.">";
 	  } else {
 		echo ' value="Fattura SAP">';
 	  }
 	}
 	echo "</div>";	
+echo 'blocco_pl: '.$blocco_pl.'<br>';
 */	
 	$blocco_pl = str_replace("|",";",$blocco_pl);
 	switch ($doc) {
 		case "F":
 		  if ($n_ord_sap == "") {
-			echo "<a href=\"javascript:void(0);\"><div style =\"width:auto; height:14px; font-size: 13px; background-color:#F63; margin-left:10px; color:white; float:left; padding:4px;\" onClick=\"salvataggio_ordine('".$blocco_pl."',".$sing_unit.",".$contatore."); notifica_salvataggio(".$sing_pl.");\">";
+			echo '<a href="javascript:void(0);"><div style ="width:auto; height:14px; font-size: 13px; background-color:#F63; margin-left:10px; color:white; float:left; padding:4px;" onClick="salvataggio_ordine(\''.$blocco_pl.'\','.$idcomp.','.$progressivo.'); notifica_salvataggio('.$sing_pl.');">';
 			echo "Inserisci";
 			echo "</div></a>";
 		  }
@@ -706,12 +707,23 @@ foreach ($array_pl_unit as $pl_singolo) {
   }
 	  echo '</div>';
 }
-	  echo '<div id="pulsante_'.$contatore.'" style="width: 30px; height: 20px; float: right; margin-right: 20px; margin-top: -3px; cursor:pointer; text-align: right;" onclick="vis_invis_unit('.$contatore.')"><img src="immagini/a-piu.png"></div>';
+	  echo '<div id="pulsante_'.$progressivo.'" style="width: 30px; height: 20px; float: right; margin-right: 20px; margin-top: -3px; cursor:pointer; text-align: right;" onclick="vis_invis_unit('.$progressivo.')"><img src="immagini/a-piu.png"></div>';
 	  if ($nrRdaDaModulo == "") {
-	  echo "<div style=\"width: 50px; height: 20px; float: right; margin-right: 20px; cursor:pointer;\" onclick=\"PopupCenter('vista_fattura.php?mode=print&blocco_pl=".$blocco_pl."&unit=".$sing_unit."', 'myPop1',800,800);\">PDF</div>";
+	  echo "<div style=\"width: 50px; height: 20px; float: right; margin-right: 20px; cursor:pointer;\" onclick=\"PopupCenter('vista_fattura.php?mode=print&blocco_pl=".$blocco_pl."&company=".$idcomp."&venditore=".$venditore."', 'myPop1',800,800);\">PDF</div>";
 	  }
+	  echo '<div style="width: 50px; height: 20px; float: right; margin-right: 20px;">';
+	switch($venditore) {
+		case "SOL":
+		  echo '<img src="immagini/bottone-sol.png" border="0">';
+		break;
+		case "VIVISOL":
+		  echo '<img src="immagini/bottone-vivisol.png" border="0">';
+		break;
+	}/**/
+	echo '</div>';
+/*  
 foreach ($array_pl as $cad_pl) {
-	$queryw = "SELECT * FROM qui_packing_list WHERE id = '$cad_pl' AND id_unita = '$sing_unit'";
+	$queryw = "SELECT * FROM qui_packing_list WHERE id = '$cad_pl' AND id_unita = '$sing_company'";
 	$resultw = mysql_query($queryw);
 	while ($roww = mysql_fetch_array($resultw)) {
 	  $logo_pl = $roww[logo];
@@ -727,10 +739,11 @@ foreach ($array_pl as $cad_pl) {
 		break;
 	}
 	echo "</div>";
+*/	
 	  echo "</div>";
-  echo "<div id=unit".$contatore." class=contenitore_pl_unit>";
-foreach ($array_pl as $sing_pl) {
-	$queryx = "SELECT * FROM qui_packing_list WHERE id = '$sing_pl' AND id_unita = '$sing_unit'";
+  echo "<div id=unit".$progressivo." class=contenitore_pl_unit>";
+foreach ($array_pl_comp as $sing_pl) {
+	$queryx = "SELECT * FROM qui_packing_list WHERE id = '$sing_pl'";
 	$resultx = mysql_query($queryx);
 	$presenza_pl = mysql_num_rows($resultx);
 	while ($rowx = mysql_fetch_array($resultx)) {
@@ -800,7 +813,7 @@ foreach ($array_pl as $sing_pl) {
 	  echo "<div class=contenitore_gruppo_merci style=\"margin-top:5px; width:800px; float:left;\">";
 	  echo "RdA ".$sing_rdapl;
 	  echo "</div>";
-		$sum_parz_rda = "SELECT SUM(totale) as somma_parz_rda FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl'";
+		$sum_parz_rda = "SELECT SUM(totale) as somma_parz_rda FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND azienda_prodotto = '$venditore'";
 		  $resultf = mysql_query($sum_parz_rda);
 		  list($somma_parz_rda) = mysql_fetch_array($resultf);
 	  echo '<div class="box_130_dx" style="font-weight:bold; width: 100px; float: right; padding-right:0px;">';
@@ -808,7 +821,7 @@ foreach ($array_pl as $sing_pl) {
 	  echo "</div>";
 	  $somma_parz_rda = "";
 	  //if ($clausole <= 5) {
-		$queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' ORDER BY gruppo_merci ASC";
+		$queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND azienda_prodotto = '$venditore' ORDER BY gruppo_merci ASC";
 	  //} else {
 		//$queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND dest_contab = '$dest_contab' ORDER BY gruppo_merci ASC";
 	  //}
@@ -828,7 +841,7 @@ foreach ($array_pl as $sing_pl) {
 			$descrizione_gruppo_merci = $rows[descrizione];
 			$codice_sap = $rows[codice_sap];
 		  }
-			$sum_grm = "SELECT SUM(totale) as somma_grm FROM qui_righe_rda WHERE pack_list = '$sing_pl' AND gruppo_merci = '$gruppo_merci_uff'";
+			$sum_grm = "SELECT SUM(totale) as somma_grm FROM qui_righe_rda WHERE pack_list = '$sing_pl' AND gruppo_merci = '$gruppo_merci_uff' AND azienda_prodotto = '$venditore'";
 		  $resultz = mysql_query($sum_grm);
 		  list($somma_grm) = mysql_fetch_array($resultz);
 		  $totale_grm = $somma_grm;
@@ -902,7 +915,7 @@ $totale_fattura = "";
   //fine div glob_
   echo "</div>";	
 $blocco_pl = '';
-  //FINE FOREACH UNITA'
+  //FINE FOREACH COMPANY
 }
 break;
 //BLOCCO PER PAGINA REGISTRAZIONE FATTURA
@@ -922,55 +935,47 @@ foreach ($array_ord_sap as $sing_ord) {
 	while ($rowx = mysql_fetch_array($resultx)) {
 	  $n_fatt_sap = $rowx[n_fatt_sap];
 	 $id_fatt = $rowx[id];
+	$sing_company = $rowx[id_company];
+	$nome_sing_company = $rowx[nome_company];
+	$logo_fatt = $rowx[logo];
 	}
 $array_pl_ord = array();
-foreach ($array_pl as $ogni_pl) {
-	$queryw = "SELECT * FROM qui_packing_list WHERE id = '$ogni_pl'";
+	$queryw = "SELECT * FROM qui_packing_list WHERE n_ord_sap = '$sing_ord'";
 	$resultw = mysql_query($queryw);
 	while ($roww = mysql_fetch_array($resultw)) {
-		if ($roww[n_ord_sap] == $sing_ord) {
-		  $sing_unit = $roww[id_unita];
-		  $add_pl_ord = array_push($array_pl_ord,$ogni_pl);
-		  $blocco_pl .= $ogni_pl.';';
-		}
+		  $add_pl_ord = array_push($array_pl_ord,$roww[id]);
+		  $blocco_pl .= $roww[id].';';
 	}
-}
 $blocco_pl = substr($blocco_pl,0,(strlen($blocco_pl)-1));
-foreach ($array_pl_ord as $pl_singolo) {
-  $sommapl =  "SELECT SUM(totale) as totale_pl FROM qui_righe_rda WHERE pack_list = '".$pl_singolo."'";
+  $sommapl =  "SELECT SUM(totale) as totale_fatt FROM qui_righe_rda WHERE n_ord_sap = '".$sing_ord."'";
   $resulth = mysql_query($sommapl);
-  list($totale_pl) = mysql_fetch_array($resulth);
-  $totale_fattura = $totale_fattura + $totale_pl;
-}
-	$contatore = $contatore +1;
-	  echo '<div id= "glob_'.$contatore.'" style="width: 100%; min-height: 30px; overflow: hidden; height: auto;">';
-	echo "<a name=".$contatore.">";
+  list($totale_fatt) = mysql_fetch_array($resulth);
+  $importo_fatt = $totale_fatt;
+	  echo '<div id= "glob_'.$id_fatt.'" style="width: 100%; min-height: 30px; overflow: hidden; height: auto;">';
+	echo "<a name=".$id_fatt.">";
 	  echo '<div class="contenitore_rda_testfatt" style="padding-top: 10px; background-color: #888; color:white; text-decoration:none;">';
-	$queryz = "SELECT * FROM qui_unita WHERE id_unita = '$sing_unit'";
-	$resultz = mysql_query($queryz);
-	while ($rowz = mysql_fetch_array($resultz)) {
-	  $nome_sing_unita = $rowz[nome_unita];
-	}
-	  echo '<div style="width: 150px; height: 20px; float: left;">Unit&agrave; '.$nome_sing_unita.'</div>
-	  <div style="text-align: right; width: 130px; height: 20px; float: left; margin: 0px 50px 0px 10px;">Totale euro '.number_format($totale_fattura,2,",",".").'</div>';
+	  echo '<div style="width: 150px; height: 20px; float: left;">'.$nome_sing_company.'</div>
+	  <div style="text-align: right; width: 130px; height: 20px; float: left; margin: 0px 50px 0px 10px;">Totale euro '.number_format($importo_fatt,2,",",".").'</div>';
 	  echo '<div style="width: 400px; height: 20px; float: left; margin-top: -3px;">';
 		if ($visualizza_pulsanti == "1") {
 		  echo '<div style ="width:154px; height:22px; float:left;">';
-			echo "<span style=\"margin:1px 5px 0px 0px; color: #dedede;\">Ord. n. </span><input type=text name=ord".$contatore." id=ord".$contatore." disabled style =\"width:100px; height:22px; background-color: transparent !important; border: none; color: #dedede; font-weight: normal !important; padding-left:0px; margin-top: -1px;\" onFocus=\"azzera_campoord(this.id,".$contatore.")\"";
+			echo "<span style=\"margin:1px 5px 0px 0px; color: #dedede;\">Ord. n. </span><input type=text name=ord".$id_fatt." id=ord".$id_fatt." disabled style =\"width:100px; height:22px; background-color: transparent !important; border: none; color: #dedede; font-weight: normal !important; padding-left:0px; margin-top: -1px;\" onFocus=\"azzera_campoord(this.id,".$id_fatt.")\"";
 			echo " value=".$sing_ord.">";
 		  echo "</div>";	
 	echo '<div style="width:154px; height:22px; margin-left:10px; float:left;">';
-	  if ($n_fatt_sap != "") {
+echo '<input type="hidden" name="venditore'.$id_fatt.'" id="venditore'.$id_fatt.'" value="'.$logo_fatt.'">';
+if ($n_fatt_sap != "") {
 		  //se il numero fattura sap è inserito,  niente campo, solo valore
 		echo '<div style="margin:3px 5px 0px 0px; color: #dedede; font-weight: normal !important;">Fatt. n '.$n_fatt_sap.'</div>';
 	  } else {
-		echo "<input type=text name=fatt".$contatore." id=fatt".$contatore." style =\"width:150px; height:22px; color: #686868; border: none; padding-left:3px; padding-top:3px;\" onFocus=\"azzera_campofatt(this.id,".$contatore.")\"";
+		echo '<input type="text" name="fatt'.$id_fatt.'" id="fatt'.$id_fatt.'" style="width:150px; height:22px; color: #686868; border: none; padding-left:3px; padding-top:3px;" onFocus="azzera_campofatt(this.id,'.$id_fatt.')" onBlur="ripristina_campofatt(this.id,'.$id_fatt.')"';
 		  echo ' value="Fattura SAP">';
 	  }
 	echo "</div>";	
 		  if ($n_fatt_sap == "") {
 			  $blocco_pl = str_replace("|",";",$blocco_pl);
-			echo "<a href=\"javascript:void(0);\"><div style =\"width:auto; height:14px; font-size: 13px; background-color:#F63; margin-left:10px; color:white; float:left; padding:4px;\" onClick=\"salvataggio_fattura('".$blocco_pl."',".$id_fatt.",".$contatore.")\">";
+			  $blocco_pl = str_replace(""," ",$blocco_pl);
+			echo '<a href=javascript:void(0);"><div style ="width:auto; height:14px; font-size: 13px; background-color:#F63; margin-left:10px; color:white; float:left; padding:4px;" onClick="salvataggio_fattura(\''.$blocco_pl.'\','.$id_fatt.')">';
 			echo "Inserisci";
 			echo "</div></a>";
 		  }
@@ -980,30 +985,29 @@ foreach ($array_pl_ord as $pl_singolo) {
 
 
 
-	  echo '<div id="pulsante_'.$contatore.'" style="width: 30px; height: 20px; float: right; margin-right: 20px; margin-top: -3px; cursor:pointer; text-align: right;" onclick="vis_invis_unit('.$contatore.')"><img src="immagini/a-piu.png"></div>';
+	  echo '<div id="pulsante_'.$id_fatt.'" style="width: 30px; height: 20px; float: right; margin-right: 20px; margin-top: -3px; cursor:pointer; text-align: right;" onclick="vis_invis_unit('.$id_fatt.')"><img src="immagini/a-piu.png"></div>';
 	  if ($nrRdaDaModulo == "") {
-	  echo "<div style=\"width: 30px; height: 20px; float: right; margin-right: 20px; cursor:pointer;\" onclick=\"PopupCenter('vista_fattura.php?mode=print&blocco_pl=".$blocco_pl."&unit=".$sing_unit."', 'myPop1',800,800);\">PDF</div>";
+	  echo "<div style=\"width: 30px; height: 20px; float: right; margin-right: 20px; cursor:pointer;\" onclick=\"PopupCenter('vista_fattura.php?mode=print&blocco_pl=".$blocco_pl."&company=".$sing_company."&venditore=".$logo_fatt."', 'myPop1',800,800);\">PDF</div>";
 	  }
-foreach ($array_pl_ord as $cad_pl) {
-	$queryw = "SELECT * FROM qui_packing_list WHERE id = '$cad_pl'";
-	$resultw = mysql_query($queryw);
-	while ($roww = mysql_fetch_array($resultw)) {
-	  $logo_pl = $roww[logo];
-	}
-}
+/*	  
+*/
 	echo "<div id=logo_".$cad_pl." style =\"width:30px; height:20px; margin-right:25px; float:right;\">";
-	switch($logo_pl) {
+	switch($logo_fatt) {
 		case "sol":
+		case "SOL":
 		  echo '<img src="immagini/bottone-sol.png" border="0">';
 		break;
 		case "vivisol":
+		case "VIVISOL":
 		  echo '<img src="immagini/bottone-vivisol.png" border="0">';
 		break;
 	}
+	/*
+*/	
 	echo "</div>";
 	  echo "</div>";
 	echo "</a>";
-  echo "<div id=unit".$contatore." class=contenitore_pl_unit>";
+  echo "<div id=unit".$id_fatt." class=contenitore_pl_unit>";
 foreach ($array_pl_ord as $sing_pl) {
   $array_rda_pl = array();
   $array_resp = array();
@@ -1066,7 +1070,7 @@ foreach ($array_pl_ord as $sing_pl) {
 	  echo "<div class=contenitore_gruppo_merci style=\"margin-top:5px; width:800px; float:left;\">";
 	  echo "RdA ".$sing_rdapl;
 	  echo "</div>";
-		$sum_parz_rda = "SELECT SUM(totale) as somma_parz_rda FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl'";
+		$sum_parz_rda = "SELECT SUM(totale) as somma_parz_rda FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND n_ord_sap = '$sing_ord'";
 		  $resultf = mysql_query($sum_parz_rda);
 		  list($somma_parz_rda) = mysql_fetch_array($resultf);
 	  echo '<div class="box_130_dx" style="font-weight:bold; width: 100px; float: right; padding-right:0px;">';
@@ -1074,12 +1078,12 @@ foreach ($array_pl_ord as $sing_pl) {
 	  echo "</div>";
 	  $somma_parz_rda = "";
 	  //if ($clausole <= 5) {
-		$queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' ORDER BY gruppo_merci ASC";
+		$queryg = "SELECT * FROM qui_righe_rda WHERE pack_list = '$sing_pl' AND n_ord_sap = '$sing_ord' ORDER BY gruppo_merci ASC";
 	  //} else {
-		//$queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND dest_contab = '$dest_contab' ORDER BY gruppo_merci ASC";
+		//$queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND n_ord_sap = '$n_ord_sap' ORDER BY gruppo_merci ASC";
 	  //}
 	 //echo '<span style="color:red;">clausole: '.$clausole.'<br>';
-	 //echo $queryg.'</span><br>';
+	// echo '<span style="color:red;">'.$queryg.'</span><br>';
 	  $resultg = mysql_query($queryg);
 	  while ($rowg = mysql_fetch_array($resultg)) {
 		if ($rowg[gruppo_merci] != $gruppo_merci_uff) {
@@ -1094,7 +1098,7 @@ foreach ($array_pl_ord as $sing_pl) {
 			$descrizione_gruppo_merci = $rows[descrizione];
 			$codice_sap = $rows[codice_sap];
 		  }
-			$sum_grm = "SELECT SUM(totale) as somma_grm FROM qui_righe_rda WHERE pack_list = '$sing_pl' AND gruppo_merci = '$gruppo_merci_uff'";
+			$sum_grm = "SELECT SUM(totale) as somma_grm FROM qui_righe_rda WHERE pack_list = '$sing_pl' AND gruppo_merci = '$gruppo_merci_uff' AND n_ord_sap = '$sing_ord'";
 		  $resultz = mysql_query($sum_grm);
 		  list($somma_grm) = mysql_fetch_array($resultz);
 		  $totale_grm = $somma_grm;
@@ -1285,6 +1289,14 @@ if(campo_ord == "Ordine SAP") {
 document.getElementById('ord'+pl).value = '';
 }
 }
+function ripristina_campoord(id,pl) {
+var campo_ord = document.getElementById('ord'+pl).value;
+var id_ord = document.getElementById('ord'+pl).id;
+	/*alert(id);*/
+if(campo_ord == "") {
+document.getElementById('ord'+pl).value = 'Ordine SAP';
+}
+}
 
 function azzera_campofatt(id,contatore) {
 var campo_fatt = document.getElementById('fatt'+contatore).value;
@@ -1294,10 +1306,20 @@ if(campo_fatt == "Fattura SAP") {
 document.getElementById('fatt'+contatore).value = '';
 }
 }
+function ripristina_campofatt(id,contatore) {
+var campo_fatt = document.getElementById('fatt'+contatore).value;
+var id_fatt = document.getElementById('fatt'+contatore).id;
+	/*alert(id_fatt);*/
+if(campo_fatt == "") {
+document.getElementById('fatt'+contatore).value = 'Fattura SAP';
+}
+}
 
-function salvataggio_ordine(blocco_pl,unita,contatore){
-  var n_ord = document.getElementById('ord'+contatore).value;
-  if(document.getElementById('ord'+contatore).disabled==false) {
+function salvataggio_ordine(blocco_pl,company,progr){
+  var venditore = document.getElementById('venditore'+progr).value;
+  var n_ord = document.getElementById('ord'+progr).value;
+	  /*alert("venditore: "+venditore);*/
+  if(document.getElementById('ord'+progr).disabled==false) {
 	if((n_ord == "") || n_ord == "Ordine SAP") {
 	  alert("Errore: Valore del numero ordine SAP non valido");
 	  n_ord.focus();
@@ -1307,9 +1329,9 @@ function salvataggio_ordine(blocco_pl,unita,contatore){
 		$.ajax({
 		  type: "POST",   
 		  url: "aggiorna_ordine_sap.php",   
-		  data: "n_ord="+n_ord+"&blocco_pl="+blocco_pl+"&unita="+unita+"&check_ord=1",
+		  data: "n_ord="+n_ord+"&blocco_pl="+blocco_pl+"&company="+company+"&venditore="+venditore+"&check_ord=1",
 		  success: function(output) {
-		  $('#glob_'+contatore).html(output).show();
+		  $('#glob_'+progr).html(output).show();
 		  }
 		});
 		return true
@@ -1317,13 +1339,14 @@ function salvataggio_ordine(blocco_pl,unita,contatore){
 	}
   }
 }
-function salvataggio_fattura(blocco_pl,id,contatore){
-  var n_ord = document.getElementById('ord'+contatore).value;
-  var n_fatt = document.getElementById('fatt'+contatore).value;
+function salvataggio_fattura(blocco_pl,id){
+  var n_ord = document.getElementById('ord'+id).value;
+  var n_fatt = document.getElementById('fatt'+id).value;
 	  /*
 	  alert("ordine SAP "+n_ord);
+	  alert("n_fatt "+n_fatt);
 	  */
-  if(document.getElementById('fatt'+contatore).disabled==false) {
+  if(document.getElementById('fatt'+id).disabled==false) {
 	if((n_fatt == "") || n_fatt == "Fattura SAP") {
 	  alert("Errore: Valore del numero fattura SAP non valido");
 	  n_fatt.focus();
@@ -1335,7 +1358,7 @@ function salvataggio_fattura(blocco_pl,id,contatore){
 		  url: "aggiorna_ordine_sap.php",   
 		  data: "n_ord="+n_ord+"&blocco_pl="+blocco_pl+"&n_fatt="+n_fatt+"&id="+id+"&check_fatt=1",
 		  success: function(output) {
-		  $('#glob_'+contatore).html(output).show();
+		  $('#glob_'+id).html(output).show();
 		  }
 		});
 		return true
@@ -1426,7 +1449,7 @@ function vis_invis_unit(contatore)  {
         }else{
 		  $.ajax({
 			type: "POST",   
-			url: "motore_ricerca_MSC.php",   
+			url: "motore_ricerca_MSC_fatt.php",   
 			data: "societa="+socval+"&nr_pl="+nr_pl+"&shop="+shopval+"&unita="+unitaval+"&nr_rda="+nr_rda+"&data_inizio="+data_inizio_val+"&data_fine="+data_fine_val+"&file_presente=<?php echo $file_presente; ?>"+"&doc=<?php echo $doc; ?>",
 			success: function(output) {
 			$('#contenitore_msc').html(output).show();

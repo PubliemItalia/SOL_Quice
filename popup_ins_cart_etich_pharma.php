@@ -533,6 +533,24 @@ case "mag":
 	echo "</div>";
 	  echo "</div>";
 break;
+case "prev":
+	//caso per tutti quegli articoli che non hanno ancora il prezzo e per cui bisogna richiedere un preventivo
+switch ($lingua) {
+	case "it":
+	$dic_prev = "Prodotto non disponibile a magazzino.<br><br>Per richiedere un preventivo ";
+	$dic_prev2 = "<a href=\"mailto:d.cassini@sol.it?subject=Richiesta preventivo etichette cod. ".$codice_art."&bcc=mara.girardi@publiem.it;diego.sala@publiem.it\">clicca qui</a>";
+	//$dic_prev3 = "<br><br>oppure manda una mail a<br>mara.girardi@publiem.it";
+	break;
+	case "en":
+	$dic_prev = "This product isn't available.<br><br>To ask for a quotation ";
+	$dic_prev2 = "<a href=\"mailto:d.cassini@sol.it?subject=Quotation request for labels code ".$codice_art."&bcc=mara.girardi@publiem.it;diego.sala@publiem.it\">click here</a>";
+	//$dic_prev3 = "<br><br>or send an email to<br>mara.girardi@publiem.it";
+	break;
+}
+    echo '<div class="riga_generale" style="margin-bottom: 100px;">';
+	echo '<span style="text-decoration:none !important; color:red !important; font-size: 12px !important;">'.$dic_prev.$dic_prev2.'</span>';
+  echo "</div>";
+break;
 case "maglab":
 	//solo per le etichette, il prezzo è da recuperare nella tabella "qui_pharma_quant_prezzi" prezzo unitario senza considerare coefficienti da iperbole
     echo "<div class=riga_generale>";

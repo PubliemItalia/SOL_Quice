@@ -1,0 +1,25 @@
+"ID","Country","Type","Vessel","GAS"," Capacity ","UP with economizer","Filling Connection","Supplier","High Flow","Price"
+"PU001","ITALY","Spirit 300","Portable Unit","LOX"," 0.3 ","Yes","Side Fill","Chart","Not",704
+"PU002","ITALY","Spirit 300","Portable Unit","LOX"," 0.3 ","Yes","Top Fill Penox","Chart","Not",704
+"PU003","ITALY","Spirit 300","Portable Unit","LOX"," 0.3 ","Yes","Top Fill Puritan Bennet","Chart","Not",704
+"PU004","ITALY","Spirit 300","Portable Unit","LOX"," 0.3 ","Yes","Top Fill Taema","Chart","Not",704
+"PU005","ITALY","Sprint","Portable Unit","LOX"," 0.6 ","Not","Side Fill","Chart","Not",611
+"PU006","ITALY","Sprint","Portable Unit","LOX"," 0.6 ","Not","Top Fill Penox","Chart","Not",611
+"PU007","ITALY","Sprint","Portable Unit","LOX"," 0.6 ","Not","Top Fill Puritan Bennet","Chart","Not",611
+"PU008","ITALY","Sprint","Portable Unit","LOX"," 0.6 ","Not","Top Fill Taema","Chart","Not",611
+"PU009","ITALY","Spirit 600","Portable Unit","LOX"," 0.6 ","Yes","Side Fill","Chart","Not",749
+"PU010","ITALY","Spirit 600","Portable Unit","LOX"," 0.6 ","Yes","Top Fill Penox","Chart","Not",749
+"PU011","ITALY","Spirit 600","Portable Unit","LOX"," 0.6 ","Yes","Top Fill Puritan Bennet","Chart","Not",749
+"PU012","ITALY","Spirit 600","Portable Unit","LOX"," 0.6 ","Yes","Top Fill Taema","Chart","Not",749
+"PU013","ITALY","Stroller","Portable Unit","LOX"," 1.2 ","Not","Side Fill","Chart","Not",611
+"PU014","ITALY","Stroller","Portable Unit","LOX"," 1.2 ","Not","Top Fill Penox","Chart","Not",611
+"PU015","ITALY","Stroller","Portable Unit","LOX"," 1.2 ","Not","Top Fill Puritan Bennet","Chart","Not",611
+"PU016","ITALY","Stroller","Portable Unit","LOX"," 1.2 ","Not","Top Fill Taema","Chart","Not",611
+"PU017","ITALY","Stroller HF","Portable Unit","LOX"," 1.2 ","Not","Side Fill","Chart","Yes",711
+"PU018","ITALY","Stroller HF","Portable Unit","LOX"," 1.2 ","Not","Top Fill Penox","Chart","Yes",711
+"PU019","ITALY","Stroller HF","Portable Unit","LOX"," 1.2 ","Not","Top Fill Puritan Bennet","Chart","Yes",711
+"PU020","ITALY","Stroller HF","Portable Unit","LOX"," 1.2 ","Not","Top Fill Taema","Chart","Yes",711
+"PU021","ITALY","Walky","Portable Unit","LOX"," 1.2 ","Not","Top Fill Penox","VRV","Not",611
+"PU022","ITALY","Walky","Portable Unit","LOX"," 1.2 ","Not","Top Fill Puritan Bennet","VRV","Not",611
+"PU023","ITALY","Walky","Portable Unit","LOX"," 1.2 ","Not","Top Fill Taema","VRV","Not",611
+"PU024","ITALY","Bag","Bag",,,,,"VRV",,

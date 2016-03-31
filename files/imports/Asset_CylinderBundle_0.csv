@@ -1,0 +1,576 @@
+"ID","Vessel","Material","Cylinder Capacity","Bundle Tipe/Number of cylinders","W. Pressure","Markets","GAS","Valve type of bundle","Material valve of bundle","Deep tube","Material deep tube","Price"
+"CBU001","Bundle","Steel",40,9,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU002","Bundle","Steel",40,9,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU003","Bundle","Steel",40,9,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU004","Bundle","Steel",40,9,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU005","Bundle","Steel",50,9,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU006","Bundle","Steel",50,9,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU007","Bundle","Steel",50,9,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU008","Bundle","Steel",50,9,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU009","Bundle","Steel",40,9,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU010","Bundle","Steel",40,9,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU011","Bundle","Steel",40,9,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU012","Bundle","Steel",40,9,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU013","Bundle","Steel",50,9,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU014","Bundle","Steel",50,9,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU015","Bundle","Steel",50,9,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU016","Bundle","Steel",50,9,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU017","Bundle","Steel",40,9,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU018","Bundle","Steel",40,9,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU019","Bundle","Steel",40,9,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU020","Bundle","Steel",50,9,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU021","Bundle","Steel",50,9,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU022","Bundle","Steel",50,9,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU023","Bundle","Steel",40,9,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU024","Bundle","Steel",40,9,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU025","Bundle","Steel",40,9,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU026","Bundle","Steel",50,9,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU027","Bundle","Steel",50,9,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU028","Bundle","Steel",50,9,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU029","Bundle","Steel",40,9,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU030","Bundle","Steel",40,9,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU031","Bundle","Steel",40,9,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU032","Bundle","Steel",50,9,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU033","Bundle","Steel",50,9,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU034","Bundle","Steel",50,9,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU035","Bundle","Steel",40,9,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU036","Bundle","Steel",40,9,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU037","Bundle","Steel",40,9,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU038","Bundle","Steel",50,9,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU039","Bundle","Steel",50,9,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU040","Bundle","Steel",50,9,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU041","Bundle","Steel",40,9,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU042","Bundle","Steel",40,9,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU043","Bundle","Steel",40,9,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU044","Bundle","Steel",40,9,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU045","Bundle","Steel",50,9,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU046","Bundle","Steel",50,9,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU047","Bundle","Steel",50,9,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU048","Bundle","Steel",50,9,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU049","Bundle","Steel",40,9,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU050","Bundle","Steel",40,9,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU051","Bundle","Steel",50,9,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU052","Bundle","Steel",50,9,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU053","Bundle","Steel",40,9,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU054","Bundle","Steel",40,9,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU055","Bundle","Steel",50,9,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU056","Bundle","Steel",50,9,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU057","Bundle","Steel",40,9,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU058","Bundle","Steel",40,9,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU059","Bundle","Steel",40,9,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU060","Bundle","Steel",40,9,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU061","Bundle","Steel",50,9,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU062","Bundle","Steel",50,9,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU063","Bundle","Steel",50,9,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU064","Bundle","Steel",50,9,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU065","Bundle","Steel",40,9,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU066","Bundle","Steel",40,9,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU067","Bundle","Steel",40,9,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU068","Bundle","Steel",40,9,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU069","Bundle","Steel",50,9,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU070","Bundle","Steel",50,9,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU071","Bundle","Steel",50,9,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU072","Bundle","Steel",50,9,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU073","Bundle","Steel",40,9,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU074","Bundle","Steel",40,9,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU075","Bundle","Steel",40,9,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU076","Bundle","Steel",40,9,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU077","Bundle","Steel",50,9,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU078","Bundle","Steel",50,9,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU079","Bundle","Steel",50,9,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU080","Bundle","Steel",50,9,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1300
+"CBU081","Bundle","Steel",40,9,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU082","Bundle","Steel",40,9,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU083","Bundle","Steel",40,9,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU084","Bundle","Steel",40,9,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU085","Bundle","Steel",50,9,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU086","Bundle","Steel",50,9,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU087","Bundle","Steel",50,9,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU088","Bundle","Steel",50,9,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU089","Bundle","Steel",40,9,"---","Industrial","Acetylene (C2H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU090","Bundle","Steel",50,9,"---","Industrial","Acetylene (C2H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU091","Bundle","Steel",40,9,"---","Pure","Acetylene (C2H2)","1 x higt flow residual pressure","Brass","Not","---",1300
+"CBU092","Bundle","Steel",40,12,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU093","Bundle","Steel",40,12,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU094","Bundle","Steel",40,12,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU095","Bundle","Steel",40,12,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU096","Bundle","Steel",50,12,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU097","Bundle","Steel",50,12,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU098","Bundle","Steel",50,12,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU099","Bundle","Steel",50,12,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU100","Bundle","Steel",40,12,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU101","Bundle","Steel",40,12,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU102","Bundle","Steel",40,12,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU103","Bundle","Steel",40,12,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU104","Bundle","Steel",50,12,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU105","Bundle","Steel",50,12,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU106","Bundle","Steel",50,12,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU107","Bundle","Steel",50,12,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU108","Bundle","Steel",40,12,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU109","Bundle","Steel",40,12,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU110","Bundle","Steel",40,12,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU111","Bundle","Steel",50,12,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU112","Bundle","Steel",50,12,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU113","Bundle","Steel",50,12,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU114","Bundle","Steel",40,12,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU115","Bundle","Steel",40,12,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU116","Bundle","Steel",40,12,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU117","Bundle","Steel",50,12,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU118","Bundle","Steel",50,12,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU119","Bundle","Steel",50,12,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU120","Bundle","Steel",40,12,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU121","Bundle","Steel",40,12,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU122","Bundle","Steel",40,12,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU123","Bundle","Steel",50,12,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU124","Bundle","Steel",50,12,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU125","Bundle","Steel",50,12,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU126","Bundle","Steel",40,12,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU127","Bundle","Steel",40,12,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU128","Bundle","Steel",40,12,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU129","Bundle","Steel",50,12,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU130","Bundle","Steel",50,12,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU131","Bundle","Steel",50,12,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU132","Bundle","Steel",40,12,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU133","Bundle","Steel",40,12,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU134","Bundle","Steel",40,12,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU135","Bundle","Steel",40,12,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU136","Bundle","Steel",50,12,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU137","Bundle","Steel",50,12,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU138","Bundle","Steel",50,12,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU139","Bundle","Steel",50,12,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU140","Bundle","Steel",40,12,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU141","Bundle","Steel",40,12,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU142","Bundle","Steel",50,12,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU143","Bundle","Steel",50,12,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU144","Bundle","Steel",40,12,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU145","Bundle","Steel",40,12,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU146","Bundle","Steel",50,12,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU147","Bundle","Steel",50,12,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU148","Bundle","Steel",40,12,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU149","Bundle","Steel",40,12,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU150","Bundle","Steel",40,12,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU151","Bundle","Steel",40,12,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU152","Bundle","Steel",50,12,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU153","Bundle","Steel",50,12,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU154","Bundle","Steel",50,12,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU155","Bundle","Steel",50,12,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU156","Bundle","Steel",40,12,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU157","Bundle","Steel",40,12,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU158","Bundle","Steel",40,12,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU159","Bundle","Steel",40,12,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU160","Bundle","Steel",50,12,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU161","Bundle","Steel",50,12,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU162","Bundle","Steel",50,12,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU163","Bundle","Steel",50,12,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU164","Bundle","Steel",40,12,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU165","Bundle","Steel",40,12,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU166","Bundle","Steel",40,12,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU167","Bundle","Steel",40,12,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU168","Bundle","Steel",50,12,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU169","Bundle","Steel",50,12,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU170","Bundle","Steel",50,12,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU171","Bundle","Steel",50,12,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1450
+"CBU172","Bundle","Steel",40,12,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU173","Bundle","Steel",40,12,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU174","Bundle","Steel",40,12,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU175","Bundle","Steel",40,12,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU176","Bundle","Steel",50,12,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU177","Bundle","Steel",50,12,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU178","Bundle","Steel",50,12,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU179","Bundle","Steel",50,12,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1450
+"CBU180","Bundle","Steel",40,16,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU181","Bundle","Steel",40,16,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU182","Bundle","Steel",40,16,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU183","Bundle","Steel",40,16,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU184","Bundle","Steel",50,16,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU185","Bundle","Steel",50,16,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU186","Bundle","Steel",50,16,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU187","Bundle","Steel",50,16,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU188","Bundle","Steel",50,16,"300 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU189","Bundle","Steel",50,16,"300 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU190","Bundle","Steel",50,16,"300 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU191","Bundle","Steel",50,16,"300 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU192","Bundle","Steel",40,16,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU193","Bundle","Steel",40,16,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU194","Bundle","Steel",40,16,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU195","Bundle","Steel",40,16,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU196","Bundle","Steel",50,16,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU197","Bundle","Steel",50,16,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU198","Bundle","Steel",50,16,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU199","Bundle","Steel",50,16,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU200","Bundle","Steel",50,16,"300 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU201","Bundle","Steel",50,16,"300 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU202","Bundle","Steel",50,16,"300 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU203","Bundle","Steel",50,16,"300 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU204","Bundle","Steel",40,16,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU205","Bundle","Steel",40,16,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU206","Bundle","Steel",40,16,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU207","Bundle","Steel",50,16,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU208","Bundle","Steel",50,16,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU209","Bundle","Steel",50,16,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU210","Bundle","Steel",50,16,"300 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU211","Bundle","Steel",50,16,"300 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU212","Bundle","Steel",50,16,"300 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU213","Bundle","Steel",40,16,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU214","Bundle","Steel",40,16,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU215","Bundle","Steel",40,16,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU216","Bundle","Steel",50,16,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU217","Bundle","Steel",50,16,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU218","Bundle","Steel",50,16,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU219","Bundle","Steel",50,16,"300 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU220","Bundle","Steel",40,16,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU221","Bundle","Steel",40,16,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU222","Bundle","Steel",40,16,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU223","Bundle","Steel",50,16,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU224","Bundle","Steel",50,16,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU225","Bundle","Steel",50,16,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU226","Bundle","Steel",40,16,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU227","Bundle","Steel",40,16,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU228","Bundle","Steel",40,16,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU229","Bundle","Steel",50,16,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU230","Bundle","Steel",50,16,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU231","Bundle","Steel",50,16,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU232","Bundle","Steel",50,16,"300 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU233","Bundle","Steel",50,16,"300 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU234","Bundle","Steel",50,16,"300 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU235","Bundle","Steel",40,16,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU236","Bundle","Steel",40,16,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU237","Bundle","Steel",40,16,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU238","Bundle","Steel",40,16,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU239","Bundle","Steel",50,16,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU240","Bundle","Steel",50,16,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU241","Bundle","Steel",50,16,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU242","Bundle","Steel",50,16,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU243","Bundle","Steel",50,16,"300 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU244","Bundle","Steel",50,16,"300 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU245","Bundle","Steel",50,16,"300 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU246","Bundle","Steel",50,16,"300 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU247","Bundle","Steel",40,16,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU248","Bundle","Steel",40,16,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU249","Bundle","Steel",50,16,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU250","Bundle","Steel",50,16,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU251","Bundle","Steel",50,16,"300 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU252","Bundle","Steel",50,16,"300 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU253","Bundle","Steel",40,16,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU254","Bundle","Steel",40,16,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU255","Bundle","Steel",50,16,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU256","Bundle","Steel",50,16,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU257","Bundle","Steel",40,16,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU258","Bundle","Steel",40,16,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU259","Bundle","Steel",40,16,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU260","Bundle","Steel",40,16,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU261","Bundle","Steel",50,16,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU262","Bundle","Steel",50,16,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU263","Bundle","Steel",50,16,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU264","Bundle","Steel",50,16,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU265","Bundle","Steel",50,16,"300 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU266","Bundle","Steel",50,16,"300 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU267","Bundle","Steel",50,16,"300 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU268","Bundle","Steel",50,16,"300 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU269","Bundle","Steel",40,16,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU270","Bundle","Steel",40,16,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU271","Bundle","Steel",40,16,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU272","Bundle","Steel",40,16,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU273","Bundle","Steel",50,16,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU274","Bundle","Steel",50,16,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU275","Bundle","Steel",50,16,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU276","Bundle","Steel",50,16,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU277","Bundle","Steel",40,16,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU278","Bundle","Steel",40,16,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU279","Bundle","Steel",40,16,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU280","Bundle","Steel",40,16,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU281","Bundle","Steel",50,16,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU282","Bundle","Steel",50,16,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU283","Bundle","Steel",50,16,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU284","Bundle","Steel",50,16,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1600
+"CBU285","Bundle","Steel",40,16,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU286","Bundle","Steel",40,16,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU287","Bundle","Steel",40,16,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU288","Bundle","Steel",40,16,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU289","Bundle","Steel",50,16,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU290","Bundle","Steel",50,16,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU291","Bundle","Steel",50,16,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU292","Bundle","Steel",50,16,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU293","Bundle","Steel",50,16,"---","Pure","Acetylene (C2H2)","1 x higt flow residual pressure","Brass","Not","---",1600
+"CBU294","Bundle","Steel",50,18,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU295","Bundle","Steel",50,18,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU296","Bundle","Steel",50,18,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU297","Bundle","Steel",50,18,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU298","Bundle","Steel",50,18,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU299","Bundle","Steel",50,18,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU300","Bundle","Steel",50,18,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU301","Bundle","Steel",50,18,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU302","Bundle","Steel",50,18,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU303","Bundle","Steel",50,18,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU304","Bundle","Steel",50,18,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU305","Bundle","Steel",50,18,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU306","Bundle","Steel",50,18,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU307","Bundle","Steel",50,18,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU308","Bundle","Steel",50,18,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU309","Bundle","Steel",50,18,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU310","Bundle","Steel",50,18,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU311","Bundle","Steel",50,18,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU312","Bundle","Steel",50,18,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU313","Bundle","Steel",50,18,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU314","Bundle","Steel",50,18,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU315","Bundle","Steel",50,18,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU316","Bundle","Steel",50,18,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU317","Bundle","Steel",50,18,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU318","Bundle","Steel",50,18,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU319","Bundle","Steel",50,18,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU320","Bundle","Steel",50,18,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU321","Bundle","Steel",50,18,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU322","Bundle","Steel",50,18,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU323","Bundle","Steel",50,18,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU324","Bundle","Steel",50,18,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU325","Bundle","Steel",50,18,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU326","Bundle","Steel",50,18,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU327","Bundle","Steel",50,18,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU328","Bundle","Steel",50,18,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU329","Bundle","Steel",50,18,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU330","Bundle","Steel",50,18,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU331","Bundle","Steel",50,18,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU332","Bundle","Steel",50,18,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU333","Bundle","Steel",50,18,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU334","Bundle","Steel",50,18,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU335","Bundle","Steel",50,18,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU336","Bundle","Steel",50,18,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU337","Bundle","Steel",50,18,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU338","Bundle","Steel",40,18,"200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU339","Bundle","Steel",40,18,"200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU340","Bundle","Steel",40,18,"200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU341","Bundle","Steel",40,18,"200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU342","Bundle","Steel",40,18,"200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU343","Bundle","Steel",40,18,"200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU344","Bundle","Steel",40,18,"200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU345","Bundle","Steel",40,18,"200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU346","Bundle","Steel",40,18,"200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU347","Bundle","Steel",40,18,"200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU348","Bundle","Steel",40,18,"200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU349","Bundle","Steel",40,18,"200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU350","Bundle","Steel",40,18,"200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU351","Bundle","Steel",40,18,"200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU352","Bundle","Steel",40,18,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU353","Bundle","Steel",40,18,"200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU354","Bundle","Steel",40,18,"200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU355","Bundle","Steel",40,18,"200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU356","Bundle","Steel",40,18,"200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU357","Bundle","Steel",40,18,"200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU358","Bundle","Steel",40,18,"200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU359","Bundle","Steel",40,18,"200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU360","Bundle","Steel",40,18,"200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU361","Bundle","Steel",40,18,"200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU362","Bundle","Steel",40,18,"200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU363","Bundle","Steel",40,18,"200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU364","Bundle","Steel",40,18,"200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU365","Bundle","Steel",40,18,"200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU366","Bundle","Steel",40,18,"200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU367","Bundle","Steel",40,18,"200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU368","Bundle","Steel",40,18,"200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU369","Bundle","Steel",40,18,"200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU370","Bundle","Steel",40,18,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU371","Bundle","Steel",40,18,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU372","Bundle","Steel",40,18,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU373","Bundle","Steel",40,18,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU374","Bundle","Steel",40,18,"---","Industrial","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU375","Bundle","Steel",40,18,"---","Medical","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU376","Bundle","Steel",40,18,"---","Pure","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU377","Bundle","Steel",40,18,"---","Food","Carbon Dioxide (CO2)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1700
+"CBU378","Bundle","Steel",40,18,"---","Industrial","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU379","Bundle","Steel",40,18,"---","Medical","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU380","Bundle","Steel",40,18,"---","Pure","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU381","Bundle","Steel",40,18,"---","Food","Nitrous Oxide (N2O)","1 x higt flow residual pressure","Brass","Not","---",1700
+"CBU382","Bundle","Steel",40,"20 H","200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU383","Bundle","Steel",40,"20 H","200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU384","Bundle","Steel",40,"20 H","200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU385","Bundle","Steel",40,"20 H","200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU386","Bundle","Steel",40,"20 H","200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU387","Bundle","Steel",40,"20 H","200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU388","Bundle","Steel",40,"20 H","200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU389","Bundle","Steel",40,"20 H","200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU390","Bundle","Steel",40,"20 H","200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU391","Bundle","Steel",40,"20 H","200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU392","Bundle","Steel",40,"20 H","200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU393","Bundle","Steel",40,"20 H","200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU394","Bundle","Steel",40,"20 H","200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU395","Bundle","Steel",40,"20 H","200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU396","Bundle","Steel",40,"20 H","200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU397","Bundle","Steel",40,"20 H","200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU398","Bundle","Steel",40,"20 H","200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU399","Bundle","Steel",40,"20 H","200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU400","Bundle","Steel",40,"20 H","200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU401","Bundle","Steel",40,"20 H","200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU402","Bundle","Steel",40,"20 H","200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU403","Bundle","Steel",40,"20 H","200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU404","Bundle","Steel",40,"20 H","200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU405","Bundle","Steel",40,"20 H","200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU406","Bundle","Steel",40,"20 H","200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU407","Bundle","Steel",40,"20 H","200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU408","Bundle","Steel",40,"20 H","200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU409","Bundle","Steel",40,"20 H","200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU410","Bundle","Steel",40,"20 H","200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU411","Bundle","Steel",40,"20 H","200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU412","Bundle","Steel",40,"20 H","200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU413","Bundle","Steel",40,"20 H","200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU414","Bundle","Steel",50,"20 H","200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU415","Bundle","Steel",50,"20 H","200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU416","Bundle","Steel",50,"20 H","200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU417","Bundle","Steel",50,"20 H","200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU418","Bundle","Steel",50,"20 H","200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU419","Bundle","Steel",50,"20 H","200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU420","Bundle","Steel",50,"20 H","200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU421","Bundle","Steel",50,"20 H","200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU422","Bundle","Steel",50,"20 H","200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU423","Bundle","Steel",50,"20 H","200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU424","Bundle","Steel",50,"20 H","200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU425","Bundle","Steel",50,"20 H","200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU426","Bundle","Steel",50,"20 H","200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU427","Bundle","Steel",50,"20 H","200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU428","Bundle","Steel",50,"20 H","200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU429","Bundle","Steel",50,"20 H","200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU430","Bundle","Steel",50,"20 H","200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU431","Bundle","Steel",50,"20 H","200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU432","Bundle","Steel",50,"20 H","200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU433","Bundle","Steel",50,"20 H","200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU434","Bundle","Steel",50,"20 H","200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU435","Bundle","Steel",50,"20 H","200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU436","Bundle","Steel",50,"20 H","200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU437","Bundle","Steel",50,"20 H","200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU438","Bundle","Steel",50,"20 H","200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU439","Bundle","Steel",50,"20 H","200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU440","Bundle","Steel",50,"20 H","200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU441","Bundle","Steel",50,"20 H","200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU442","Bundle","Steel",50,"20 H","200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU443","Bundle","Steel",50,"20 H","200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU444","Bundle","Steel",50,"20 H","200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU445","Bundle","Steel",50,"20 H","200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU446","Bundle","Steel",50,"20 H S","200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU447","Bundle","Steel",50,"20 H S","200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU448","Bundle","Steel",50,"20 H S","200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU449","Bundle","Steel",50,"20 H S","200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU450","Bundle","Steel",50,"20 H S","200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU451","Bundle","Steel",50,"20 H S","200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU452","Bundle","Steel",50,"20 H S","200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU453","Bundle","Steel",50,"20 H S","200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU454","Bundle","Steel",50,"20 H S","200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU455","Bundle","Steel",50,"20 H S","200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU456","Bundle","Steel",50,"20 H S","200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU457","Bundle","Steel",50,"20 H S","200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU458","Bundle","Steel",50,"20 H S","200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU459","Bundle","Steel",50,"20 H S","200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU460","Bundle","Steel",50,"20 H S","200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU461","Bundle","Steel",50,"20 H S","200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU462","Bundle","Steel",50,"20 H S","200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU463","Bundle","Steel",50,"20 H S","200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU464","Bundle","Steel",50,"20 H S","200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU465","Bundle","Steel",50,"20 H S","200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU466","Bundle","Steel",50,"20 H S","200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU467","Bundle","Steel",50,"20 H S","200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU468","Bundle","Steel",50,"20 H S","200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU469","Bundle","Steel",50,"20 H S","200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU470","Bundle","Steel",50,"20 H S","200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU471","Bundle","Steel",50,"20 H S","200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU472","Bundle","Steel",50,"20 H S","200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU473","Bundle","Steel",50,"20 H S","200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU474","Bundle","Steel",50,"20 H S","200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU475","Bundle","Steel",50,"20 H S","200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU476","Bundle","Steel",50,"20 H S","200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU477","Bundle","Steel",50,"20 H S","200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU478","Bundle","Steel",40,"20 H S","200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU479","Bundle","Steel",40,"20 H S","200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU480","Bundle","Steel",40,"20 H S","200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU481","Bundle","Steel",40,"20 H S","200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU482","Bundle","Steel",40,"20 H S","200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU483","Bundle","Steel",40,"20 H S","200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU484","Bundle","Steel",40,"20 H S","200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU485","Bundle","Steel",40,"20 H S","200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU486","Bundle","Steel",40,"20 H S","200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU487","Bundle","Steel",40,"20 H S","200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU488","Bundle","Steel",40,"20 H S","200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU489","Bundle","Steel",40,"20 H S","200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU490","Bundle","Steel",40,"20 H S","200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU491","Bundle","Steel",40,"20 H S","200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU492","Bundle","Steel",40,"20 H S","200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU493","Bundle","Steel",40,"20 H S","200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU494","Bundle","Steel",40,"20 H S","200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",2000
+"CBU495","Bundle","Steel",40,"20 H S","200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU496","Bundle","Steel",40,"20 H S","200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU497","Bundle","Steel",40,"20 H S","200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU498","Bundle","Steel",40,"20 H S","200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU499","Bundle","Steel",40,"20 H S","200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU500","Bundle","Steel",40,"20 H S","200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU501","Bundle","Steel",40,"20 H S","200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU502","Bundle","Steel",40,"20 H S","200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU503","Bundle","Steel",40,"20 H S","200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU504","Bundle","Steel",40,"20 H S","200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU505","Bundle","Steel",40,"20 H S","200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU506","Bundle","Steel",40,"20 H S","200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU507","Bundle","Steel",40,"20 H S","200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU508","Bundle","Steel",40,"20 H S","200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU509","Bundle","Steel",40,"20 H S","200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",2000
+"CBU510","Bundle","Steel",40,"20 V","200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU511","Bundle","Steel",40,"20 V","200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU512","Bundle","Steel",40,"20 V","200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU513","Bundle","Steel",40,"20 V","200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU514","Bundle","Steel",40,"20 V","200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU515","Bundle","Steel",40,"20 V","200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU516","Bundle","Steel",40,"20 V","200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU517","Bundle","Steel",40,"20 V","200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU518","Bundle","Steel",40,"20 V","200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU519","Bundle","Steel",40,"20 V","200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU520","Bundle","Steel",40,"20 V","200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU521","Bundle","Steel",40,"20 V","200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU522","Bundle","Steel",40,"20 V","200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU523","Bundle","Steel",40,"20 V","200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU524","Bundle","Steel",40,"20 V","200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU525","Bundle","Steel",40,"20 V","200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU526","Bundle","Steel",40,"20 V","200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU527","Bundle","Steel",40,"20 V","200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU528","Bundle","Steel",40,"20 V","200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU529","Bundle","Steel",40,"20 V","200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU530","Bundle","Steel",40,"20 V","200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU531","Bundle","Steel",40,"20 V","200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU532","Bundle","Steel",40,"20 V","200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU533","Bundle","Steel",40,"20 V","200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU534","Bundle","Steel",40,"20 V","200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU535","Bundle","Steel",40,"20 V","200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU536","Bundle","Steel",40,"20 V","200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU537","Bundle","Steel",40,"20 V","200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU538","Bundle","Steel",40,"20 V","200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU539","Bundle","Steel",40,"20 V","200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU540","Bundle","Steel",40,"20 V","200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU541","Bundle","Steel",40,"20 V","200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU542","Bundle","Steel",50,"20 V","200 bar","Industrial","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU543","Bundle","Steel",50,"20 V","200 bar","Medical","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU544","Bundle","Steel",50,"20 V","200 bar","Pure","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU545","Bundle","Steel",50,"20 V","200 bar","Food","Oxygen (O2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU546","Bundle","Steel",50,"20 V","200 bar","Industrial","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU547","Bundle","Steel",50,"20 V","200 bar","Medical","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU548","Bundle","Steel",50,"20 V","200 bar","Pure","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU549","Bundle","Steel",50,"20 V","200 bar","Food","Nitrogen (N2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU550","Bundle","Steel",50,"20 V","200 bar","Industrial","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU551","Bundle","Steel",50,"20 V","200 bar","Pure","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU552","Bundle","Steel",50,"20 V","200 bar","Food","Argon (Ar)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU553","Bundle","Steel",50,"20 V","200 bar","Industrial","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU554","Bundle","Steel",50,"20 V","200 bar","Pure","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU555","Bundle","Steel",50,"20 V","200 bar","Food","Helium (He)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU556","Bundle","Steel",50,"20 V","200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU557","Bundle","Steel",50,"20 V","200 bar","Pure","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU558","Bundle","Steel",50,"20 V","200 bar","Food","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",1750
+"CBU559","Bundle","Steel",50,"20 V","200 bar","Industrial","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU560","Bundle","Steel",50,"20 V","200 bar","Medical"," Medical Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU561","Bundle","Steel",50,"20 V","200 bar","Pure","Air","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU562","Bundle","Steel",50,"20 V","200 bar","Industrial","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU563","Bundle","Steel",50,"20 V","200 bar","Medical","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU564","Bundle","Steel",50,"20 V","200 bar","Pure","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU565","Bundle","Steel",50,"20 V","200 bar","Food","Inert Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU566","Bundle","Steel",50,"20 V","200 bar","Industrial","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU567","Bundle","Steel",50,"20 V","200 bar","Pure","Flammable Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU568","Bundle","Steel",50,"20 V","200 bar","Industrial","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU569","Bundle","Steel",50,"20 V","200 bar","Pure","Hidrogen Mixture (H2-Mix)","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU570","Bundle","Steel",50,"20 V","200 bar","Industrial","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU571","Bundle","Steel",50,"20 V","200 bar","Medical","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU572","Bundle","Steel",50,"20 V","200 bar","Pure","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU573","Bundle","Steel",50,"20 V","200 bar","Food","Oxidant Mixture","1 x higt flow residual pressure","Brass","Yes","Aluminium",1750
+"CBU574","Scarabeo","Steel",50,90,"200 bar","Industrial","Hidrogen (H2)","1 x higt flow residual pressure","Brass","Not","---",30000
+"CBU575","Scarabeo","Steel",50,90,"200 bar","Industrial","Acetylene (C2H2)","1 x higt flow residual pressure","Brass","Not","---",35000
