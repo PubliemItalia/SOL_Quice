@@ -67,10 +67,13 @@ body {
 .puls_margine {
 	margin-bottom:10px;
 }
+.puls_altezza {
+	height: 37px;
+	overflow:hidden;
+}
 .puls_sap {
 	font-family: Arial;
 	width: 100%;
-	height: 35px;
 	}
 .puls_mag_vivisol {
   /* IE 8 */
@@ -89,7 +92,6 @@ body {
   opacity: 0.7;
   	font-family: Arial;
 	width: 100%;
-	height: 35px;
 }
 .puls_mag_vivisol:hover {
   /* IE 8 */
@@ -110,28 +112,23 @@ body {
 .puls_sap_vivisol {
 	font-family: Arial;
 	width: 100%;
-	height: 35px;
 	}
 	
 .puls_mag {
 	font-family: Arial;
 	width: 100%;
-	height: 35px;
 	}
 .puls_ord_sol {
 	font-family: Arial;
 	width: 100%;
-	height: 35px;
 	}
 .puls_ord_vivisol {
 	font-family: Arial;
 	width: 100%;
-	height: 35px;
 	}
 .puls_mag_lab {
 	font-family: Arial;
 	width: 100%;
-	height: 35px;
 	}
 html {
 	margin-bottom:20px !important;
@@ -192,34 +189,39 @@ if ($num_righe > 0) {
 	  <div style="width:60%; min-height:60px; overflow: hidden; height: auto; color:rgb(0,0,0); float: left;">';
 		  switch ($flusso) {
 		  case "":
-			echo '<a href="genera_tracciato_sap.php?output_ok=1&output_mode=sap&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="sap" class="puls_sap puls_margine">
-		  <img src="immagini/btn_green_freccia_sap_on.png" style="width: 227px; height:35px; cursor: pointer;">
+			echo '<a href="genera_tracciato_sap.php?output_ok=1&output_mode=sap&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="sap" class="puls_sap puls_margine puls_altezza">
+		  <img id="sapd" src="immagini/btn_green_freccia_sap_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 			</div></a>';
-			echo '<a href="genera_magazzino.php?output_ok=1&output_mode=mag&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="mag" class="puls_mag puls_margine">
-		  <img src="immagini/btn_green_freccia_mag_on.png" style="width: 227px; height:35px; cursor: pointer;">
+			echo '<a href="genera_magazzino.php?output_ok=1&output_mode=mag&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="mag" class="puls_mag puls_margine puls_altezza">
+		  <img src="immagini/btn_green_freccia_mag_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 			</div></a>';
-			echo '<a href="genera_magazzino.php?output_ok=1&output_mode=lab&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="lab" class="puls_mag_lab puls_margine">
-		  <img src="immagini/btn_green_freccia_labels_on.png" style="width: 227px; height:35px; cursor: pointer;">
+			echo '<a href="genera_magazzino.php?output_ok=1&output_mode=lab&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="lab" class="puls_mag_lab puls_margine puls_altezza">
+		  <img src="immagini/btn_green_freccia_labels_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 			</div></a>';
-			echo '<a href="genera_ordine.php?output_ok=1&output_mode=ord&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='. $lingua.'&logo=sol"><div id="ord_sol" class="puls_ord_sol puls_margine">
-		  <img src="immagini/btn_green_freccia_sol_on.png" style="width: 227px; height:35px; cursor: pointer;">
+			echo '<a href="genera_ordine.php?output_ok=1&output_mode=ord&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='. $lingua.'&logo=sol"><div id="ord_sol" class="puls_ord_sol puls_margine puls_altezza">
+		  <img src="immagini/btn_green_freccia_sol_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 			</div></a>';
-			echo '<a href="genera_ordine.php?output_ok=1&output_mode=ord&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='. $lingua.'&logo=vivisol"><div id="ord_viv" class="puls_ord_vivisol puls_margine">
-		  <img src="immagini/btn_green_freccia_vivisol_on.png" style="width: 227px; height:35px; cursor: pointer;">
+			echo '<a href="genera_ordine.php?output_ok=1&output_mode=ord&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='. $lingua.'&logo=vivisol"><div id="ord_viv" class="puls_ord_vivisol puls_margine puls_altezza">
+		  <img src="immagini/btn_green_freccia_vivisol_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 		  </div></a>';
 		  break;
 		  case "bmc":
-		  echo '<a href="genera_tracciato_sap.php?output_ok=1&flusso=bmc&output_mode=bmc&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="sap_viv" class="puls_sap_vivisol puls_margine">
-		  <img src="immagini/btn_green_freccia_sapviv_on.png" style="width: 227px; height:35px; cursor: pointer;">
+		  echo '<a href="genera_tracciato_sap.php?output_ok=1&flusso=bmc&output_mode=bmc&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="sap_viv" class="puls_sap_vivisol puls_margine puls_altezza">
+		  <img src="immagini/btn_green_freccia_sapviv_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 		  </div></a>';		
-		  echo '<a href="genera_magazzino.php?output_ok=1&output_mode=bmc&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="mag_viv" class="puls_mag_vivisol puls_margine">
-		  <img src="immagini/btn_green_freccia_magviv_on.png" style="width: 227px; height:35px; cursor: pointer;">
+		  echo '<a href="genera_magazzino.php?output_ok=1&output_mode=bmc&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="mag_viv" class="puls_mag_vivisol puls_margine puls_altezza">
+		  <img src="immagini/btn_green_freccia_magviv_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 		  </div></a>';
 		  break;
 		  case "htc":
-		  echo '<a href="genera_magazzino.php?output_ok=1&output_mode=htc&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="mag_viv" class="puls_mag_vivisol puls_margine">
-		  <img src="immagini/btn_green_freccia_magviv_on.png" style="width: 227px; height:35px; cursor: pointer;">
+		  echo '<a href="genera_magazzino.php?output_ok=1&output_mode=htc&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='.$lingua.'"><div id="mag_viv" class="puls_mag_vivisol puls_margine puls_altezza">
+		  <img src="immagini/btn_green_freccia_magviv_onoff.png" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
 		  </div></a>';
+		  break;
+		  case "pre":
+			echo '<a href="genera_ordine.php?output_ok=1&output_mode=ord&id='.$id.'&id_utente='.$_SESSION[user_id].'&lang='. $lingua.'&logo=sol"><div id="ord_sold" class="puls_ord_sol puls_margine puls_altezza">
+		  <img src="immagini/prenota_onoff.png" id="ord_sol" style="cursor: pointer;" onmouseover="scambioOn(this)" onmouseout="scambioOff(this)">
+			</div></a>';
 		  break;
 		  }
 		}
@@ -233,15 +235,18 @@ if ($num_righe > 0) {
 	</div>
 	';
 }
-?>   
+?> 
+
 <script type="text/javascript">
-function passa_sopra(mode){
+function scambioOn(x){
+    x.style.margin = "-47px 0px 0px 0px";
 	/*
-	alert(mode);
-	*/
-		  switch (mode) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+	alert(x);
+		  switch (id) {
 		  case "sap":
-		  var imgsost = '<img src="immagini/btn_green_freccia_sap_off.png" style="width: 227px; height:35px; cursor: pointer;">';
+			id.style.margin = "20px 0px 0px 0px";
 		  break;
 		  case "mag":
 		  var imgsost = '<img src="immagini/btn_green_freccia_mag_off.png" style="width: 227px; height:35px; cursor: pointer;">';
@@ -261,16 +266,20 @@ function passa_sopra(mode){
 		  case "mag_viv":
 		  var imgsost = '<img src="immagini/btn_green_freccia_magviv_off.png" style="width: 227px; height:35px; cursor: pointer;">';
 		  break;
+		  case "pre":
+			var imgsost = '<img src="immagini/prenota_on.png" style="width: 227px; height:35px; cursor: pointer;">';
+		  break;
 		  }
 	$('#'+mode).html(imgsost).show();
-}
-function passa_fuori(mode2){
-	/*
-	alert(mode);
 	*/
-		  switch (mode2) {
+}
+function scambioOff(x){
+    x.style.margin = "0px 0px 0px 0px";
+	/*
+	alert(mode2+',off');
+		  switch (id) {
 		  case "sap":
-		  var imgsost2 = '<img src="immagini/btn_green_freccia_sap_on.png" style="width: 227px; height:35px; cursor: pointer;">';
+			id.style.margin = "0px 0px 0px 0px";
 		  break;
 		  case "mag":
 		  var imgsost2 = '<img src="immagini/btn_green_freccia_mag_on.png" style="width: 227px; height:35px; cursor: pointer;">';
@@ -290,8 +299,12 @@ function passa_fuori(mode2){
 		  case "mag_viv":
 		  var imgsost2 = '<img src="immagini/btn_green_freccia_magviv_on.png" style="width: 227px; height:35px; cursor: pointer;">';
 		  break;
+		  case "pre":
+			var imgsost2 = '<img src="immagini/prenota_off.png" style="width: 227px; height:35px; cursor: pointer;">';
+		  break;
 		  }
 	$('#'+mode2).html(imgsost2).show();
+	*/
 }
  </script>      
 </body>

@@ -583,7 +583,11 @@ $limite_max = 800;
 		}
 		$altezza_reale = $altezza_reale + 32;
 		$blocco .= '<div style="width:593px; min-height:20px; overflow: hidden; height: auto; margin-left: 119px;">';
-		  $blocco .= '<div class="contenitore_riga_fattura" style="font-size: 12px; width:583px; min-height:15px; overflow:hidden; height:32px; padding-left:0px;">';
+		if ($rowg[stato_ordine] < 4) {
+		  $blocco .= '<div class="contenitore_riga_fattura" style="font-size: 12px; width:583px; min-height:15px; overflow:hidden; height:32px; padding-left:0px; border-bottom: 1px solid #bbb;">';
+		} else {
+		  $blocco .= '<div class="contenitore_riga_fattura" style="font-size: 12px; width:583px; min-height:15px; overflow:hidden; height:32px; padding-left:0px; background-color: #eee; border-bottom: 1px solid #bbb;">';
+		}
 		  $blocco .= '<div class="box_60">';
 		  if (substr($rowg[codice_art],0,1) != "*") {
 			$blocco .= $rowg[codice_art];
@@ -591,22 +595,41 @@ $limite_max = 800;
 			$blocco .= substr($rowg[codice_art],1);
 		  }
 		  $blocco .= "</div>";
-		  $blocco .= '<div class="box_350" style="width:295px; border-left: 1px solid #666; padding-left: 5px; padding-bottom:2px;">';
+		  $blocco .= '<div class="box_350" style="width:295px; border-left: 1px solid #666; padding-left: 5px; padding-bottom:2px; padding-top: 2px; ">';
 		  $blocco .= stripslashes($rowg[descrizione]);
 		  $blocco .= "</div>";
-		  $blocco .= '<div class="box_60" style="text-align:right; width:60px; float:right; padding-right: 5px; background-color: #ededed; padding-bottom:5px;">';
+		  $blocco .= '<div class="box_60" style="text-align:right; width:60px; float:right; padding-right: 5px; padding-top: 2px; padding-bottom:2px;">';
 		  $blocco .= number_format($rowg[totale],2,",",".");
 		  $blocco .= "</div>";
-		  $blocco .= '<div class="box_60" style="text-align:center; width:60px; float:right;padding-bottom:5px;">';
+		  $blocco .= '<div class="box_60" style="text-align:center; width:60px; float:right; padding-top: 2px; padding-bottom:2px;">';
 		  $blocco .= intval($rowg[quant]);
 		  $blocco .= "</div>";
-		  $blocco .= '<div class="box_60" style="text-align:center; width:60px; float:right;padding-bottom:5px;">';
+		  $blocco .= '<div class="box_60" style="text-align:center; width:60px; float:right; padding-top: 2px; padding-bottom:2px;">';
 		  $blocco .= intval($rowg[confezione]);
 		  $blocco .= "</div>";
-		  /*$blocco .= '<div class="box_90" style="text-align:right; width:70px; float:right;">';
-		  $blocco .= number_format($rowg[totale],2,",",".");
+		if ($rowg[stato_ordine] == 4) {
+		  $blocco .= '<div class="box_90" style="text-align:right; width:150px; padding-right: 2px; padding-top: 2px; float:right; color: #000; font-size: 10px;">';
+		  switch ($rowg[output_mode]) {
+			  case 'mag':
+			  case 'lab':
+			  case 'htc':
+			  case 'bmc':
+				$blocco .= 'PL '.$rowg[pack_list];
+			  break;
+			  case 'sap':
+				$blocco .= 'ord '.$rowg[fornitore_tx].' '.$rowg[ord_fornitore];
+			  break;
+			  case 'ord':
+				$queryp = "SELECT * FROM qui_righe_ordini_for WHERE id_riga_rda = '$rowg[id]'";
+				$resultp = mysql_query($queryp);
+				while ($rowp = mysql_fetch_array($resultp)) {
+					$blocco .= 'Ord. fornitore '.$rowp[id_ordine_for];
+				}
+			  break;
+		  }
 		  $blocco .= "</div>";
-		  $blocco .= '<div class="box_40" style="text-align:center; display:none;">';
+		}
+		  /*$blocco .= '<div class="box_40" style="text-align:center; display:none;">';
 		  $blocco .= $rowg[output_mode];
 		  $blocco .= "</div>";*/
 		  $x = $x + 1;

@@ -823,18 +823,26 @@ while ($rigaq = mysql_fetch_array($risultq)) {
 			  echo "</div>";
 		  echo "<div class=scritte_bottoncini>".$price."</div>"; 
 		echo "<div class=bottoncini>";
-		if ($rigaq[prezzo] > 0) {
-			echo number_format($rigaq[prezzo],2,",",".");
-		} else {
-		  switch ($_SESSION[lang]) {
-			case "it":
-			  echo "da calcolare";
-			break;
-			case "en":
-			  echo "to be quoted";
-			break;
+		  if ($rigaq[prezzo] > 0) {
+			if ($rigaq[extra] != "") {
+				  $sqlp = "SELECT * FROM qui_pharma_quant_prezzi WHERE tipologia = '$rigaq[extra]'";
+				  $risultp = mysql_query($sqlp) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+				  while ($rigap = mysql_fetch_array($risultp)) {
+					  echo number_format($rigap[prezzo],2,",",".");
+				}
+			} else {
+				echo number_format($rigaq[prezzo],2,",",".");
+			}
+		  } else {
+			switch ($_SESSION[lang]) {
+			  case "it":
+				echo "da calcolare";
+			  break;
+			  case "en":
+				echo "to be quoted";
+			  break;
+			}
 		  }
-		}
 		echo "</div>";
 		  echo "<div class=scritte_bottoncini>".$package."</div>";
 		  echo "<div class=bottoncini>";

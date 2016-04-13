@@ -11,25 +11,39 @@ $num_fin = $parte_int.",".$parte_decim;
 return $num_fin;
 }
 function tratta($stringa) {
-$stringa = str_replace("è","",$stringa);
-$stringa = str_replace("","e",$stringa);
-$stringa = str_replace("","i",$stringa);
-$stringa = str_replace("","o",$stringa);
-$stringa = str_replace("","u",$stringa);
-$stringa = str_replace("","",$stringa);
+$stringa = str_replace("unità  ","unita' ",$stringa);
+$stringa = str_replace("  "," ",$stringa);
+$stringa = str_replace("è","e'",$stringa);
+$stringa = str_replace("ì","i'",$stringa);
+$stringa = str_replace("ò","o'",$stringa);
+$stringa = str_replace("à","a'",$stringa);
+$stringa = str_replace("ù","u'",$stringa);
+$stringa = str_replace("Â","",$stringa);
+$stringa = str_replace("Ã¹","u'",$stringa);
 $stringa = stripslashes($stringa);
 $stringa = str_replace("\n"," ",$stringa);
 $stringa = str_replace("\r"," ",$stringa);
 $stringa = str_replace("\p"," ",$stringa);
+$stringa = str_replace("<br>"," ",$stringa);
 return $stringa;
 }
+
 include "query.php";
 mysql_set_charset("utf8"); //settare la codifica della connessione al db
 ///////////////////////////////////////////////
 //INIZIO COSTRUZIONE QUERY
 ///////////////////////////////////////////////
 //impostazione variabili per costruzione query
-$doc = $_GET['doc'];
+$doc = $_GET[doc];
+switch ($doc) {
+	case "G":
+	  $tipo_documento = "Giroconto";
+	break;
+	case "F":
+	  $tipo_documento = "Fatture";
+	break;
+}
+$ricerca = $_GET['ricerca'];
 if (isset($_GET['unita'])) {
 $unitaDaModulo = $_GET['unita'];
 } 
@@ -37,7 +51,7 @@ if ($unitaDaModulo != "") {
 $a = "id_unita = '$unitaDaModulo'";
 $clausole++;
 }
-if (isset($_GET['nr_rda'])) {
+  if (isset($_GET['nr_rda'])) {
 $nrRdaDaModulo = $_GET['nr_rda'];
 } 
 if ($nrRdaDaModulo != "") {
@@ -119,34 +133,41 @@ if (isset($_GET['societa'])) {
 $societaDaModulo = $_GET['societa'];
 } 
 if ($societaDaModulo != "") {
-$g = "azienda_prodotto = '".$societaDaModulo."'";
+$g = "azienda_utente = '".$societaDaModulo."'";
 $clausole++;
 }
 
-$h = "pack_list > '0'";
-$clausole++;
-if ($_GET['nr_fatt'] != "") {
-  $nr_fattDaModulo = $_GET['nr_fatt'];
-} 
-if ($nr_fattDaModulo != "") {
-  $j = "n_fatt_sap LIKE '%$nr_fattDaModulo%'";
-$clausole++;
-}
 switch ($doc) {
 	case "G":
 	case "F":
 	  $m = "n_ord_sap = ''";
 	  $clausole++;
-	  $ordinamento = "pack_list DESC";
+	  $ordinamento = "azienda_utente ASC";
 	break;
 	case "R":
 	  $m = "n_ord_sap != ''";
 	  $doc = "F";
 	  $arc = "1";
 	  $clausole++;
-	  $ordinamento = "pack_list DESC";
+	  $ordinamento = "azienda_utente ASC";
 	break;
 }
+
+$h = "pack_list > '0'";
+$clausole++;
+if ($_GET['nr_fatt'] != "") {
+$nr_fattDaModulo = $_GET['nr_fatt'];
+} 
+if ($nr_fattDaModulo != "") {
+	switch ($file_presente) {
+		case "report_fatturazione.php":
+		  $p = "n_fatt_sap LIKE '%$nr_fattDaModulo%'";
+		break;
+	}
+$clausole++;
+}
+$r = "((output_mode = 'mag') OR (output_mode = 'lab'))";
+$clausole++;
 
 
 //echo "clausole: ".$clausole."<br>";
@@ -200,6 +221,14 @@ if ($m != "") {
 $testoQuery .= $m;
 $sumquery .= $m;
 }
+if ($p != "") {
+$testoQuery .= $p;
+$sumquery .= $p;
+}
+if ($r != "") {
+$testoQuery .= $r;
+$sumquery .= $r;
+}
 } else {
 if ($a != "") {
 $testoQuery .= $a." AND ";
@@ -238,8 +267,16 @@ $testoQuery .= $j." AND ";
 $sumquery .= $j." AND ";
 }
 if ($m != "") {
-$testoQuery .= $m;
-$sumquery .= $m;
+$testoQuery .= $m." AND ";
+$sumquery .= $m." AND ";
+}
+if ($p != "") {
+$testoQuery .= $p." AND ";
+$sumquery .= $p." AND ";
+}
+if ($r != "") {
+$testoQuery .= $r;
+$sumquery .= $r;
 }
 }
 //$testoQuery = "SELECT * FROM qui_righe_rda WHERE stato_ordine = '4'";
@@ -255,22 +292,57 @@ $finale_sum = substr($sumquery,($lungsum-5),5);
 if ($finale_sum == " AND ") {
 $sumquery = substr($sumquery,0,($lungsum-5));
 }
+/*
+//condizioni per evitare errori
+if(($limit == "") OR (is_numeric($limit) == false)) {
+//echo "limit in errore<br>";
+     $limit = 500; //default
+ } 
 
+if(($page == "") OR (is_numeric($page) == false)) {
+//echo "page in errore<br>";
+      $page = 1; //default
+ } 
+*/
+//determino quanti sono in tutto gli articoli trovati
+//non mi interessa l'ordinamento, che viene stabilito più sotto
+//if ($clausole > 0) {
+$querya = $testoQuery;
+$resulta = mysql_query($querya);
+$total_items = mysql_num_rows($resulta);
+
+$total_pages = ceil($total_items / $limit);
+$set_limit = $page * $limit - ($limit);
+//}
 
 //if ($clausole > 0) {
+//$testoQuery .= " ORDER BY ".$ordinamento." LIMIT $set_limit, $limit";
 $testoQuery .= " ORDER BY ".$ordinamento;
-$array_units_ids = array();
+
+
+//echo "testoQuery: ".$testoQuery."<br>";
+//echo "sumquery: ".$sumquery."<br>";
+//echo "finale: |".$finale."|<br>";
+///////////////////////////////////////////////
+//FINE COSTRUZIONE QUERY
+///////////////////////////////////////////////
+//}
+ $querya = $testoQuery;
+ $sf = 1;
+//$querya = $testoQuery;
+//inizia il corpo della tabella
+$array_company_ids = array();
 $array_units = array();
 $array_pl = array();
 $array_ord_sap = array();
 $array_fatt_sap = array();
-$result = mysql_query($testoQuery);
+$result = mysql_query($querya);
 while ($row = mysql_fetch_array($result)) {
-	if (!in_array($row[pack_list],$array_pl)) {
-		$add_pl = array_push($array_pl,$row[pack_list]);
+	if (!in_array($row[pack_list].'-'.$row[azienda_prodotto],$array_pl)) {
+		$add_pl = array_push($array_pl,$row[pack_list].'-'.$row[azienda_prodotto]);
 	}
-	if (!in_array($row[nome_unita],$array_units)) {
-		$add_unit = array_push($array_units,$row[nome_unita]);
+	if (!in_array($row[azienda_utente].'-'.$row[azienda_prodotto],$array_company_ids)) {
+		$add_company = array_push($array_company_ids,$row[azienda_utente].'-'.$row[azienda_prodotto]);
 	}
 	if ($row[n_ord_sap] != "0") {
 	  if (!in_array($row[n_ord_sap],$array_ord_sap)) {
@@ -283,237 +355,306 @@ while ($row = mysql_fetch_array($result)) {
 	  }
 	}
 }
-sort($array_units);
-foreach ($array_units as $cada_unit) {
-	$queryt = "SELECT * FROM qui_unita WHERE nome_unita = '$cada_unit'";
-	$resultt = mysql_query($queryt);
-	while ($rowt = mysql_fetch_array($resultt)) {
-	$add_id_unit = array_push($array_units_ids,$rowt[id_unita]);
-	}
-}
 sort($array_fatt_sap);
 sort($array_ord_sap);
-
-
-//echo "testoQuery: ".$testoQuery."<br>";
-//echo "sumquery: ".$sumquery."<br>";
-//echo "finale: |".$finale."|<br>";
-///////////////////////////////////////////////
-//FINE COSTRUZIONE QUERY
-///////////////////////////////////////////////
-//}
 switch ($doc) {
 //BLOCCO PER PAGINA RICHIESTA FATTURA
 case "F":
 case "G":
-  foreach ($array_units_ids as $sing_unit) {
-	$array_pl_unit = array();
-	/*
-	foreach ($array_pl as $ogni_pl) {
-		$queryw = "SELECT * FROM qui_packing_list WHERE id = '$ogni_pl'";
-		$resultw = mysql_query($queryw);
-		while ($roww = mysql_fetch_array($resultw)) {
-			if ($roww[id_unita] == $sing_unit) {
-			  $add_pl_unit = array_push($array_pl_unit,$ogni_pl);
-			}
-		}
+case "R":
+foreach ($array_company_ids as $sing_company) {
+  $array_pl_comp = array();
+	$progressivo = $progressivo + 1;
+	$postrat = stripos($sing_company,"-");
+	$venditore = substr($sing_company,($postrat+1));
+	$idcomp = substr($sing_company,0,$postrat);
+	$queryw = "SELECT DISTINCT pack_list FROM qui_righe_rda WHERE azienda_utente = '$idcomp' ORDER BY pack_list ASC";
+	$resultw = mysql_query($queryw);
+	while ($roww = mysql_fetch_array($resultw)) {
+	  if (in_array($roww[pack_list].'-'.$venditore,$array_pl)) {
+		$add_pl_comp = array_push($array_pl_comp,$roww[pack_list]);
+		$blocco_pl .= $roww[pack_list].';';
+	  }
 	}
-	*/
-  //foreach ($array_pl_unit as $pl_singolo) {
-	  $contatore = $contatore +1;
-	  $queryz = "SELECT * FROM qui_unita WHERE id_unita = '$sing_unit'";
-	  $resultz = mysql_query($queryz);
-	  while ($rowz = mysql_fetch_array($resultz)) {
-		$nome_sing_unita = $rowz[nome_unita];
-	  }
-	  $righe .= "<tr>";
-	  $righe .= "<td>";
-	  $righe .= tratta($nome_sing_unita);
-	  $righe .= "</td>";
-	  $righe .= "</tr>";
-	  foreach ($array_pl as $sing_pl) {
-	  $queryx = "SELECT * FROM qui_packing_list WHERE id = '$sing_pl' AND id_unita = '$sing_unit'";
-	  $resultx = mysql_query($queryx);
-	  $presenza_pl = mysql_num_rows($resultx);
-	  while ($rowx = mysql_fetch_array($resultx)) {
-		$n_ord_sap = $rowx[n_ord_sap];
-		$n_fatt_sap = $rowx[n_fatt_sap];
-	  }
-	  if ($presenza_pl > 0) {
-	$array_rda_pl = array();
-	$array_resp = array();
-	  $querys = "SELECT * FROM qui_corrispondenze_pl_rda WHERE pl = '$sing_pl'";
-	  $results = mysql_query($querys);
-	  while ($rows = mysql_fetch_array($results)) {
-		if (!in_array($rows[rda],$array_rda_pl)) {
-		  $add_rdapl = array_push($array_rda_pl,$rows[rda]);
-		}
-	  }
-//echo "array_rda_pl: ";
-//print_r($array_rda_pl);
-//echo "<br>";
-/*
-	  foreach ($array_rda_pl as $sing_rdapl) {
-		$lista_rdapl .= $sing_rdapl." ";
-		$queryh = "SELECT * FROM qui_rda WHERE id = '$sing_rdapl'";
-		$resulth = mysql_query($queryh);
-		while ($row = mysql_fetch_array($resulth)) {
-			$lista_unita = $row[nome_unita]." ";
-		  $queryk = "SELECT * FROM qui_utenti WHERE user_id = '$row[id_resp]'";
-		  $resultk = mysql_query($queryk);
-		  while ($rowk = mysql_fetch_array($resultk)) {
-			$lista_resp = $rowk[nome]." ";
-		  }
-		}
-	  }
-	  $lista_rdapl = "";
-	  $lista_resp = "";
-	  $lista_unita = "";
-	  */
-	//singolo contenitore
-  //stampa file
-	  foreach ($array_rda_pl as $sing_rdapl) {
-		//echo "RdA ".$sing_rdapl;
-		  $queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' ORDER BY gruppo_merci ASC";
-		$resultg = mysql_query($queryg);
-		while ($rowg = mysql_fetch_array($resultg)) {
-/*
-echo "sing_unit: ".$sing_unit."<br>";
-echo "array_pl_unit: ";
-print_r($array_pl_unit);
-echo "<br>";
- */ 
-		  if ($rowg[gruppo_merci] != $gruppo_merci_uff) {
-			$gruppo_merci_uff = $rowg[gruppo_merci];
-			$querys = "SELECT * FROM qui_gruppo_merci WHERE gruppo_merce = '$gruppo_merci_uff'";
-			$results = mysql_query($querys);
-			while ($rows = mysql_fetch_array($results)) {
-			  $descrizione_gruppo_merci = $rows[descrizione];
-			  $codice_sap = $rows[codice_sap];
-			}
-			$sum_grm = "SELECT SUM(totale) as somma_grm FROM qui_righe_rda WHERE pack_list = '$sing_pl' AND gruppo_merci = '$gruppo_merci_uff'";
-			$resultz = mysql_query($sum_grm);
-			list($somma_grm) = mysql_fetch_array($resultz);
-			$totale_grm = $somma_grm;
+	
+$blocco_pl = substr($blocco_pl,0,(strlen($blocco_pl)-1));
+foreach ($array_pl_comp as $pl_singolo) {
+  $sommapl =  "SELECT SUM(totale) as totale_pl FROM qui_righe_rda WHERE pack_list = '".$pl_singolo."' AND azienda_prodotto = '$venditore'";
+  $resulth = mysql_query($sommapl);
+  list($totale_pl) = mysql_fetch_array($resulth);
+  $totale_fattura = $totale_fattura + $totale_pl;
+}
+	$queryz = "SELECT * FROM qui_company WHERE IDCompany = '$idcomp'";
+	$resultz = mysql_query($queryz);
+	while ($rowz = mysql_fetch_array($resultz)) {
+	  $nome_sing_company = $rowz[Company];
+	}
+/*	
 			$righe .= "<tr>";
 			$righe .= "<td>";
-			$righe .= $gruppo_merci_uff;
+			$righe .= '<strong>'.$nome_sing_company.'</strong>';
 			$righe .= "</td>";
 			$righe .= "<td>";
-			$righe .= $codice_sap." ".stripslashes($descrizione_gruppo_merci);
 			$righe .= "</td>";
 			$righe .= "<td>";
-			$righe .= number_format($totale_grm,2,",",".");
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			//$righe .= 'Totale euro '.number_format($totale_fattura,2,",",".");
+			$righe .= "</td>";
+			$righe .= "<td>";
+			//$righe .= $venditore;
 			$righe .= "</td>";
 			$righe .= "</tr>";
-			$totale_grm = "";
+*/			
+foreach ($array_pl_comp as $sing_pl) {
+	$queryx = "SELECT * FROM qui_packing_list WHERE id = '$sing_pl'";
+	$resultx = mysql_query($queryx);
+	$presenza_pl = mysql_num_rows($resultx);
+	while ($rowx = mysql_fetch_array($resultx)) {
+	  $n_ord_sap = $rowx[n_ord_sap];
+	  $n_fatt_sap = $rowx[n_fatt_sap];
+	  $logo_pl = $rowx[logo];
+	}
+	if ($presenza_pl > 0) {
+  $array_rda_pl = array();
+  $array_resp = array();
+	$querys = "SELECT * FROM qui_corrispondenze_pl_rda WHERE pl = '$sing_pl'";
+	$results = mysql_query($querys);
+	while ($rows = mysql_fetch_array($results)) {
+	  if (!in_array($rows[rda],$array_rda_pl)) {
+		$add_rdapl = array_push($array_rda_pl,$rows[rda]);
+	  }
+	}
+	foreach ($array_rda_pl as $sing_rdapl) {
+	  $lista_rdapl .= $sing_rdapl." ";
+	  $queryh = "SELECT * FROM qui_rda WHERE id = '$sing_rdapl'";
+	  $resulth = mysql_query($queryh);
+	  while ($row = mysql_fetch_array($resulth)) {
+		  $lista_unita = $row[nome_unita]." ";
+		$queryk = "SELECT * FROM qui_utenti WHERE user_id = '$row[id_resp]'";
+		$resultk = mysql_query($queryk);
+		while ($rowk = mysql_fetch_array($resultk)) {
+		  $lista_resp = $rowk[nome]." ";
+		}
+	  }
+	}
+/*
+			$righe .= "<tr>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "PL ".$sing_pl;
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			//$righe .= "RdA ".$lista_rdapl." | Resp. ".$lista_resp." | Unit&agrave; ".$lista_unita;
+			$righe .= "</td>";
+	$lista_rdapl = "";
+	$lista_resp = "";
+	//$lista_unita = "";
+			$righe .= "</td>";
+			$righe .= "</tr>";
+			$righe .= "<td>";
+			  if ($n_ord_sap != "") {
+				$righe .= "ODV ".$n_ord_sap;
+			  }
+			$righe .= "</td>";
+			$righe .= "<td>";
+			  if ($n_fatt_sap != "") {
+				$righe .= "FT ".$n_fatt_sap;
+			  }
+			$righe .= "<td>";
+*/			
+			
+  //singolo contenitore
+	foreach ($array_rda_pl as $sing_rdapl) {
+/*		
+			$righe .= "<tr>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			  $righe .= "RdA ".$sing_rdapl;
+			$righe .= "</td>";
+			//colonna vuota
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$righe .= "<td>";
+			$righe .= "</td>";
+			$sum_parz_rda = "SELECT SUM(totale) as somma_parz_rda FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND azienda_prodotto = '$venditore'";
+			$resultf = mysql_query($sum_parz_rda);
+			list($somma_parz_rda) = mysql_fetch_array($resultf);
+			$righe .= "<td>";
+			  //$righe .= number_format($somma_parz_rda,2,",",".");
+			$righe .= "</td>";
+			$righe .= "</tr>";
+			$somma_parz_rda = "";
+*/			
+			  $queryg = "SELECT * FROM qui_righe_rda WHERE id_rda = '$sing_rdapl' AND pack_list = '$sing_pl' AND azienda_prodotto = '$venditore' ORDER BY gruppo_merci ASC";
+			$resultg = mysql_query($queryg);
+			while ($rowg = mysql_fetch_array($resultg)) {
+			  if ($rowg[gruppo_merci] != $gruppo_merci_uff) {
+				if ($gruppo_merci_uff != "") {
+/*					
+		  //riga vuota separatrice
+				  $righe .= "<tr>";
+				  $righe .= "<td>";
+				  $righe .= "</td>";
+				  $righe .= "</tr>";
+*/				  
+				}
+		  $gruppo_merci_uff = $rowg[gruppo_merci];
+		  $querys = "SELECT * FROM qui_gruppo_merci WHERE gruppo_merce = '$gruppo_merci_uff'";
+		  $results = mysql_query($querys);
+		  while ($rows = mysql_fetch_array($results)) {
+			$descrizione_gruppo_merci = $rows[descrizione];
+			$codice_sap = $rows[codice_sap];
 		  }
+			$sum_grm = "SELECT SUM(totale) as somma_grm FROM qui_righe_rda WHERE pack_list = '$sing_pl' AND gruppo_merci = '$gruppo_merci_uff' AND azienda_prodotto = '$venditore'";
+		  $resultz = mysql_query($sum_grm);
+		  list($somma_grm) = mysql_fetch_array($resultz);
+		  $totale_grm = $somma_grm;
+/*		  
 		  $righe .= "<tr>";
 		  $righe .= "<td>";
-		  $righe .= $rowg[pack_list];
 		  $righe .= "</td>";
 		  $righe .= "<td>";
-		  $righe .= $rowg[id_rda];
 		  $righe .= "</td>";
 		  $righe .= "<td>";
-		  $righe .= $rowg[azienda_prodotto];
 		  $righe .= "</td>";
 		  $righe .= "<td>";
-		  if ($rowg['data_chiusura'] > 0) {
-		  $righe .= date("d/m/Y",$rowg['data_chiusura']);
-		  }
+			  //$righe .= tratta($gruppo_merci_uff).' | '.tratta($codice_sap." ".stripslashes($descrizione_gruppo_merci));
 		  $righe .= "</td>";
 		  $righe .= "<td>";
-		  $righe .= tratta($rowg[negozio]);
 		  $righe .= "</td>";
 		  $righe .= "<td>";
-		  $righe .= tratta($rowg[output_mode]);
 		  $righe .= "</td>";
 		  $righe .= "<td>";
-		  $queryd = "SELECT * FROM qui_unita WHERE id_unita = '$rowg[id_unita]'";
-		  $resultd = mysql_query($queryd);
-		  while ($rowd = mysql_fetch_array($resultd)) {
-		  $righe .= stripslashes($rowd[nome_resp]);
-		  }
-		  $righe .= "</td>";
-		  $righe .= "<td>";
-		  $righe .= tratta($nome_sing_unita);
-		  $righe .= "</td>";
-		  $righe .= "<td>";
-			  if (substr($rowg[codice_art],0,1) != "*") {
-				$righe .= tratta($rowg[codice_art]);
-			  } else {
-				$righe .= tratta(substr($rowg[codice_art],1));
-			  }
-		  $righe .= "</td>";
-		  $righe .= "<td>";
-		  $righe .= tratta($rowg[descrizione]);
-		  $righe .= "</td>";
-			$righe .= "<td>";
-			$righe .= $gruppo_merci_uff;
-			$righe .= "</td>";
-		  $righe .= "<td>";
-		  $righe .= numdecim(intval($rowg[quant]*1));
-		  $righe .= "</td>";
-		  $righe .= "<td>";
-		  $righe .= numdecim($rowg[prezzo]*1);
-		  $righe .= "</td>";
-		  $righe .= "<td>";
-		  $righe .= numdecim($rowg[totale]*1);
-		  $righe .= "</td>";
-		  $righe .= "<td>";
-		  switch ($rowg[stato_ordine]) {
-			  case "1":
-			  $righe .= "Inserita";
-			  break;
-			  case "2":
-			  $righe .= "Approvata";
-			  break;
-			  case "3":
-			  $righe .= "In processo";
-			  break;
-			  case "4":
-			  $righe .= "Completata";
-			  break;
-		  }
-		  $righe .= "</td>";
-		  $righe .= "<td>";
-		  if ($rowg['wbs'] != "") {
-		  $righe .= tratta($rowg[wbs]);
-		  }
+			  //$righe .= number_format($totale_grm,2,",",".");
 		  $righe .= "</td>";
 		  $righe .= "</tr>";
-		//fine while $sing_rdapl
+*/		  
+		  $totale_grm = "";
 		}
-	  //fine foreach ($array_rda_pl as $sing_rdapl) {
+		  $righe .= "<tr>";
+		  $righe .= "<td>";
+			$righe .= '<strong>'.$rowg[azienda_prodotto].'</strong>';
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			$righe .= '<strong>'.$nome_sing_company.'</strong>';
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			$righe .= $lista_unita;
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  $righe .= $sing_pl;
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  $righe .= $sing_rdapl;
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  $righe .= date("d/m/Y",$rowg[data_chiusura]);
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			$righe .= $gruppo_merci_uff;
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			$righe .= tratta($codice_sap." ".stripslashes($descrizione_gruppo_merci));
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			//if (substr($rowg[codice_art],0,1) != "*") {
+			  $righe .= $rowg[codice_art];
+			//} else {
+			 // $righe .= tratta(substr($rowg[codice_art],1));
+			//}
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			$righe .= numdecim(intval($rowg[quant]));
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			$righe .= number_format($rowg[totale],2,",",".");
+			$TOTALE_pl = $TOTALE_pl + $rowg[totale];
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+			$righe .= tratta(stripslashes($rowg[descrizione]));
+		  $righe .= "</td>";
+			$righe .= "<td>";
+			  if ($n_ord_sap != "") {
+				$righe .= "ODV ".$n_ord_sap;
+			  }
+			$righe .= "</td>";
+			$righe .= "<td>";
+			  if ($n_fatt_sap != "") {
+				$righe .= "FT ".$n_fatt_sap;
+			  }
+			$righe .= "<td>";
+		  $righe .= "</tr>";
+	  //fine while $sing_rdapl
+		  //$lista_unita = "";
 	  }
-  
-	$gruppo_merci_uff = "";
-	$TOTALE_pl = "";
-	//fine if pl appartiene all'unità
-	  }
-	$presenza_pl = "";
-	//FINE FOREACH PL unit
-  //}
-	//FINE FOREACH PL
-  }
-  $totale_fattura = "";
-  
-	$n_ord_sap = "";
-	//FINE FOREACH UNITA'
-  }
-  break;
-//BLOCCO PER PAGINA REGISTRAZIONE FATTURA
-case "R":
+	//fine foreach ($array_rda_pl as $sing_rdapl) {
+	}
 /*
-echo '<span style="color: red;">array_fatt_sap: ';
-print_r($array_fatt_sap);
-echo '<br>';
-echo '<br>';
-echo 'array_ord_sap: ';
-print_r($array_ord_sap);
-echo '</span><br>';
-*/
+		  //riga vuota separatrice
+		  $righe .= "<tr>";
+		  $righe .= "<td>";
+		  $righe .= "</td>";
+		  $righe .= "</tr>";
+		  $righe .= "<tr>";
+		  $righe .= "<td>";
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  //$righe .= "Totale";
+		  $righe .= "</td>";
+		  $righe .= "<td>";
+		  //$righe .= 'euro '.number_format($TOTALE_pl,2,",",".");
+		  $righe .= "</td>";
+		  $righe .= "</tr>";
+*/		  
+  //fine singolo contenitore
+		  $gruppo_merci_uff = "";
+  $TOTALE_pl = "";
+  //fine if pl appartiene all'unità
+	}
+	$presenza_pl = "";
+  //FINE FOREACH PL
+}
+$totale_fattura = "";
+
+$blocco_pl = '';
+  //FINE FOREACH COMPANY
+}
+break;
+
+
+/*
+case "R":
 foreach ($array_ord_sap as $sing_ord) {
 	$queryx = "SELECT * FROM qui_RdF WHERE n_ord_sap = '$sing_ord'";
 	$resultx = mysql_query($queryx);
@@ -717,14 +858,13 @@ foreach ($array_pl_ord as $sing_pl) {
   //FINE FOREACH PL
 	}
 	$totale_fattura = "";
-/*
-*/
 
   $n_ord_sap = "";
   //FINE FOREACH ORDINI SAP'
 }
 
 break;
+*/
   }
 
 
@@ -741,52 +881,46 @@ $header .= "<tr>";
 */
 $header .= "<tr>";
 $header .= "<td>";
+$header .= "Magazzino";
+$header .= "</td>";
+$header .= "<td>";
+$header .= "Company";
+$header .= "</td>";
+$header .= "<td>";
+$header .= "Unit";
+$header .= "</td>";
+$header .= "<td>";
 $header .= "Packing List";
 $header .= "</td>";
 $header .= "<td>";
 $header .= "RdA";
 $header .= "</td>";
 $header .= "<td>";
-$header .= "Società";
-$header .= "</td>";
-$header .= "<td>";
 $header .= "Data chiusura";
-$header .= "</td>";
-$header .= "<td>";
-$header .= "Negozio";
-$header .= "</td>";
-$header .= "<td>";
-$header .= "Output";
-$header .= "</td>";
-$header .= "<td>";
-$header .= "Nome resp";
-$header .= "</td>";
-$header .= "<td>";
-$header .= "Nome unita";
-$header .= "</td>";
-$header .= "<td>";
-$header .= "Codice art.";
-$header .= "</td>";
-$header .= "<td>";
-$header .= "Descrizione";
 $header .= "</td>";
 $header .= "<td>";
 $header .= "Gruppo merci";
 $header .= "</td>";
 $header .= "<td>";
-$header .= "Quant.";
+$header .= "Descrizione gruppo merci";
 $header .= "</td>";
 $header .= "<td>";
-$header .= "Prezzo";
+$header .= "Codice art.";
+$header .= "</td>";
+$header .= "<td>";
+$header .= "Quant.";
 $header .= "</td>";
 $header .= "<td>";
 $header .= "Totale riga";
 $header .= "</td>";
 $header .= "<td>";
-$header .= "Stato";
+$header .= "Descrizione";
 $header .= "</td>";
 $header .= "<td>";
-$header .= "WBS";
+$header .= "Ordine SAP";
+$header .= "</td>";
+$header .= "<td>";
+$header .= "Fattura SAP";
 $header .= "</td>";
 $header .= "</tr>";
 

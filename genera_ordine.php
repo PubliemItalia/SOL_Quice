@@ -42,16 +42,16 @@ $data_ultima_modifica = $rigay[data_ultima_modifica];
 $id_carrello_rda = $rigay[id_carrello];
 $wbs_rda = $rigay[wbs];
 if ($rigay[note_utente] != "") {
-$note .= "Note utente - ".$rigay[note_utente];
+$note .= "Note utente - ".addslashes($rigay[note_utente]);
 }
 if ($rigay[note_resp] != "") {
-$note .= "<br>Note responsabile - ".$rigay[note_resp];
+$note .= "<br>Note responsabile - ".addslashes($rigay[note_resp]);
 }
 if ($rigay[note_buyer] != "") {
-$note .= "<br>Note buyer - ".$rigay[note_buyer];
+$note .= "<br>Note buyer - ".addslashes($rigay[note_buyer]);
 }
 if ($rigay[note_magazziniere] != "") {
-$note .= "<br>Note buyer - ".$rigay[note_magazziniere];
+$note .= "<br>Note buyer - ".addslashes($rigay[note_magazziniere]);
 }
 }
 $querya = "SELECT * FROM qui_utenti WHERE idunita = '$id_unita_rda' ORDER BY user_id ASC LIMIT 1";
@@ -63,7 +63,7 @@ $indirizzo_completo .= $rigaa[cap]." ".addslashes($rigaa[localita])." ".addslash
 }
 $data_ordine = mktime();
 $data_ordine_tx = date("d/m/Y",$data_ordine);
-mysql_query("INSERT INTO qui_ordini_for (negozio, id_unita, nome_unita, id_utente, nome_utente , id_resp, nome_resp, id_buyer, nome_buyer, stato, totale_ordine, ordinante, data_ordine, data_ordine_tx, buyer_output, data_ultima_modifica, id_carrello, id_rda, wbs, note, logo) VALUES ('$negozio_rda', '$id_unita_rda', '$nome_unita_rda', '$id_utente_rda', '$nome_utente_rda', '$id_resp_rda', '$nome_resp_rda', '$id_buyer_rda', '$nome_buyer_rda', '$stato_rda', '$totale_rda', '$indirizzo_completo', '$data_ordine', '$data_ordine_tx', '$buyer_output_rda', '$data_ultima_modifica', '$id_carrello_rda', '$id_rda', '$wbs_rda', '$note', '$logo')");
+mysql_query("INSERT INTO qui_ordini_for (negozio, id_unita, nome_unita, id_utente, nome_utente, id_resp, nome_resp, id_buyer, nome_buyer, stato, totale_ordine, ordinante, data_ordine, data_ordine_tx, buyer_output, data_ultima_modifica, id_carrello, id_rda, wbs, note, logo) VALUES ('$negozio_rda', '$id_unita_rda', '$nome_unita_rda', '$id_utente_rda', '$nome_utente_rda', '$id_resp_rda', '$nome_resp_rda', '$id_buyer_rda', '$nome_buyer_rda', '$stato_rda', '$totale_rda', '$indirizzo_completo', '$data_ordine', '$data_ordine_tx', '$buyer_output_rda', '$data_ultima_modifica', '$id_carrello_rda', '$id_rda', '$wbs_rda', '$note', '$logo')");
 $n_ordine = mysql_insert_id();
 /*
 $queryx = "INSERT INTO qui_ordini_for (negozio, id_unita, nome_unita, id_utente, nome_utente , id_resp, nome_resp, id_buyer, nome_buyer, stato, totale_ordine, ordinante, data_ordine, data_ordine_tx, buyer_output, data_ultima_modifica, id_carrello, wbs) VALUES ('$negozio_rda', '$id_unita_rda', '$nome_unita_rda', '$id_utente_rda', '$nome_utente_rda', '$id_resp_rda', '$nome_resp_rda', '$id_buyer_rda', '$nome_buyer_rda', '$stato_rda', '$totale_rda', '$indirizzo_completo', '$data_ordine', '$data_ordine_tx', '$buyer_output_rda', '$data_ultima_modifica', '$id_carrello_rda', '$wbs_rda')";

@@ -117,7 +117,7 @@ case "magazziniere":
 $stato_rda = 2;
 break;
 }
-$f = "SELECT * FROM qui_company WHERE IDCompany = '$company_scelta'";
+$f = "SELECT * FROM qui_company WHERE id = '$company_scelta'";
 $risultf = mysql_query($f) or die("Impossibile eseguire l'interrogazione" . mysql_error());
 while ($rigaf = mysql_fetch_array($risultf)) {
 $IDCompany = $rigaf['IDCompany'];
@@ -160,7 +160,7 @@ if ($addr_spedizione != "") {
 	  }
 //echo "stato_rda: ".$stato_rda."<br>";
 //legenda stati = 1 = da presentare - 2 = approvata resp - 4 = approvata buyer
-mysql_query("INSERT INTO qui_rda (negozio, id_unita, nome_unita, id_utente, id_resp, stato, data_inserimento, data_approvazione, data_ultima_modifica, id_carrello, data_carrello, note_utente, nome_utente, wbs, nazione, id_company, nome_company, indirizzo_spedizione) VALUES ('$negozio_rda', '$unita_scelta', '$nome_unita', '$id_utente', '$_SESSION[IDResp]', '$stato_rda', '$data_rda', '$data_rda', '$data_rda', '$id_carrello', '$data_ultima_modifica', '$note', '$nome_sessione', '$wbs', '$nazione_rda', '$company_scelta', '$nome_company', '$indirizzo_diverso')") or die("Impossibile eseguire l'inserimento 1" . mysql_error());
+mysql_query("INSERT INTO qui_rda (negozio, id_unita, nome_unita, id_utente, id_resp, stato, data_inserimento, data_approvazione, data_ultima_modifica, id_carrello, data_carrello, note_utente, nome_utente, wbs, nazione, id_company, nome_company, indirizzo_spedizione) VALUES ('$negozio_rda', '$unita_scelta', '$nome_unita', '$id_utente', '$_SESSION[IDResp]', '$stato_rda', '$data_rda', '$data_rda', '$data_rda', '$id_carrello', '$data_ultima_modifica', '$note', '$nome_sessione', '$wbs', '$nazione_rda', '$IDCompany', '$nome_company', '$indirizzo_diverso')") or die("Impossibile eseguire l'inserimento 1" . mysql_error());
 $id_rda = mysql_insert_id();
 
 $query = "UPDATE qui_carrelli SET rda = '$id_rda', data_rda = '$data_rda' WHERE id = '$id_carrello'"; 
@@ -193,21 +193,21 @@ $quant = $rigaf['quant'];
 $id_prodotto = $rigaf['id_prodotto'];
 $id_riga = $rigaf['id'];
 $azienda_prodotto = $rigaf['azienda_prodotto'];
-$azienda_utente = $company_scelta;
-if (($rigaf[azienda_prodotto] == "SOL") && ($company_scelta == "1")) {
+$azienda_utente = $IDCompany;
+if (($rigaf[azienda_prodotto] == "SOL") && ($IDCompany == "1")) {
   if ($nazione_rda == "Italy") {
 	  $dest_contab = "GSOLSPA";
   } else {
 	  $dest_contab = "FSOLSPA";
   }
 }
-if (($rigaf[azienda_prodotto] == "SOL") && ($company_scelta != "1")) {
+if (($rigaf[azienda_prodotto] == "SOL") && ($IDCompany != "1")) {
 	$dest_contab = "FSOLSPA";
 }
-if (($rigaf[azienda_prodotto] == "VIVISOL") && ($company_scelta == "2")) {
+if (($rigaf[azienda_prodotto] == "VIVISOL") && ($IDCompany == "2")) {
 	$dest_contab = "GVIVISOL";
 }
-if (($rigaf[azienda_prodotto] == "VIVISOL") && ($company_scelta != "2")) {
+if (($rigaf[azienda_prodotto] == "VIVISOL") && ($IDCompany != "2")) {
 	$dest_contab = "FVIVISOL";
 }
 //vado a prendere i dati freschi dal listino prodotti

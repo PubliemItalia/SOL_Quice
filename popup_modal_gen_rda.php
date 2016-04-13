@@ -271,9 +271,9 @@ return true;
 	  $risultp = mysql_query($sqlp) or die("Impossibile eseguire l'interrogazione" . mysql_error());
 	  while ($rigap = mysql_fetch_array($risultp)) {
 		if ($rigap[IDCompany] == $unita_originaria) {
-			$tendina_unita .= '<option selected value="'.$rigap[IDCompany].'">'.$rigap[Company].' - '.substr($rigap[localita],0,7).'</option>';
+			$tendina_unita .= '<option selected value="'.$rigap[id].'">'.$rigap[Company].' - '.substr($rigap[localita],0,7).'</option>';
 		} else {
-			$tendina_unita .= '<option value="'.$rigap[IDCompany].'">'.$rigap[Company].' - '.substr($rigap[localita],0,7).'</option>';
+			$tendina_unita .= '<option value="'.$rigap[id].'">'.$rigap[Company].' - '.substr($rigap[localita],0,7).'</option>';
 		}
 	  }
       echo '<select name="company_scelta" class="codice_lista_nopadding" id="company_scelta" style="font-size: 11px; height:22px; width:90%;" onchange="indir(this.value)">'.$tendina_unita.'</select>';

@@ -58,8 +58,8 @@ $result = mssql_query('select table_name from information_schema.tables order by
 }
  
 // Print MSSQL table list.
-print_r($tables);  
 /*
+print_r($tables);  
 */
 /*
 $sql = 'SELECT * FROM [nomi]';
@@ -95,21 +95,22 @@ echo '</div>';
 mssql_free_result($query);
 
 */
-$sql2 = 'SELECT * FROM [tBMC]';
+/*
+$sql2 = 'SELECT * FROM [tDeleghe]';
 $sql2 = iconv("UTF-8","Latin1",$sql2);
 $query2 = mssql_query($sql2);
 
 // Dump all field names in result
 echo '<div style="float: left; width: 100px; min-height; 70px; overflow: hidden;">';
-echo '<strong>Result tab unità:</strong>', PHP_EOL;
+echo '<strong>Result tab deleghe:</strong>', PHP_EOL;
 for ($i = 0; $i < mssql_num_fields($query2); ++$i) {
     echo '<br> ' . mssql_field_name($query2, $i), PHP_EOL;
 }
 echo '</div>';
-/*
 // Free the query result
 mssql_free_result($query2);
 */
+/*
 $sql2 = 'SELECT * FROM [tBMC_Clienti]';
 $sql2 = iconv("UTF-8","Latin1",$sql2);
 $query2 = mssql_query($sql2);
@@ -121,7 +122,6 @@ for ($i = 0; $i < mssql_num_fields($query2); ++$i) {
     echo '<br> ' . mssql_field_name($query2, $i), PHP_EOL;
 }
 echo '</div>';
-/*
 // Free the query result
 mssql_free_result($query2);
 */
@@ -140,7 +140,6 @@ echo '</div>';
 // Free the query result
 mssql_free_result($query2);
 */
-/*
   $query3 = mssql_query('SELECT * FROM [tLocalita]');
 
 // Dump all field names in result
@@ -150,6 +149,7 @@ for ($i = 0; $i < mssql_num_fields($query3); ++$i) {
     echo '<br> ' . mssql_field_name($query3, $i), PHP_EOL;
 }
 echo '</div>';
+/*
 // Free the query result
 mssql_free_result($query3);
   $query4 = mssql_query('SELECT * FROM [tresp]');
@@ -223,6 +223,43 @@ echo '<tr><td>'.$row["KUNNR"].'</td><td>'.$row["NAME1"].'</td><td>'.$row["STRAS"
 echo '<table>';
 echo '</div>';
 */
+
+echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
+echo '<table>';
+echo '<tr><td>Id_Delega</td><td>Id_Delegante</td><td>Id_Delegato</td><td>Id_Funzione</td><td>Inizio</td><td>Fine</td><td>Data_Annullamento</td><td>Timestamp</td></tr>'; 
+//Declare the SQL statement that will query the database
+$sql2 = 'SELECT * FROM [tDeleghe] ORDER BY Inizio DESC';
+$sql2 = iconv("UTF-8","Latin1",$sql2);
+//Execute the SQL query and return records
+$query2 = mssql_query($sql2)
+	or die('A error occured: ' . mssql_error());
+//Show result
+while ( $row = mssql_fetch_array($query2) ) {
+echo '<tr><td>'.$row["Id_Delega"].'</td><td>'.$row["Id_Delegante"].'</td><td>'.$row["Id_Delegato"].'</td><td>'.$row["Id_Funzione"].'</td><td>'.$row["Inizio"].'</td><td>'.$row["Fine"].'</td><td>'.$row["Data_Annullamento"].'</td><td>'.$row["Timestamp"].'</td></tr>';
+}
+echo '<table>';
+
+
+
+
+
+echo '<table style="color:red;">';
+echo '<tr><td>Id</td><td>Nome</td><td>Short</td><td>Colore</td><td>Obsoleto</td></tr>'; 
+//Declare the SQL statement that will query the database
+$sql2 = 'SELECT * FROM [tDelegheFunzioni]';
+$sql2 = iconv("UTF-8","Latin1",$sql2);
+//Execute the SQL query and return records
+$query2 = mssql_query($sql2)
+	or die('A error occured: ' . mssql_error());
+//Show result
+while ( $row = mssql_fetch_array($query2) ) {
+echo '<tr><td>'.$row["Id"].'</td><td>'.$row["Nome"].'</td><td>'.$row["Short"].'</td><td>'.$row["Colore"].'</td><td>'.$row["Obsoleto"].'</td></tr>';
+}
+echo '<table>';
+echo '</div>';
+/*
+*/
+/*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
 echo '<table>';
 echo '<tr><td>IDUnit</td><td>Codice</td><td>Unit</td><td>Dipendenza</td><td>IDCompany</td><td>CodSAP</td></tr>'; 
@@ -238,7 +275,6 @@ echo '<tr><td>'.$row["IDUnit"].'</td><td>'.$row["Codice"].'</td><td>'.$row["Unit
 }
 echo '<table>';
 echo '</div>';
-/*
 */
 /*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
@@ -257,7 +293,6 @@ echo '<tr><td>'.$row["IDNazione"].'</td><td>'.$row["Nazione"].'</td><td>'.$row["
 echo '</table>';
 echo '</div>';
 */
-/*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
 echo '<table>';
 echo '<tr><td>IDCompany</td><td>Company</td><td>Ordine</td><td>CodSAP</td><td>IDNazione</td><td>Prefisso</td></tr>'; 
@@ -274,8 +309,8 @@ echo '<tr><td>'.$row["IDCompany"].'</td><td>'.$company.'</td><td>'.$row["Ordine"
 }
 echo '<table>';
 echo '</div>';
-*/
 /*
+*/
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
 echo '<table>';
 echo '<tr><td>IDLocalita</td><td>LocShort</td><td>Indirizzo</td><td>CAP</td><td>Localita</td><td>Nazione</td><td>Obsoleto</td></tr>'; 
@@ -292,6 +327,7 @@ echo '<tr><td>'.$row["IDLocalita"].'</td><td>'.$row["LocShort"].'</td><td>'.icon
 }
 echo '<table>';
 echo '</div>';
+/*
 */
 /*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
