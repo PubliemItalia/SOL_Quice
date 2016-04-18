@@ -17,11 +17,32 @@ $id_riga_rda = $_GET[id_riga_rda];
 $id_rda = $_GET[id_rda];
 $ok_resp = $_GET[ok_resp];
 $addr_spedizione = $_GET[addr_spedizione];
-$array_flussi = array("bmc","htc");
+$addr_spedizione_unit = $_GET[addr_spedizione_unit];
+$attenzione = addslashes($_GET[attenzione]);
+$array_flussi = array("bmc","htc","pre");
 //echo "lingua: ".$lingua."<br>";
 //echo "negozio: ".$negozio_carrello."<br>";
 //echo "ruolo: ".$_SESSION[ruolo]."<br>";
 //echo "file giusto<br>";
+if ($attenzione != "") {
+switch($lingua) {
+case "it":
+$dic_attenzione = '<br><strong>Alla cortese attenzione di<br>'.$attenzione.'</strong>';
+break;
+case "en":
+$dic_attenzione = '<br><strong>Kind attention of<br>'.$attenzione.'</strong>';
+break;
+case "fr":
+$dic_attenzione = '<br><strong>Kind attention of<br>'.$attenzione.'</strong>';
+break;
+case "de":
+$dic_attenzione = '<br><strong>Kind attention of<br>'.$attenzione.'</strong>';
+break;
+case "es":
+$dic_attenzione = '<br><strong>Kind attention of<br>'.$attenzione.'</strong>';
+break;
+}
+}
 include "query.php";
 mysql_set_charset("utf8"); //settare la codifica della connessione al db
 include "traduzioni_interfaccia.php";
@@ -37,6 +58,14 @@ if ($addr_spedizione != "") {
 		//indirizzo_diverso = addslashes($rigap[DescrInd]);
 		$indirizzo_sped .= addslashes($rigap[NAME1]).'<br>'.addslashes($rigap[STRAS]).'<br>'.addslashes($rigap[PSTLZ]).' '.addslashes($rigap[ORT01]).' ('.addslashes($rigap[LAND1]).')<br>'.addslashes($rigap[KUNNR]);
 	  }
+}
+if ($addr_spedizione_unit != "") {
+	$sqlq = "SELECT * FROM qui_utenti WHERE user_id = '$addr_spedizione_unit'";
+	$risultq = mysql_query($sqlq) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+	while ($rigaq = mysql_fetch_array($risultq)) {
+		//$indirizzo_originario = $rigaq[DescrInd];
+		 $indirizzo_sped .= addslashes($rigaq[companyName]).' - '.addslashes($rigaq[nomeunita]).'<br>'.addslashes($rigaq[indirizzo]).'<br>'.addslashes($rigaq[localita]).'<br>'.addslashes($rigaq[nazione]).$dic_attenzione;
+	}
 }
 
 //§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
@@ -155,7 +184,7 @@ $risults = mysql_query($s) or die("Impossibile eseguire l'interrogazione" . mysq
 while ($rigas = mysql_fetch_array($risults)) {
 $nome_unita = $rigas[nome_unita];
 }
-if ($addr_spedizione != "") {
+if (($addr_spedizione != "") || ($addr_spedizione_unit != "")) {
 		$indirizzo_diverso = $indirizzo_sped;
 	  }
 //echo "stato_rda: ".$stato_rda."<br>";
@@ -318,10 +347,9 @@ if (($rigad[ric_mag] == "RIC") OR ($rigaf[categoria] == "Bombole")) {
 	  $descrizione_art .= '</strong>';
 	}
 	$cavo = $rigaf[cavo];
-/*echo '<span style="color: #000;">lingua_impostata: '.$lingua_impostata.'<br>
-lingua_impostata_descr: '.$lingua_impostata_descr.'<br>
-descrizione_art: '.$descrizione_art.'</span><br>';*/
-//echo "fin qui ok<br>";
+//echo '<span style="color: #000;">lingua_impostata: '.$lingua_impostata.'<br>
+//lingua_impostata_descr: '.$lingua_impostata_descr.'<br>
+//descrizione_art: '.$descrizione_art.'</span><br>';
 //se si tratta di etichette pharma, o di una bombola (assets), il prezzo giusto è quello inserito nel carrello
 //non posso andare a prenderlo dalla tabella
 //per cui faccio uno switch a questo livello
@@ -448,29 +476,34 @@ break;
 }
 //RIPRISTINARE
 switch ($_SESSION[ruolo]) {
-case "utente":
-include "spedizione_mail.php";
-break;
-case "responsabile":
-$array_mail_buyer = array();
-$m = "SELECT * FROM qui_buyer_funzioni WHERE negozio = '$negozio_rda' AND riceve_email_rda = '1'";
-$risultm = mysql_query($m) or die("Impossibile eseguire l'interrogazione" . mysql_error());
-$n_mail_buyer = mysql_num_rows($risultm);
-if ($n_mail_buyer > 0) {
-while ($rigam = mysql_fetch_array($risultm)) {
-$add_mail_buyer = array_push($array_mail_buyer,$rigam[mail]);
-}
-//termine duplicazione righe rda
-}
-include "spedizione_mail_resp.php";
-break;
-case "buyer":
-$array_mail_buyer = array("diego.sala@publiem.it");
-//include "spedizione_mail_resp.php";
-break;
-}
+  case "utente":
+	include "spedizione_mail.php";
+  break;
+  case "responsabile":
+	$array_mail_buyer = array();
 /*
+echo "fin qui ok<br>";
+echo "addr_spedizione_unit: ".$addr_spedizione_unit."<br>";
+echo "dicitura: ".$dicitura."<br>";
+echo "fin qui ok<br>";
+echo "mail buyer: ".$rigam[mail]."<br>";
 */
+	$m = "SELECT * FROM qui_buyer_funzioni WHERE negozio = '$negozio_rda' AND riceve_email_rda = '1'";
+	$risultm = mysql_query($m) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+	$n_mail_buyer = mysql_num_rows($risultm);
+	if ($n_mail_buyer > 0) {
+	while ($rigam = mysql_fetch_array($risultm)) {
+	$add_mail_buyer = array_push($array_mail_buyer,$rigam[mail]);
+	}
+	//termine duplicazione righe rda
+	include "spedizione_mail_resp.php";
+	}
+  break;
+  case "buyer":
+	$array_mail_buyer = array("diego.sala@publiem.it");
+	//include "spedizione_mail_resp.php";
+  break;
+}
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

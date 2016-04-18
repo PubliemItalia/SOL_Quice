@@ -61,7 +61,6 @@ $result = mssql_query('select table_name from information_schema.tables order by
 /*
 print_r($tables);  
 */
-/*
 $sql = 'SELECT * FROM [nomi]';
 $sql = iconv("UTF-8","Latin1",$sql);
 $query = mssql_query($sql);
@@ -77,6 +76,7 @@ echo '</div>';
 // Free the query result
 mssql_free_result($query);
 
+/*
 */
 /*
 $sql = 'SELECT * FROM [tNazioni]';
@@ -140,6 +140,7 @@ echo '</div>';
 // Free the query result
 mssql_free_result($query2);
 */
+/*
   $query3 = mssql_query('SELECT * FROM [tLocalita]');
 
 // Dump all field names in result
@@ -149,7 +150,6 @@ for ($i = 0; $i < mssql_num_fields($query3); ++$i) {
     echo '<br> ' . mssql_field_name($query3, $i), PHP_EOL;
 }
 echo '</div>';
-/*
 // Free the query result
 mssql_free_result($query3);
   $query4 = mssql_query('SELECT * FROM [tresp]');
@@ -224,6 +224,7 @@ echo '<table>';
 echo '</div>';
 */
 
+/*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
 echo '<table>';
 echo '<tr><td>Id_Delega</td><td>Id_Delegante</td><td>Id_Delegato</td><td>Id_Funzione</td><td>Inizio</td><td>Fine</td><td>Data_Annullamento</td><td>Timestamp</td></tr>'; 
@@ -257,7 +258,6 @@ echo '<tr><td>'.$row["Id"].'</td><td>'.$row["Nome"].'</td><td>'.$row["Short"].'<
 }
 echo '<table>';
 echo '</div>';
-/*
 */
 /*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
@@ -293,6 +293,7 @@ echo '<tr><td>'.$row["IDNazione"].'</td><td>'.$row["Nazione"].'</td><td>'.$row["
 echo '</table>';
 echo '</div>';
 */
+/*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
 echo '<table>';
 echo '<tr><td>IDCompany</td><td>Company</td><td>Ordine</td><td>CodSAP</td><td>IDNazione</td><td>Prefisso</td></tr>'; 
@@ -309,8 +310,8 @@ echo '<tr><td>'.$row["IDCompany"].'</td><td>'.$company.'</td><td>'.$row["Ordine"
 }
 echo '<table>';
 echo '</div>';
-/*
 */
+/*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
 echo '<table>';
 echo '<tr><td>IDLocalita</td><td>LocShort</td><td>Indirizzo</td><td>CAP</td><td>Localita</td><td>Nazione</td><td>Obsoleto</td></tr>'; 
@@ -327,9 +328,7 @@ echo '<tr><td>'.$row["IDLocalita"].'</td><td>'.$row["LocShort"].'</td><td>'.icon
 }
 echo '<table>';
 echo '</div>';
-/*
 */
-/*
 echo '<div style="width: 800px; min-height; 70px; overflow: hidden;">';
 echo '<table>';
 echo '<tr><td>ID</td><td>Nome</td><td>Cognome</td><td>IDUnit</td><td>Resp</td><td>Posta</td><td>IDCompany</td><td>Company</td></tr>'; 
@@ -340,8 +339,9 @@ $result = mssql_query($query4)
 	or die('A error occured: ' . mssql_error());
 //Show result
 while ( $row = mssql_fetch_array($result) ) {
+/*
 	$sql2 = "SELECT * FROM [unità] WHERE IDUnit = '$row[IDUnit]'";
-	$sql2 = iconv("UTF-8","Latin1",$sql2);
+	//$sql2 = iconv("UTF-8","Latin1",$sql2);
 	//Execute the SQL query and return records
 	$query2 = mssql_query($sql2)
 		or die('A error occured: ' . mssql_error());
@@ -358,11 +358,11 @@ while ( $row = mssql_fetch_array($result) ) {
 	  }
 	}
 */
-/*
 echo '<tr><td>'.$row["ID"].'</td><td>'.iconv("Latin1","UTF-8",$row["Nome"]).'</td><td>'.iconv("Latin1","UTF-8",$row["Cognome"]).'</td><td>'.$row["IDUnit"].'</td><td>'.$row["Resp"].'</td><td>'.$row["Posta"].'</td><td>'.$IDCompany.'</td><td>'.$company.'</td></tr>';
 }
 echo '</table>';
 echo '</div>';
+/*
 */
 	//user_id	login	nome	posta	idlocalita	idunita	indirizzo	cap	company	localita	nazione	nomeunita	companyName	IDCompany	idresp	ruolo	ruolo_report	negozio_buyer	negozio2_buyer	precedenza_buyer	pwd	flag_etichette_pharma
 	/*

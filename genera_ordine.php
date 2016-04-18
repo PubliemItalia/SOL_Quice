@@ -141,7 +141,7 @@ echo "Errore durante l'inserimento4". mysql_error();
 
 
 $data_attuale = mktime();
-$query = "UPDATE qui_righe_rda SET flag_buyer = '2', output_mode = 'ord', stato_ordine = '3', data_ultima_modifica = '$data_attuale', data_output = '$data_attuale', dest_contab = '' WHERE id = '$ogni_riga'";
+$query = "UPDATE qui_righe_rda SET flag_buyer = '2', output_mode = 'ord', stato_ordine = '4', data_ultima_modifica = '$data_attuale', data_chiusura = '$data_attuale', data_output = '$data_attuale', dest_contab = '' WHERE id = '$ogni_riga'";
 if (mysql_query($query)) {
 //echo "le righe rda sono state modificate correttamente";
 } else {
@@ -150,11 +150,11 @@ echo "Errore durante l'inserimento: ".mysql_error();
 }
 
 
-$data_odierna = mktime();
+$data_attuale = mktime();
 
 //*********************
 //versione precedente, con chiusura automatica della rda quando tutte le righe sono state processate e hanno il valore 4
-	/*$sqlb = "SELECT * FROM qui_rda WHERE id = '$id_rda'";
+	$sqlb = "SELECT * FROM qui_rda WHERE id = '$id_rda'";
 	$risultb = mysql_query($sqlb) or die("Impossibile eseguire l'interrogazione" . mysql_error());
 	$numrigherda = mysql_num_rows($risultb);
 	while ($rigab = mysql_fetch_array($risultb)) {
@@ -163,20 +163,22 @@ $data_odierna = mktime();
 	$righe_chiuse = mysql_num_rows($risultc);
 	}
 	if ($righe_chiuse == $numrigherda) {
-	  $queryd = "UPDATE qui_rda SET stato = '4', , data_ultima_modifica = '".$data_odierna."', data_chiusura = '".$data_odierna."' WHERE id = '$id_rda'";
+	  $queryd = "UPDATE qui_rda SET stato = '4', , data_ultima_modifica = '".$data_attuale."', data_chiusura = '".$data_attuale."' WHERE id = '$id_rda'";
 		if (mysql_query($queryd)) {
 		} else {
 		  echo "Errore durante l'inserimento: ".mysql_error();
 		}
-	} else {*/
-	  $query = "UPDATE qui_rda SET stato = '3', data_output = '$data_odierna', buyer_output = '$id_utente', output_mode = 'ord' WHERE id = '$id'";
+	} else {
+	  $query = "UPDATE qui_rda SET stato = '3', data_output = '$data_attuale', buyer_output = '$id_utente' WHERE id = '$id'";
 	  //echo "queri di modifica: ".$query."<br>";
 	  if (mysql_query($query)) {
 	  //echo "rda modificata correttamente";
 	  } else {
 	  echo "Errore durante l'inserimento: ".mysql_error();
 	  }
-	//}
+	}
+/*
+*/
 //*********************
 
 

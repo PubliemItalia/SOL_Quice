@@ -4,6 +4,7 @@ include "query.php";
 mysql_set_charset("utf8"); //settare la codifica della connessione al db
 $id = $_GET['id'];
 $mode = $_GET['mode'];
+$tipo = $_GET['tipo'];
 switch ($mode) {
 	case "unita":
 	  $sqlq = "SELECT * FROM qui_company WHERE id = '$id'";
@@ -25,11 +26,23 @@ switch ($mode) {
 	  }
 	break;
 	case "sped":
-	  $sqlq = "SELECT * FROM qui_tBMC_Clienti WHERE id = '$id'";
-	  $risultq = mysql_query($sqlq) or die("Impossibile eseguire l'interrogazione" . mysql_error());
-	  while ($rigaq = mysql_fetch_array($risultq)) {
-		  //$indirizzo_originario = $rigaq[DescrInd];
-		   $indirizzo_originario .= $rigaq[NAME1].'<br>'.$rigaq[STRAS].'<br>'.$rigaq[PSTLZ].' '.$rigaq[ORT01].' ('.$rigaq[LAND1].')<br>'.$rigaq[KUNNR];
+	  switch ($tipo) {
+		case "1":
+		  $sqlq = "SELECT * FROM qui_tBMC_Clienti WHERE id = '$id'";
+		  $risultq = mysql_query($sqlq) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+		  while ($rigaq = mysql_fetch_array($risultq)) {
+			  //$indirizzo_originario = $rigaq[DescrInd];
+			   $indirizzo_originario .= $rigaq[NAME1].'<br>'.$rigaq[STRAS].'<br>'.$rigaq[PSTLZ].' '.$rigaq[ORT01].' ('.$rigaq[LAND1].')<br>'.$rigaq[KUNNR];
+		  }
+		break;
+		case "2":
+		  $sqlq = "SELECT * FROM qui_utenti WHERE user_id = '$id'";
+		  $risultq = mysql_query($sqlq) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+		  while ($rigaq = mysql_fetch_array($risultq)) {
+			  //$indirizzo_originario = $rigaq[DescrInd];
+			   $indirizzo_originario .= $rigaq[companyName].' - '.$rigaq[nomeunita].'<br>'.$rigaq[indirizzo].'<br>'.$rigaq[localita].'<br>'.$rigaq[nazione];
+		  }
+		break;
 	  }
 	break;
 }

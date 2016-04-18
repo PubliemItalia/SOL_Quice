@@ -913,7 +913,7 @@ echo '<body>';
 	echo '<img src="immagini/bottone-sol.png">';
   }
   echo "</div>";
-  echo '<div style="width:50px; height:20px; float:right; text-align:right; margin:3px 20px 0px 5px;">';
+  echo '<div style="width:240px; height:20px; float:right; text-align:right; margin:3px 10px 0px 5px;">';
 	switch ($_SESSION[ruolo]) {
 	case "utente":
 	if ($row[stato_ordine] == 1) {

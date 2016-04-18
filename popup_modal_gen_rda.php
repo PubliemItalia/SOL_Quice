@@ -32,29 +32,84 @@ $num_righe_sospese = mysql_num_rows($resultc);
 
 switch($lingua) {
 case "it":
+$dicitura_tendina_indir = "Seleziona indirizzo";
 $dicitura_sospese = "<span class=stile_rosso>Per poter generare la RdA devi completare le modifiche in sospeso</span>";
-$dicitura_acquisto = "Acquisto per conto di<br>un&acute;altra company del gruppo";
-$dicitura_indirizzo = "Indica un indirizzo di spedizione diverso";
+	switch ($array_flussi[0]) {
+		case "":
+		case "htc":
+		case "bmc":
+		  $dicitura_acquisto = "Acquisto per conto di<br>un&acute;altra company del gruppo";
+		break;
+		case "pre":
+		  $dicitura_acquisto = "Acquisto per conto di";
+		break;
+	}
+		  $dic_attenzione_di = "All'attenzione di";
+$dicitura_indirizzo = "Indica l&acute;indirizzo di spedizione della merce";
 break;
 case "en":
+$dicitura_tendina_indir = "Select address";
 $dicitura_sospese = "<span class=stile_rosso>You have to finish editing the products quantity to produce the Order Request</span>";
-$dicitura_acquisto = "Purchase in name of another company";
-$dicitura_indirizzo = "Select another delivery address";
+	switch ($array_flussi[0]) {
+		case "":
+		case "htc":
+		case "bmc":
+		  $dicitura_acquisto = "Purchase in name of another company";
+		break;
+		case "pre":
+		  $dicitura_acquisto = "Purchase in name of";
+		break;
+	}
+		  $dic_attenzione_di = "Contact name";
+$dicitura_indirizzo = "Select the goods delivery address";
 break;
 case "fr":
+$dicitura_tendina_indir = "Select address";
 $dicitura_sospese = "<span class=stile_rosso>You have to finish editing the products quantity to produce the Order Request</span>";
-$dicitura_acquisto = "Purchase in name of another company";
-$dicitura_indirizzo = "Select another delivery address";
+	switch ($array_flussi[0]) {
+		case "":
+		case "htc":
+		case "bmc":
+		  $dicitura_acquisto = "Purchase in name of another company";
+		break;
+		case "pre":
+		  $dicitura_acquisto = "Purchase in name of";
+		break;
+	}
+		  $dic_attenzione_di = "Contact name";
+$dicitura_indirizzo = "Select the goods delivery address";
 break;
 case "de":
+$dicitura_tendina_indir = "Select address";
 $dicitura_sospese = "<span class=stile_rosso>You have to finish editing the products quantity to produce the Order Request</span>";
-$dicitura_acquisto = "Purchase in name of another company";
-$dicitura_indirizzo = "Select another delivery address";
+	switch ($array_flussi[0]) {
+		case "":
+		case "htc":
+		case "bmc":
+		  $dicitura_acquisto = "Purchase in name of another company";
+		break;
+		case "pre":
+		  $dicitura_acquisto = "Purchase in name of";
+		break;
+	}
+		  $dic_attenzione_di = "Contact name";
+$dicitura_indirizzo = "Select the goods delivery address";
 break;
 case "es":
+$dicitura_tendina_indir = "Select address";
 $dicitura_sospese = "<span class=stile_rosso>You have to finish editing the products quantity to produce the Order Request</span>";
-$dicitura_acquisto = "Purchase in name of another company";
-$dicitura_indirizzo = "Select another delivery address";
+	switch ($array_flussi[0]) {
+		case "":
+		case "htc":
+		case "bmc":
+		  $dicitura_acquisto = "Purchase in name of another company";
+		break;
+		case "pre":
+		  $dicitura_acquisto = "Purchase in name of";
+		break;
+	}
+$dic_attenzione_di = "Contact name";
+$dicitura_indirizzo = "Select the goods delivery address";
 break;
 }
 
@@ -245,7 +300,7 @@ return true;
           </div>
   </div>
 </div>
-  <div style="width:50%; text-align:center; height:160px; float:left; background-color:#ddd; color:#414141; font-size:11px;">
+  <div style="width:50%; text-align:center; height:210px; float:left; background-color:#ddd; color:#414141; font-size:11px;">
     <div style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto;">
 	  <?php echo '<strong>'.$dicitura_acquisto.'</strong>'; ?>
     </div>
@@ -266,8 +321,16 @@ return true;
 		  }
 		  //$indirizzo_originario .= '<br>('.$rigaq[nomeunita].')<br>'.$rigaq[indirizzo].'<br>'.$rigaq[cap].' '.$rigaq[localita].'<br>('.$rigaq[nazione].')';
 	  }
-	   	
-	  $sqlp = "SELECT * FROM qui_company ORDER BY Company ASC";
+	switch ($array_flussi[0]) {
+		case "":
+		case "htc":
+		case "bmc":
+		  $sqlp = "SELECT * FROM qui_company ORDER BY Company ASC";
+		break;
+		case "pre":
+		  $sqlp = "SELECT * FROM qui_company WHERE IDCompany = '1'";
+		break;
+	}
 	  $risultp = mysql_query($sqlp) or die("Impossibile eseguire l'interrogazione" . mysql_error());
 	  while ($rigap = mysql_fetch_array($risultp)) {
 		if ($rigap[IDCompany] == $unita_originaria) {
@@ -281,25 +344,58 @@ return true;
     </div>
     <div id="indirizzo_unita" style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto; font-size:11px;"><?php echo $indirizzo_originario; ?></div>
   </div>
-  <div style="width:50%; text-align:center; height:160px; float:left; background-color:#ddd; color:#414141; font-size:11px;">
+  <div style="width:50%; text-align:center; height:210px; float:left; background-color:#ddd; color:#414141; font-size:11px;">
     <?php 
-	  if (count($array_flussi) > 0) {
-	echo '<div style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto;">
-	  <strong>'.$dicitura_indirizzo.'</strong>
-    </div>
-    <div style="margin-left:25px; width:80%; text-align:left; min-height:30px; overflow: hidden; height:auto;">'; 
-		$tendina_addr .= '<option selected value="">Seleziona indirizzo</option>';
-		foreach ($array_flussi as $sing_flusso) {
-		  $sqlp = "SELECT * FROM qui_tBMC_Clienti WHERE flusso LIKE '%$sing_flusso%' ORDER BY NAME1 ASC";
-		  $risultp = mysql_query($sqlp) or die("Impossibile eseguire l'interrogazione" . mysql_error());
-		  while ($rigap = mysql_fetch_array($risultp)) {
-				$tendina_addr .= '<option value="'.$rigap[id].'">'.$rigap[Descrizione].'</option>';
-		  }
-		}
-      echo '<select name="addr_spedizione" class="codice_lista_nopadding" id="addr_spedizione" style="font-size: 11px; height:22px; width:90%;" onchange="addr_sped(this.value)">'.$tendina_addr.'</select>';
-    echo '</div>
-    <div id="indirizzo_spedizione" style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto; font-size:11px;"></div>';
-	  }
+	switch ($array_flussi[0]) {
+		case "bmc":
+		  echo '<div style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto;">
+			<strong>'.$dicitura_indirizzo.'</strong>
+		  </div>
+		  <div style="margin-left:25px; width:80%; text-align:left; min-height:30px; overflow: hidden; height:auto;">'; 
+			  $tendina_addr .= '<option selected value="">Seleziona indirizzo</option>';
+				$sqlp = "SELECT * FROM qui_tBMC_Clienti WHERE flusso = '$array_flussi[0]' ORDER BY NAME1 ASC";
+				$risultp = mysql_query($sqlp) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+				while ($rigap = mysql_fetch_array($risultp)) {
+					  $tendina_addr .= '<option value="'.$rigap[id].'">'.$rigap[Descrizione].'</option>';
+				}
+			echo '<select name="addr_spedizione" class="codice_lista_nopadding" id="addr_spedizione" style="font-size: 11px; height:22px; width:90%;" onchange="addr_sped(this.value,1)">'.$tendina_addr.'</select>';
+		  echo '</div>
+		  <div id="indirizzo_spedizione" style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto; font-size:11px;"></div>';
+		break;
+		case "pre":
+		  echo '<div style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto;">
+			<strong>'.$dicitura_indirizzo.'</strong>
+		  </div>
+		  <div style="margin-left:25px; width:80%; text-align:left; min-height:25px; overflow: hidden; height:auto;">'; 
+			  $tendina_addr .= '<option selected value="">'.$dicitura_tendina_indir.'</option>';
+				$sqlr = "SELECT * FROM qui_unita WHERE id_unita != '0' ORDER BY nome_unita ASC";
+				$risultr = mysql_query($sqlr) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+				while ($rigar = mysql_fetch_array($risultr)) {
+				  $sqlp = "SELECT * FROM qui_utenti WHERE idunita = '$rigar[id_unita]' AND companyName != '' AND indirizzo != '' ORDER BY localita ASC LIMIT 1";
+				  $risultp = mysql_query($sqlp) or die("Impossibile eseguire l'interrogazione" . mysql_error());
+				  while ($rigap = mysql_fetch_array($risultp)) {
+					  if (strlen($rigap[companyName]) > 25) {
+						  $simb_comp_lunga = '[...]';
+					  }
+					  if (strlen($rigap[localita]) > 25) {
+						  $simb_loc_lunga = '[...]';
+					  }
+						$tendina_addr .= '<option value="'.$rigap[user_id].'">'.$rigap[nomeunita].' - '.substr($rigap[companyName],0,22).$simb_comp_lunga.' - '.substr($rigap[localita],0,22).$simb_loc_lunga.'</option>';
+						$simb_loc_lunga = '';
+						$simb_comp_lunga = '';
+				  }
+				}
+			echo '<select name="addr_spedizione_unit" class="codice_lista_nopadding" id="addr_spedizione_unit" style="font-size: 11px; height:22px; width:90%;" onchange="addr_sped(this.value,2)">'.$tendina_addr.'</select>';
+		  echo '</div>
+		  <div style="margin:10px 0px 5px 25px; width:80%; text-align:left; min-height:15px; overflow: hidden; height:auto;"> 
+		  '.$dic_attenzione_di.'
+		  </div>
+		  <div style="margin-left:25px; width:80%; text-align:left; min-height:25px; overflow: hidden; height:auto;"> 
+			<input id="attenzione" name="attenzione" type="text" style="font-size: 11px; height:22px; width:90%;">
+		  </div>
+		  <div id="indirizzo_spedizione" style="margin:10px 25px; width:auto; text-align:left; min-height:25px; overflow: hidden; height:auto; font-size:11px;"></div>';
+		break;
+	}
 	  ?>
   </div>
 </form>
@@ -315,12 +411,12 @@ function indir(id){
 	  }
 	})
 }
-function addr_sped(id){
+function addr_sped(id,tipo){
 	/*alert(id);*/
 	$.ajax({
 	  type: "GET",   
 	  url: "aggiorna_indirizzo_unita.php",  
-	  data: "id="+id+"&mode=sped",
+	  data: "id="+id+"&mode=sped"+"&tipo="+tipo,
 	  success: function(output) {
 	  $('#indirizzo_spedizione').html(output).show();
 	  }

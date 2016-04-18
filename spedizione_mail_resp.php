@@ -9,25 +9,6 @@ return $contents;
 //fine funzione
 $messaggio_resp=leggifile("quice_email_template_buyer.html");
 //echo "messaggio: ".$messaggio."<br>";
-/*
-switch ($negozioXMail) {
-case "assets":
-$negozio_rda = "Assets";
-break;
-case "consumabili":
-$negozio_rda = 'Consumabili';
-break;
-case "spare_parts":
-$negozio_rda = 'Spare parts';
-break;
-case "labels":
-$negozio_rda = 'Labels';
-break;
-case "vivilist":
-$negozio_rda = 'ViviStore';
-break;
-}
-*/
 switch($lingua) {
 case "it":
 $testo_mail_responsabile = "E-mail responsabile";
@@ -79,6 +60,7 @@ $mail->Host = "10.0.1.148";  // specify main and backup server
 $mail->From = $mittente;
 $mail->FromName = "Qui c'e' - ".$negozio_rda." - ".stripslashes($_SESSION[nome]);
 $dataora = mktime();
+//echo "mail=> fin qui ok<br>";
 //$mail->AddAddress($mail_destinatario);
 foreach($array_mail_buyer as $sing_mail) {
 $mail->AddAddress($sing_mail);

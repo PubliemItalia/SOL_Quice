@@ -375,7 +375,7 @@ if ($percorso_ritorno != "") {
 }
 ?>
 
-<div style="width:100%; height:500px; background-image:url('immagini/interfaccia_carrello_it.png')">
+<div style="width:100%; height:450px;">
  <div style="width: 100%; height: 150px;">
   <!--<div style="width: 100%; height: 150px; background-color:#80B6E2;">
     <div style="width: auto; min-height: 70px; overflow:hidden; height:auto; margin:20px 0px 0px 20px;">
